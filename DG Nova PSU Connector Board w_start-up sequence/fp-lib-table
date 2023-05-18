@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Card Edge PCB")(type "KiCad")(uri "${KIPRJMOD}/DG Nova PSU Connector Board w_start-up sequence.pretty")(options "")(descr ""))
+  (lib (name "Card Edge")(type "KiCad")(uri "${KIPRJMOD}/Card Edge.pretty")(options "")(descr ""))
+)
