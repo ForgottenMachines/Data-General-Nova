@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "NovaTemp")(type "KiCad")(uri "D:/Data/MightyFrame/GitHub/Data-General-Nova/Backplane/NovaTemp.kicad_sym")(options "")(descr ""))
+)
