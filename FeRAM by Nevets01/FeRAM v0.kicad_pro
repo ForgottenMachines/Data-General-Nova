@@ -34,9 +34,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.0,
-          "height": 1.7,
-          "width": 1.7
+          "drill": 0.762,
+          "height": 1.524,
+          "width": 1.524
         },
         "silk_line_width": 0.12,
         "silk_text_italic": false,
@@ -393,7 +393,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "NovaFPGA.kicad_pro",
+    "filename": "FeRAM v0.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -424,10 +424,10 @@
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
-        "name": "PWR_GND",
+        "name": "power",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.35,
+        "track_width": 0.4,
         "via_diameter": 0.8,
         "via_drill": 0.4,
         "wire_width": 6
@@ -441,7 +441,11 @@
     "netclass_patterns": [
       {
         "netclass": "Default",
-        "pattern": "/+15v"
+        "pattern": "+3V3"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "-5V"
       },
       {
         "netclass": "Default",
@@ -449,203 +453,7 @@
       },
       {
         "netclass": "Default",
-        "pattern": "/ATTEN0"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/ATTEN1"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/ATTEN2"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/ATTEN3"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/BANK0_IO_M10"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/BANK0_IO_M11"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/BANK0_IO_M9"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/BANK0_IO_P11"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/BANK0_IO_T9"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/B_rx_0"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/B_rx_1"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/B_tx_0"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/B_tx_1"
-      },
-      {
-        "netclass": "Default",
         "pattern": "/CLR"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/CPU_A_REQ"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/CPU_A_SELECT"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/D0"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/D1"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_IN0"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_IN1"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_IN10"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_IN11"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_IN12"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_IN13"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_IN14"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_IN15"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_IN2"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_IN3"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_IN4"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_IN5"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_IN6"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_IN7"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_IN8"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_IN9"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_OUT0"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_OUT1"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_OUT10"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_OUT11"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_OUT12"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_OUT13"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_OUT14"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_OUT15"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_OUT2"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_OUT3"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_OUT4"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_OUT5"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_OUT6"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_OUT7"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_OUT8"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DATA_OUT9"
       },
       {
         "netclass": "Default",
@@ -673,107 +481,35 @@
       },
       {
         "netclass": "Default",
-        "pattern": "/DCHA_IN"
+        "pattern": "/DCH0"
       },
       {
         "netclass": "Default",
-        "pattern": "/DCHI_IN"
+        "pattern": "/DCHI"
       },
       {
         "netclass": "Default",
-        "pattern": "/DCHM0_OUT"
+        "pattern": "/DS0"
       },
       {
         "netclass": "Default",
-        "pattern": "/DCHM1_OUT"
+        "pattern": "/DS1"
       },
       {
         "netclass": "Default",
-        "pattern": "/DCHO_IN"
+        "pattern": "/DS2"
       },
       {
         "netclass": "Default",
-        "pattern": "/DCHP_IN"
+        "pattern": "/DS3"
       },
       {
         "netclass": "Default",
-        "pattern": "/DCHP_OUT"
+        "pattern": "/DS4"
       },
       {
         "netclass": "Default",
-        "pattern": "/DCHR_OUT"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DISKETTE"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DISKETTE_RW"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DRIVE"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DRIVE_DATA_OUT"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DS_IN0"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DS_IN1"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DS_IN2"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DS_IN3"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DS_IN4"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DS_IN5"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/DUR"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/FINISH"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/F_rx_0"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/F_rx_1"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/F_tx_0"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/F_tx_1"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/HD1"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/HD2"
+        "pattern": "/DS5"
       },
       {
         "netclass": "Default",
@@ -785,27 +521,75 @@
       },
       {
         "netclass": "Default",
-        "pattern": "/INTP_IN"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/INTP_OUT"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/INTR_OUT"
-      },
-      {
-        "netclass": "Default",
         "pattern": "/IOPLS"
       },
       {
         "netclass": "Default",
-        "pattern": "/IORST_IN"
+        "pattern": "/IO_SELECT"
       },
       {
         "netclass": "Default",
-        "pattern": "/LEFT_SEL"
+        "pattern": "/LOCATION"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MA1"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MA10"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MA11"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MA12"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MA13"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MA14"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MA15"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MA2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MA3"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MA4"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MA5"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MA6"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MA7"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MA8"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MA9"
       },
       {
         "netclass": "Default",
@@ -813,7 +597,63 @@
       },
       {
         "netclass": "Default",
-        "pattern": "/MSKO_IN"
+        "pattern": "/MD1"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MD10"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MD11"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MD12"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MD13"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MD14"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MD15"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MD2"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MD3"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MD4"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MD5"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MD6"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MD7"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MD8"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/MD9"
       },
       {
         "netclass": "Default",
@@ -821,59 +661,11 @@
       },
       {
         "netclass": "Default",
-        "pattern": "/PWR_ON"
+        "pattern": "/READ_1_S"
       },
       {
         "netclass": "Default",
-        "pattern": "/READ_CLOCK"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/READ_DATA"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/READ_GATE"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/RESTORE"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/RQENB_IN"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/SA1"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/SA2"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/SA4"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/SA8"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/SECTOR_PULSE"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/SEEK_ERROR"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/SELB_OUT"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/SELD_OUT"
+        "pattern": "/SELECT"
       },
       {
         "netclass": "Default",
@@ -885,91 +677,67 @@
       },
       {
         "netclass": "Default",
-        "pattern": "/TA1"
+        "pattern": "/~{CORE0}"
       },
       {
         "netclass": "Default",
-        "pattern": "/TA128"
+        "pattern": "/~{CORE1}"
       },
       {
         "netclass": "Default",
-        "pattern": "/TA16"
+        "pattern": "/~{CORE10}"
       },
       {
         "netclass": "Default",
-        "pattern": "/TA2"
+        "pattern": "/~{CORE11}"
       },
       {
         "netclass": "Default",
-        "pattern": "/TA256"
+        "pattern": "/~{CORE12}"
       },
       {
         "netclass": "Default",
-        "pattern": "/TA32"
+        "pattern": "/~{CORE13}"
       },
       {
         "netclass": "Default",
-        "pattern": "/TA4"
+        "pattern": "/~{CORE14}"
       },
       {
         "netclass": "Default",
-        "pattern": "/TA64"
+        "pattern": "/~{CORE15}"
       },
       {
         "netclass": "Default",
-        "pattern": "/TA8"
+        "pattern": "/~{CORE2}"
       },
       {
         "netclass": "Default",
-        "pattern": "/TAS"
+        "pattern": "/~{CORE3}"
       },
       {
         "netclass": "Default",
-        "pattern": "/WRITE_CHECK"
+        "pattern": "/~{CORE4}"
       },
       {
         "netclass": "Default",
-        "pattern": "/WRITE_DATA_&_CLOCK"
+        "pattern": "/~{CORE5}"
       },
       {
         "netclass": "Default",
-        "pattern": "/WRITE_GATE"
+        "pattern": "/~{CORE6}"
       },
       {
         "netclass": "Default",
-        "pattern": "/~{ATTEN0}"
+        "pattern": "/~{CORE7}"
       },
       {
         "netclass": "Default",
-        "pattern": "/~{ATTEN1}"
+        "pattern": "/~{CORE8}"
       },
       {
         "netclass": "Default",
-        "pattern": "/~{ATTEN2}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{ATTEN3}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{CLR_IN}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{CPU_A_REQ}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{CPU_A_SELECT}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{D0}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{D1}"
+        "pattern": "/~{CORE9}"
       },
       {
         "netclass": "Default",
@@ -1037,47 +805,7 @@
       },
       {
         "netclass": "Default",
-        "pattern": "/~{DATIA_IN}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{DATIB_IN}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{DATIC_IN}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{DATOA_IN}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{DATOB_IN}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{DATOC_IN}"
-      },
-      {
-        "netclass": "Default",
         "pattern": "/~{DCHA}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{DCHI}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{DCHM0}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{DCHM1}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{DCHO}"
       },
       {
         "netclass": "Default",
@@ -1093,11 +821,11 @@
       },
       {
         "netclass": "Default",
-        "pattern": "/~{DISKETTE}"
+        "pattern": "/~{DCH_M0}"
       },
       {
         "netclass": "Default",
-        "pattern": "/~{DISKETTE_RW}"
+        "pattern": "/~{DCH_M1}"
       },
       {
         "netclass": "Default",
@@ -1129,23 +857,75 @@
       },
       {
         "netclass": "Default",
-        "pattern": "/~{DUR}"
-      },
-      {
-        "netclass": "Default",
         "pattern": "/~{EXT_SELECT}"
       },
       {
         "netclass": "Default",
-        "pattern": "/~{FINISH}"
+        "pattern": "/~{INH0}"
       },
       {
         "netclass": "Default",
-        "pattern": "/~{HD1}"
+        "pattern": "/~{INH1}"
       },
       {
         "netclass": "Default",
-        "pattern": "/~{HD2}"
+        "pattern": "/~{INH10}"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/~{INH11}"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/~{INH12}"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/~{INH13}"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/~{INH14}"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/~{INH15}"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/~{INH2}"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/~{INH3}"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/~{INH4}"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/~{INH5}"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/~{INH6}"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/~{INH7}"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/~{INH8}"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/~{INH9}"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/~{INHIBIT_S}"
       },
       {
         "netclass": "Default",
@@ -1154,10 +934,6 @@
       {
         "netclass": "Default",
         "pattern": "/~{INH_TRANS}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{INTA_IN}"
       },
       {
         "netclass": "Default",
@@ -1173,27 +949,7 @@
       },
       {
         "netclass": "Default",
-        "pattern": "/~{IOPLS_IN}"
-      },
-      {
-        "netclass": "Default",
         "pattern": "/~{IORST}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{IO_AorB}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{IO_BorC}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{IO_OUT}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{LEFT_SEL}"
       },
       {
         "netclass": "Default",
@@ -1333,15 +1089,7 @@
       },
       {
         "netclass": "Default",
-        "pattern": "/~{MSKO}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{OBSERVE}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{OVFLO_IN}"
+        "pattern": "/~{MSK0}"
       },
       {
         "netclass": "Default",
@@ -1349,19 +1097,11 @@
       },
       {
         "netclass": "Default",
+        "pattern": "/~{READ_1_S}"
+      },
+      {
+        "netclass": "Default",
         "pattern": "/~{READ_2}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{READ_CLOCK}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{READ_DATA}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{READ_GATE}"
       },
       {
         "netclass": "Default",
@@ -1373,35 +1113,7 @@
       },
       {
         "netclass": "Default",
-        "pattern": "/~{RESTORE}"
-      },
-      {
-        "netclass": "Default",
         "pattern": "/~{RQENB}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{SA1}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{SA2}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{SA4}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{SA8}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{SECTOR_PULSE}"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "/~{SEEK_ERROR}"
       },
       {
         "netclass": "Default",
@@ -1413,95 +1125,175 @@
       },
       {
         "netclass": "Default",
-        "pattern": "/~{STRT_IN}"
+        "pattern": "/~{SNS0}"
       },
       {
         "netclass": "Default",
-        "pattern": "/~{TA1}"
+        "pattern": "/~{SNS1}"
       },
       {
         "netclass": "Default",
-        "pattern": "/~{TA128}"
+        "pattern": "/~{SNS10}"
       },
       {
         "netclass": "Default",
-        "pattern": "/~{TA16}"
+        "pattern": "/~{SNS11}"
       },
       {
         "netclass": "Default",
-        "pattern": "/~{TA2}"
+        "pattern": "/~{SNS12}"
       },
       {
         "netclass": "Default",
-        "pattern": "/~{TA256}"
+        "pattern": "/~{SNS13}"
       },
       {
         "netclass": "Default",
-        "pattern": "/~{TA32}"
+        "pattern": "/~{SNS14}"
       },
       {
         "netclass": "Default",
-        "pattern": "/~{TA4}"
+        "pattern": "/~{SNS15}"
       },
       {
         "netclass": "Default",
-        "pattern": "/~{TA64}"
+        "pattern": "/~{SNS2}"
       },
       {
         "netclass": "Default",
-        "pattern": "/~{TA8}"
+        "pattern": "/~{SNS3}"
       },
       {
         "netclass": "Default",
-        "pattern": "/~{TAS}"
+        "pattern": "/~{SNS4}"
       },
       {
         "netclass": "Default",
-        "pattern": "/~{WRITE_CHECK}"
+        "pattern": "/~{SNS5}"
       },
       {
         "netclass": "Default",
-        "pattern": "/~{WRITE_DATA_&_CLOCK}"
+        "pattern": "/~{SNS6}"
       },
       {
         "netclass": "Default",
-        "pattern": "/~{WRITE_GATE}"
+        "pattern": "/~{SNS7}"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(C1-Pad2)"
+        "pattern": "/~{SNS8}"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(C10-Pad1)"
+        "pattern": "/~{SNS9}"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(C10-Pad2)"
+        "pattern": "/~{STROBE_S}"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(C5-Pad1)"
+        "pattern": "Net-(C37-Pad1)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(C6-Pad1)"
+        "pattern": "Net-(J1-Pad11)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(C9-Pad1)"
+        "pattern": "Net-(J1-Pad12)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(C9-Pad2)"
+        "pattern": "Net-(J1-Pad13)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J1-Pad3)"
+        "pattern": "Net-(J1-Pad14)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J1-Pad4)"
+        "pattern": "Net-(J1-Pad15)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad16)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad17)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad18)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad19)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad20)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad21)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad22)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad23)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad24)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad25)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad26)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad27)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad28)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad29)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad30)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad31)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad32)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad47)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad49)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J1-Pad5)"
       },
       {
         "netclass": "Default",
@@ -1513,415 +1305,279 @@
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad10)"
+        "pattern": "Net-(J1-Pad61)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad12)"
+        "pattern": "Net-(J1-Pad63)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad14)"
+        "pattern": "Net-(J1-Pad65)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad16)"
+        "pattern": "Net-(J1-Pad67)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad18)"
+        "pattern": "Net-(J1-Pad69)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad2)"
+        "pattern": "Net-(J1-Pad7)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad20)"
+        "pattern": "Net-(J1-Pad71)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad22)"
+        "pattern": "Net-(J1-Pad73)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad24)"
+        "pattern": "Net-(J1-Pad75)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad26)"
+        "pattern": "Net-(J1-Pad76)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad28)"
+        "pattern": "Net-(J1-Pad77)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad30)"
+        "pattern": "Net-(J1-Pad78)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad32)"
+        "pattern": "Net-(J1-Pad79)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad34)"
+        "pattern": "Net-(J1-Pad8)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad36)"
+        "pattern": "Net-(J1-Pad81)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad38)"
+        "pattern": "Net-(J1-Pad83)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad4)"
+        "pattern": "Net-(J1-Pad84)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad40)"
+        "pattern": "Net-(J1-Pad85)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad42)"
+        "pattern": "Net-(J1-Pad86)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad44)"
+        "pattern": "Net-(J1-Pad87)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad46)"
+        "pattern": "Net-(J1-Pad88)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad48)"
+        "pattern": "Net-(J1-Pad89)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad50)"
+        "pattern": "Net-(J1-Pad9)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad52)"
+        "pattern": "Net-(J1-Pad90)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad54)"
+        "pattern": "Net-(J1-Pad91)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad56)"
+        "pattern": "Net-(J1-Pad92)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad58)"
+        "pattern": "Net-(J2-Pad10)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad6)"
+        "pattern": "Net-(J2-Pad11)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad60)"
+        "pattern": "Net-(J2-Pad13)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad62)"
+        "pattern": "Net-(J2-Pad15)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad64)"
+        "pattern": "Net-(J2-Pad19)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad66)"
+        "pattern": "Net-(J2-Pad23)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad68)"
+        "pattern": "Net-(J2-Pad25)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J10-Pad8)"
+        "pattern": "Net-(J2-Pad27)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J11-Pad11)"
+        "pattern": "Net-(J2-Pad31)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J12-Pad2)"
+        "pattern": "Net-(J2-Pad34)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J13-Pad2)"
+        "pattern": "Net-(J2-Pad36)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J14-Pad1)"
+        "pattern": "Net-(J2-Pad38)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J14-Pad2)"
+        "pattern": "Net-(J2-Pad40)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J14-Pad3)"
+        "pattern": "Net-(J2-Pad46)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J14-Pad4)"
+        "pattern": "Net-(J2-Pad48)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J14-Pad5)"
+        "pattern": "Net-(J2-Pad49)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J14-Pad6)"
+        "pattern": "Net-(J2-Pad51)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J15-Pad1)"
+        "pattern": "Net-(J2-Pad52)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J15-Pad2)"
+        "pattern": "Net-(J2-Pad53)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J15-Pad3)"
+        "pattern": "Net-(J2-Pad54)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J15-Pad4)"
+        "pattern": "Net-(J2-Pad67)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J15-Pad5)"
+        "pattern": "Net-(J2-Pad69)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J15-Pad6)"
+        "pattern": "Net-(J2-Pad78)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J2-Pad39)"
+        "pattern": "Net-(J2-Pad81)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J2-Pad41)"
+        "pattern": "Net-(J2-Pad84)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J2-Pad43)"
+        "pattern": "Net-(J2-Pad89)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J2-Pad45)"
+        "pattern": "Net-(J2-Pad91)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J3-Pad10)"
+        "pattern": "Net-(J2-Pad92)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J3-Pad11)"
+        "pattern": "Net-(J2-Pad93)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J3-Pad12)"
+        "pattern": "Net-(J2-Pad94)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J3-Pad8)"
+        "pattern": "Net-(J2-Pad96)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J3-Pad9)"
+        "pattern": "Net-(J3-Pad1)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J4-Pad11)"
+        "pattern": "Net-(J3-Pad2)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J4-Pad12)"
+        "pattern": "Net-(J3-Pad3)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J4-Pad13)"
+        "pattern": "Net-(J3-Pad4)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J4-Pad14)"
+        "pattern": "Net-(J4-Pad1)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J4-Pad15)"
+        "pattern": "Net-(J4-Pad2)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J4-Pad16)"
+        "pattern": "Net-(J4-Pad3)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J4-Pad17)"
+        "pattern": "Net-(J4-Pad4)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J4-Pad18)"
+        "pattern": "Net-(J5-Pad1)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J4-Pad19)"
+        "pattern": "Net-(J5-Pad2)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J4-Pad20)"
+        "pattern": "Net-(J5-Pad3)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J4-Pad21)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J4-Pad22)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J4-Pad23)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J4-Pad24)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J4-Pad25)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J4-Pad26)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J4-Pad27)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J4-Pad28)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J4-Pad29)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J4-Pad30)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J4-Pad31)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J4-Pad32)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J4-Pad47)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J4-Pad65)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J4-Pad67)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J4-Pad69)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J4-Pad7)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J4-Pad8)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J4-Pad88)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J4-Pad9)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J4-Pad90)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J4-Pad92)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J5-Pad10)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J5-Pad36)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J5-Pad46)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J5-Pad52)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J5-Pad78)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J5-Pad81)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J5-Pad84)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J5-Pad89)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J5-Pad91)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J5-Pad92)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J5-Pad93)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J5-Pad94)"
-      },
-      {
-        "netclass": "Default",
-        "pattern": "Net-(J5-Pad96)"
+        "pattern": "Net-(J5-Pad4)"
       },
       {
         "netclass": "Default",
@@ -1941,11 +1597,19 @@
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J7-Pad2)"
+        "pattern": "Net-(J7-Pad37)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(J8-Pad1)"
+        "pattern": "Net-(J7-Pad38)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J7-Pad39)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J7-Pad40)"
       },
       {
         "netclass": "Default",
@@ -1953,35 +1617,135 @@
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(JP1-Pad1)"
+        "pattern": "Net-(J8-Pad37)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(JP10-Pad1)"
+        "pattern": "Net-(J9-Pad1)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(JP2-Pad1)"
+        "pattern": "Net-(J9-Pad3)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(JP3-Pad1)"
+        "pattern": "Net-(J9-Pad30)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(JP4-Pad1)"
+        "pattern": "Net-(J9-Pad32)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(R1-Pad2)"
+        "pattern": "Net-(J9-Pad33)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(R2-Pad2)"
+        "pattern": "Net-(J9-Pad34)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(R3-Pad2)"
+        "pattern": "Net-(J9-Pad35)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J9-Pad36)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J9-Pad37)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J9-Pad38)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J9-Pad39)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(J9-Pad6)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(JP1-Pad2)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(JP2-Pad2)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(JP3-Pad2)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(JP4-Pad2)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(JP5-Pad2)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(JP6-Pad2)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(JP7-Pad2)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(R10-Pad1)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(R11-Pad1)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(R5-Pad2)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(R8-Pad1)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(R9-Pad1)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad10)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad11)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad2)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad3)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad4)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad6)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U1-Pad8)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U10-Pad4)"
       },
       {
         "netclass": "Default",
@@ -1989,42 +1753,114 @@
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(U11-Pad3)"
+        "pattern": "Net-(U11-Pad5)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(U11-Pad6)"
+        "pattern": "Net-(U11-Pad9)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(U11-Pad8)"
+        "pattern": "Net-(U13-Pad5)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(U12-Pad13)"
+        "pattern": "Net-(U13-Pad9)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(U9-Pad23)"
+        "pattern": "Net-(U14-Pad10)"
       },
       {
         "netclass": "Default",
-        "pattern": "Net-(U9-Pad26)"
+        "pattern": "Net-(U14-Pad13)"
       },
       {
-        "netclass": "PWR_GND",
-        "pattern": "+3V3"
+        "netclass": "Default",
+        "pattern": "Net-(U15-Pad1)"
       },
       {
-        "netclass": "PWR_GND",
+        "netclass": "Default",
+        "pattern": "Net-(U20-Pad5)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U20-Pad9)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U21-Pad10)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U21-Pad13)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U27-Pad5)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U27-Pad9)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U28-Pad10)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U28-Pad13)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U34-Pad12)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U36-Pad11)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U37-Pad11)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U38-Pad11)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U39-Pad11)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U40-Pad6)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U6-Pad5)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U6-Pad9)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U9-Pad2)"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "Net-(U9-Pad3)"
+      },
+      {
+        "netclass": "power",
         "pattern": "+5V"
       },
       {
-        "netclass": "PWR_GND",
-        "pattern": "-5V"
+        "netclass": "power",
+        "pattern": "/+15v"
       },
       {
-        "netclass": "PWR_GND",
+        "netclass": "power",
         "pattern": "GND"
       }
     ]
@@ -2033,7 +1869,7 @@
     "last_paths": {
       "gencad": "",
       "idf": "",
-      "netlist": "NovaFPGA.net",
+      "netlist": "NovaMem.net",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""
@@ -2046,7 +1882,7 @@
       "dashed_lines_dash_length_ratio": 12.0,
       "dashed_lines_gap_length_ratio": 3.0,
       "default_line_thickness": 6.0,
-      "default_text_size": 161.0,
+      "default_text_size": 50.0,
       "field_names": [],
       "intersheets_ref_own_page": false,
       "intersheets_ref_prefix": "",
@@ -2077,8 +1913,12 @@
   },
   "sheets": [
     [
-      "1104fd98-22dd-4c7d-8adb-41fd2dcc3983",
+      "28841cc8-873e-459e-b605-cedf187751a5",
       ""
+    ],
+    [
+      "00000000-0000-0000-0000-0000623464a9",
+      "PowerGround"
     ]
   ],
   "text_variables": {}

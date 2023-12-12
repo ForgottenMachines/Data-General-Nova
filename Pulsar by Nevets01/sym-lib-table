@@ -1,3 +1,5 @@
 (sym_lib_table
-  (lib (name _local)(type Legacy)(uri C:/Users/PootisMan/Documents/DataGeneralInfo/NovaMem/NovaMem/_local.lib)(options "")(descr ""))
+  (version 7)
+  (lib (name "_local")(type "Legacy")(uri "C:/Users/PootisMan/Documents/DataGeneralInfo/NovaMem/NovaMem/_local.lib")(options "")(descr ""))
+  (lib (name "NovaFPGA-rescue")(type "KiCad")(uri "${KIPRJMOD}/NovaFPGA-rescue.kicad_sym")(options "")(descr ""))
 )
