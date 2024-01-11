@@ -417,7 +417,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "DG_NOVA_MEGA.kicad_pro",
+    "filename": "DG_Nova_Front_Panel_Tester.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -868,7 +868,7 @@
     },
     "net_format_name": "Pcbnew",
     "page_layout_descr_file": "Templates/SImpleSheet.kicad_wks",
-    "plot_directory": "Project outputs/",
+    "plot_directory": "D:/Data/MightyFrame/GitHub/Data-General-Nova/DG_Nova_Front_Panel_Tester_09_1",
     "spice_adjust_passive_values": false,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
