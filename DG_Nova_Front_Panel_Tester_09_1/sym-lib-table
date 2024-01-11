@@ -1,4 +1,0 @@
-(sym_lib_table
-  (lib (name arduino)(type Legacy)(uri ${KIPRJMOD}/Libs/arduino.lib)(options "")(descr ""))
-  (lib (name port_nova)(type Legacy)(uri ${KIPRJMOD}/Libs/port_nova.lib)(options "")(descr ""))
-)

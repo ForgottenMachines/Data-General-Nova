@@ -1,0 +1,43 @@
+digitalWrite(51, LOW); //EXEC light
+digitalWrite(50, LOW); //DEFER light
+digitalWrite(49, LOW); //FETCH light
+Mem15EndPin = 48; //Data Light 15 
+47
+46
+45
+44
+43
+42
+41
+40
+39
+38
+37
+36
+35
+34
+Mem0StartPin = 33; //Data Light 0
+digitalWrite(32, LOW);  //(32 is Carry)
+digitalWrite(31, LOW); //ION light
+digitalWrite(30, LOW); //RUN light
+digitalWrite(29, LOW); //Address 15 light
+digitalWrite(28, LOW); //Address 14 light
+27
+26
+25
+24
+23
+22
+21
+20
+19
+18
+17
+16
+15  // Address 1 light
+14  // Address 0 light?  There IS no Address 0!
+
+
+
+
+

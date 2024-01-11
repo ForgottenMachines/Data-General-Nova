@@ -1,4 +1,4 @@
-21498675148098617
+21507199949778625
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -53564,6 +53564,20 @@ Card_Edge_Entrex_Trapezoid Keyboard
 24
 24
 Forgotten Machines
+Connector_2x12_P3.96mm
+
+
+0
+24
+24
+Forgotten Machines
+Connector_2x26_P3.175mm_Even_Odd
+
+
+0
+52
+52
+Forgotten Machines
 DG NOVA Backplane Connector
 
 
@@ -53572,6 +53586,20 @@ DG NOVA Backplane Connector
 100
 Forgotten Machines
 DG NOVA Front Pannel Connector
+
+
+0
+52
+51
+Forgotten Machines
+DG NOVA Front Pannel Connector - Backside
+
+
+0
+52
+51
+Forgotten Machines
+DG Nova Front Panel Card Edge
 
 
 0
@@ -53689,6 +53717,13 @@ Wire Jumper 0.325in
 0
 2
 2
+Forgotten Machines
+XK-001_Volt-Amp_Meter
+
+
+0
+0
+0
 Fuse
 Fuse_0402_1005Metric
 Fuse SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator
