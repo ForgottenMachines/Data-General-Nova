@@ -1,4 +1,4 @@
-21507199953207189
+21507200683401670
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -53578,7 +53578,14 @@ Connector_2x26_P3.175mm_Even_Odd
 52
 52
 Forgotten Machines
-DG NOVA Backplane Connector
+DG NOVA Backplane Connector - Backside
+
+
+0
+100
+100
+Forgotten Machines
+DG NOVA Backplane Connector - Frontside
 
 
 0
@@ -53586,13 +53593,6 @@ DG NOVA Backplane Connector
 100
 Forgotten Machines
 DG NOVA Front Pannel Connector
-
-
-0
-52
-51
-Forgotten Machines
-DG NOVA Front Pannel Connector - Backside
 
 
 0
