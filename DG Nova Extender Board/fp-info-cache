@@ -1,4 +1,4 @@
-21507200683401670
+21495458015480402
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -53290,6 +53290,27 @@ One digit LED 7 segment SA39-11 SC39-11 SA39-12 SC39-12
 0
 10
 10
+FM-editable
+CAP non-polarized P25.00mm
+CP, Axial series, Axial, Horizontal, pin pitch=25mm, , length*diameter=18*6.5mm^2, Electrolytic Capacitor, , http://www.vishay.com/docs/28325/021asm.pdf
+CP Axial series Axial Horizontal pin pitch 25mm  length 18mm diameter 6.5mm Electrolytic Capacitor
+0
+2
+2
+FM-editable
+R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal
+Resistor, Axial_DIN0309 series, Axial, Horizontal, pin pitch=12.7mm, 0.5W = 1/2W, length*diameter=9*3.2mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf
+Resistor Axial_DIN0309 series Axial Horizontal pin pitch 12.7mm 0.5W = 1/2W length 9mm diameter 3.2mm
+0
+2
+2
+FM-editable
+Resistor P17.70mm
+Resistor, Axial_DIN0309 series, Axial, Horizontal, pin pitch=12.7mm, 0.5W = 1/2W, length*diameter=9*3.2mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf
+Resistor Axial_DIN0309 series Axial Horizontal pin pitch 12.7mm 0.5W = 1/2W length 9mm diameter 3.2mm
+0
+2
+2
 Ferrite_THT
 LairdTech_28C0236-0JW-10
 Ferrite, vertical, LairdTech 28C0236-0JW-10, https://assets.lairdtech.com/home/brandworld/files/28C0236-0JW-10.pdf, JW Miller core https://www.bourns.com/products/magnetic-products/j.w.-miller-through-hole-ferrite-beads-emi-filters
@@ -53501,13 +53522,6 @@ CAP Medium Polarized
 2
 2
 Forgotten Machines
-CAP non-polarized P25.00mm
-CP, Axial series, Axial, Horizontal, pin pitch=25mm, , length*diameter=18*6.5mm^2, Electrolytic Capacitor, , http://www.vishay.com/docs/28325/021asm.pdf
-CP Axial series Axial Horizontal pin pitch 25mm  length 18mm diameter 6.5mm Electrolytic Capacitor
-0
-2
-2
-Forgotten Machines
 Card Edge Socket 0.125in_3.175mm connector 30
 
 connector Hirose DF11 vertical
@@ -53563,55 +53577,6 @@ Card_Edge_Entrex_Trapezoid Keyboard
 0
 24
 24
-Forgotten Machines
-Connector_2x12_P3.96mm
-
-
-0
-24
-24
-Forgotten Machines
-Connector_2x26_P3.175mm_Even_Odd
-
-
-0
-52
-52
-Forgotten Machines
-DG NOVA Backplane Connector - Backside
-
-
-0
-100
-100
-Forgotten Machines
-DG NOVA Backplane Connector - Frontside
-
-
-0
-100
-100
-Forgotten Machines
-DG NOVA Front Pannel Connector
-
-
-0
-52
-51
-Forgotten Machines
-DG Nova Front Panel Card Edge
-
-
-0
-52
-52
-Forgotten Machines
-Data General Nova Card-Edge 81-100
-
-
-0
-20
-20
 Forgotten Machines
 Disc Capacitor Common Entrex Trapezoid
 
@@ -53676,13 +53641,6 @@ Through hole socket strip THT 2x12 2.54mm double row
 24
 24
 Forgotten Machines
-Resistor P17.70mm
-Resistor, Axial_DIN0309 series, Axial, Horizontal, pin pitch=12.7mm, 0.5W = 1/2W, length*diameter=9*3.2mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf
-Resistor Axial_DIN0309 series Axial Horizontal pin pitch 12.7mm 0.5W = 1/2W length 9mm diameter 3.2mm
-0
-2
-2
-Forgotten Machines
 Resistor P17.78mm
 Resistor, Axial_DIN0414 series, Axial, Horizontal, pin pitch=15.24mm, 2W, length*diameter=11.9*4.5mm^2, http://www.vishay.com/docs/20128/wkxwrx.pdf
 Resistor Axial_DIN0414 series Axial Horizontal pin pitch 15.24mm 2W length 11.9mm diameter 4.5mm
@@ -53717,13 +53675,6 @@ Wire Jumper 0.325in
 0
 2
 2
-Forgotten Machines
-XK-001_Volt-Amp_Meter
-
-
-0
-5
-5
 Fuse
 Fuse_0402_1005Metric
 Fuse SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator
