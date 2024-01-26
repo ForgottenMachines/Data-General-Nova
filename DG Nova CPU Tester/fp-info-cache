@@ -1,4 +1,4 @@
-21507200683401670
+21512317122888699
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -53571,6 +53571,13 @@ Connector_2x12_P3.96mm
 24
 24
 Forgotten Machines
+Connector_2x12_P4.2mmx5.5mm (ATX Plug)
+
+
+0
+24
+24
+Forgotten Machines
 Connector_2x26_P3.175mm_Even_Odd
 
 
@@ -53661,6 +53668,20 @@ Diode P600_R-6 series Axial Horizontal pin pitch 20mm  length 9.1mm diameter 9.1
 0
 2
 2
+Forgotten Machines
+IDC-Header_2x25_P2.54mm - Backside
+Through hole IDC box header, 2x25, 2.54mm pitch, DIN 41651 / IEC 60603-13, double rows, https://docs.google.com/spreadsheets/d/16SsEcesNF15N3Lb4niX7dcUr-NY5_MFPQhobNuNppn4/edit#gid=0
+Through hole vertical IDC box header THT 2x25 2.54mm double row
+0
+50
+50
+Forgotten Machines
+IDC-Header_2x25_P2.54mm_Vertical
+Through hole IDC box header, 2x25, 2.54mm pitch, DIN 41651 / IEC 60603-13, double rows, https://docs.google.com/spreadsheets/d/16SsEcesNF15N3Lb4niX7dcUr-NY5_MFPQhobNuNppn4/edit#gid=0
+Through hole vertical IDC box header THT 2x25 2.54mm double row
+0
+50
+50
 Forgotten Machines
 MATE-N-LOK_2x04_P4.96mm_Vertical
 Molex Mega-Fit Power Connectors, 76829-0108 (compatible alternatives: 172065-0208, 172065-0308), 4 Pins per row (http://www.molex.com/pdm_docs/sd/768290102_sd.pdf), generated with kicad-footprint-generator

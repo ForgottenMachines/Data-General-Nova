@@ -40,6 +40,7 @@
       9,
       10,
       11,
+      12,
       13,
       14,
       15,
@@ -66,11 +67,11 @@
       39,
       40
     ],
-    "visible_layers": "fffffff_7fffffff",
+    "visible_layers": "0001eff_80000001",
     "zone_display_mode": 0
   },
   "meta": {
-    "filename": "Backplane Socket Board.kicad_prl",
+    "filename": "s100_Bus Extender.kicad_prl",
     "version": 3
   },
   "project": {

@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 0)
+  (lib (name "s100_Bus-Extender-rescue")(type "Legacy")(uri "${KIPRJMOD}/s100_Bus Extender-rescue.lib")(options "")(descr ""))
+)
