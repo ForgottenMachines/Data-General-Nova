@@ -8,6 +8,9 @@ items.forEach(item => {
     });
     // Removing dragging class from item on dragend event
     item.addEventListener("dragend", () => item.classList.remove("dragging"));
+//    for (let i = 0; i < sortableList.length; i++) {
+//        console.log(sortableList[i]);
+//      };
 });
 
 const initSortableList = (e) => {
@@ -27,3 +30,13 @@ const initSortableList = (e) => {
 
 sortableList.addEventListener("dragover", initSortableList);
 sortableList.addEventListener("dragenter", e => e.preventDefault());
+
+
+function DoSomething() {
+    console.log("HIya")
+    console.log(sortableList.length)
+    for (let i = 0; i < sortableList.length; i++) {
+        console.log(sortableList[i]);
+    };
+};
+
