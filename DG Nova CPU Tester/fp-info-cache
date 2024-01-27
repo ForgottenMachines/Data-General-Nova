@@ -1,4 +1,4 @@
-21512317122888699
+21515729842700604
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -53487,6 +53487,13 @@ emi filter
 5
 5
 Forgotten Machines
+Arduino_Mega2560_Shield
+https://store.arduino.cc/arduino-mega-2560-rev3
+
+0
+92
+91
+Forgotten Machines
 CAP 21.75mm Polarized
 CP, Axial series, Axial, Horizontal, pin pitch=15mm, , length*diameter=10*4.5mm^2, Electrolytic Capacitor, , http://www.vishay.com/docs/28325/021asm.pdf
 CP Axial series Axial Horizontal pin pitch 15mm  length 10mm diameter 4.5mm Electrolytic Capacitor
@@ -53600,6 +53607,13 @@ DG NOVA Backplane Connector - Frontside
 100
 Forgotten Machines
 DG NOVA Front Pannel Connector
+
+
+0
+52
+51
+Forgotten Machines
+DG NOVA Front Pannel Connector - Backside
 
 
 0
