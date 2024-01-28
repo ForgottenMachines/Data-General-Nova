@@ -9743,7 +9743,7 @@
     (property "Value" "XK-001" (at 371.475 94.615 0)
       (effects (font (size 1.27 1.27)) (justify right))
     )
-    (property "Footprint" "Forgotten Machines:XK-001_Volt-Amp_Meter" (at 347.98 86.36 0)
+    (property "Footprint" "Forgotten Machines:XK-001_Volt-Amp_Meter - Backside" (at 347.98 86.36 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 363.22 92.71 90)
