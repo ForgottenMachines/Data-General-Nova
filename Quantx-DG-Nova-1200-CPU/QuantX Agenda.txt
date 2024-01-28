@@ -1,0 +1,6 @@
+QuantX Agenda:
+~{IO SKIP} vs IO SKIP
+
+Nova 1200 CPU Signals in vs out vs other
+
+
