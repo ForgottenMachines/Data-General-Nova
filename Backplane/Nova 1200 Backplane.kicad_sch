@@ -1396,16 +1396,6 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 331e1927-9353-43ca-bdc8-f7a813484fa4)
   )
-  (text "* Means original text was unclear\n? Also means original source was unclear\n\nThis for the nova 1200/800 cpu slot 1 only, see other pages for other slots."
-    (at 281.94 364.49 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 463d1c58-5281-4380-a9fa-98b40d122e81)
-  )
-  (text "Nixdorf 620 schematic book, Data general 1969 nova and 1200 technical manual were sources\n"
-    (at 281.94 367.03 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 47bfccec-3516-47dd-b309-d0bedc991677)
-  )
   (text "B" (at 280.67 276.86 0)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 58632e98-f0ca-48dd-b939-5de91fb7f897)
@@ -1429,10 +1419,6 @@
   (text "B" (at 275.59 120.65 0)
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 8c275f2a-46ae-4cc1-ad85-4194416c0d34)
-  )
-  (text "Drawn by Jake Utley" (at 281.94 369.57 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid a4da78a5-e380-4df5-89d2-a5c335cbddb6)
   )
   (text "RUN not inverted (~{RUN}) on \nBack Panel Nova 1200\nDrawing No. 000090"
     (at 176.53 16.51 90)
