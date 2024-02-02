@@ -1,3 +1,4 @@
 (sym_lib_table
-  (lib (name nova1200_fptest-rescue)(type Legacy)(uri ${KIPRJMOD}/nova1200_fptest-rescue.lib)(options "")(descr ""))
+  (version 7)
+  (lib (name "nova1200_fptest-rescue")(type "KiCad")(uri "${KIPRJMOD}/nova1200_fptest-rescue.kicad_sym")(options "")(descr ""))
 )
