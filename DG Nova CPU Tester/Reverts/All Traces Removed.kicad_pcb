@@ -30487,6 +30487,7 @@
   (segment locked (start 539.877 43.815) (end 542.925 43.815) (width 0.25) (layer "B.Cu") (net 6) (tstamp c15a05e8-6300-4895-ae26-9e393a439a9b))
   (segment locked (start 546.18 40.56) (end 562.356 40.56) (width 0.25) (layer "B.Cu") (net 6) (tstamp fabdf592-0961-444b-8ac4-1b517a6dff4c))
   (segment locked (start 566.783 42.436) (end 566.783 42.436001) (width 0.25) (layer "F.Cu") (net 7) (tstamp 15eddac1-fb46-4680-9036-b055b1f02b9c))
+  (segment (start 425.26 111.791514) (end 425.23 111.761514) (width 2) (layer "F.Cu") (net 7) (tstamp a8866d12-37db-461e-968c-0e22674fc93f))
   (segment locked (start 566.783 42.436001) (end 566.91 42.563001) (width 0.25) (layer "F.Cu") (net 7) (tstamp b09ec348-dbc8-4d35-81e4-bd5cbf90fe50))
   (segment locked (start 565.658 32.893) (end 566.783 34.018) (width 0.25) (layer "F.Cu") (net 7) (tstamp c336101e-60c9-4dc3-96c8-5500df0a9377))
   (segment locked (start 566.928 42.291) (end 566.783 42.436) (width 0.25) (layer "F.Cu") (net 7) (tstamp dcf0066d-2bb5-4426-bfa1-83c5adfb2767))

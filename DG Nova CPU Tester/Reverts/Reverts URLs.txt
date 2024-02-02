@@ -1,0 +1,4 @@
+https://github.com/ForgottenMachines/Data-General-Nova/commits/main/
+
+https://github.com/ForgottenMachines/Data-General-Nova/commits/7f71e91786acf99d0a1172d5a300323ea38bc7e7/DG%20Nova%20CPU%20Tester/DG%20Nova%20CPU%20Tester.kicad_pcb
+
