@@ -1,0 +1,4 @@
+${KICAD6_3DMODEL_DIR}/Display.3dshapes/HDSP-4832.wrl
+
+${KICAD6_3DMODEL_DIR}/Button_Switch_THT.3dshapes/SW_DIP_SPSTx06_Slide_9.78x17.42mm_W7.62mm_P2.54mm.step
+
