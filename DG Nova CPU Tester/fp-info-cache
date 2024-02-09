@@ -1,4 +1,4 @@
-22487106121462871
+22452960356159122
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -19189,14 +19189,14 @@ connector Molex Micro-Fit_3.0 vertical
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-0215_2x01_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-0215 (compatible alternatives: 43045-0216, 43045-0217), 1 Pins per row (http://www.molex.com/pdm_docs/sd/430450217_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 2
 2
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-0218_2x01-1MP_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-0218 (compatible alternatives: 43045-0219, 43045-0220), 1 Pins per row (http://www.molex.com/pdm_docs/sd/430450218_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 4
 3
@@ -19231,14 +19231,14 @@ connector Molex Micro-Fit_3.0 vertical
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-0415_2x02_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-0415 (compatible alternatives: 43045-0416, 43045-0417), 2 Pins per row (http://www.molex.com/pdm_docs/sd/430450217_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 4
 4
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-0418_2x02-1MP_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-0418 (compatible alternatives: 43045-0419, 43045-0420), 2 Pins per row (http://www.molex.com/pdm_docs/sd/430450218_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 6
 5
@@ -19273,14 +19273,14 @@ connector Molex Micro-Fit_3.0 vertical
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-0615_2x03_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-0615 (compatible alternatives: 43045-0616, 43045-0617), 3 Pins per row (http://www.molex.com/pdm_docs/sd/430450217_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 6
 6
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-0618_2x03-1MP_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-0618 (compatible alternatives: 43045-0619, 43045-0620), 3 Pins per row (http://www.molex.com/pdm_docs/sd/430450218_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 8
 7
@@ -19315,14 +19315,14 @@ connector Molex Micro-Fit_3.0 vertical
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-0815_2x04_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-0815 (compatible alternatives: 43045-0816, 43045-0817), 4 Pins per row (http://www.molex.com/pdm_docs/sd/430450217_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 8
 8
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-0818_2x04-1MP_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-0818 (compatible alternatives: 43045-0819, 43045-0820), 4 Pins per row (http://www.molex.com/pdm_docs/sd/430450218_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 10
 9
@@ -19357,14 +19357,14 @@ connector Molex Micro-Fit_3.0 vertical
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-1015_2x05_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-1015 (compatible alternatives: 43045-1016, 43045-1017), 5 Pins per row (http://www.molex.com/pdm_docs/sd/430450217_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 10
 10
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-1018_2x05-1MP_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-1018 (compatible alternatives: 43045-1019, 43045-1020), 5 Pins per row (http://www.molex.com/pdm_docs/sd/430450218_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 12
 11
@@ -19399,14 +19399,14 @@ connector Molex Micro-Fit_3.0 vertical
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-1215_2x06_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-1215 (compatible alternatives: 43045-1216, 43045-1217), 6 Pins per row (http://www.molex.com/pdm_docs/sd/430450217_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 12
 12
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-1218_2x06-1MP_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-1218 (compatible alternatives: 43045-1219, 43045-1220), 6 Pins per row (http://www.molex.com/pdm_docs/sd/430450218_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 14
 13
@@ -19441,14 +19441,14 @@ connector Molex Micro-Fit_3.0 vertical
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-1415_2x07_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-1415 (compatible alternatives: 43045-1416, 43045-1417), 7 Pins per row (http://www.molex.com/pdm_docs/sd/430450217_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 14
 14
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-1418_2x07-1MP_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-1418 (compatible alternatives: 43045-1419, 43045-1420), 7 Pins per row (http://www.molex.com/pdm_docs/sd/430450218_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 16
 15
@@ -19483,14 +19483,14 @@ connector Molex Micro-Fit_3.0 vertical
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-1615_2x08_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-1615 (compatible alternatives: 43045-1616, 43045-1617), 8 Pins per row (http://www.molex.com/pdm_docs/sd/430450217_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 16
 16
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-1618_2x08-1MP_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-1618 (compatible alternatives: 43045-1619, 43045-1620), 8 Pins per row (http://www.molex.com/pdm_docs/sd/430450218_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 18
 17
@@ -19525,14 +19525,14 @@ connector Molex Micro-Fit_3.0 vertical
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-1815_2x09_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-1815 (compatible alternatives: 43045-1816, 43045-1817), 9 Pins per row (http://www.molex.com/pdm_docs/sd/430450217_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 18
 18
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-1818_2x09-1MP_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-1818 (compatible alternatives: 43045-1819, 43045-1820), 9 Pins per row (http://www.molex.com/pdm_docs/sd/430450218_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 20
 19
@@ -19567,14 +19567,14 @@ connector Molex Micro-Fit_3.0 vertical
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-2015_2x10_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-2015 (compatible alternatives: 43045-2016, 43045-2017), 10 Pins per row (http://www.molex.com/pdm_docs/sd/430450217_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 20
 20
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-2018_2x10-1MP_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-2018 (compatible alternatives: 43045-2019, 43045-2020), 10 Pins per row (http://www.molex.com/pdm_docs/sd/430450218_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 22
 21
@@ -19609,14 +19609,14 @@ connector Molex Micro-Fit_3.0 vertical
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-2215_2x11_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-2215 (compatible alternatives: 43045-2216, 43045-2217), 11 Pins per row (http://www.molex.com/pdm_docs/sd/430450217_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 22
 22
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-2218_2x11-1MP_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-2218 (compatible alternatives: 43045-2219, 43045-2220), 11 Pins per row (http://www.molex.com/pdm_docs/sd/430450218_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 24
 23
@@ -19651,14 +19651,14 @@ connector Molex Micro-Fit_3.0 vertical
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-2415_2x12_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-2415 (compatible alternatives: 43045-2416, 43045-2417), 12 Pins per row (http://www.molex.com/pdm_docs/sd/430450217_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 24
 24
 Connector_Molex
 Molex_Micro-Fit_3.0_43045-2418_2x12-1MP_P3.00mm_Vertical
 Molex Micro-Fit 3.0 Connector System, 43045-2418 (compatible alternatives: 43045-2419, 43045-2420), 12 Pins per row (http://www.molex.com/pdm_docs/sd/430450218_sd.pdf), generated with kicad-footprint-generator
-connector Molex Micro-Fit_3.0 vertical
+connector Molex Micro-Fit_3.0 side entry
 0
 26
 25
@@ -50407,6 +50407,20 @@ DCDC-Converter TRACO TBA1E THT SIP-7 1W
 4
 4
 Converter_DCDC
+Converter_DCDC_TRACO_TBA1E-xxxx_Dual_THT
+DCDC-Converter, TRACO, TBA1-xxxxE, Dual, 1W, Rev. October 9. 2023 (Script generated with StandardBox.py) (https://www.tracopower.com/products/tba1e.pdf)
+DCDC-Converter TRACO TBA1E THT SIP-7 1W
+0
+5
+5
+Converter_DCDC
+Converter_DCDC_TRACO_TBA1E-xxxx_Single_THT
+DCDC-Converter, TRACO, TBA1-xxxxE, Single, 1W, Rev. October 9. 2023 (Script generated with StandardBox.py) (https://www.tracopower.com/products/tba1e.pdf)
+DCDC-Converter TRACO TBA1E THT SIP-7 1W
+0
+4
+4
+Converter_DCDC
 Converter_DCDC_TRACO_TBA2-xxxx_Dual_THT
 DCDC-Converter, TRACO, TBA2-xxxx, Dual, 2W, Rev. October 18. 2023 (Script generated with StandardBox.py) (https://www.tracopower.com/products/tba2.pdf)
 DCDC-Converter TRACO TBA2 THT SIP-7 2W
@@ -50459,6 +50473,20 @@ Converter_DCDC
 Converter_DCDC_TRACO_TEA1-xxxx_THT
 DCDC-Converter, TRACO, TEA1-xxxx, 1W, Rev. October 19. 2023 (Script generated with StandardBox.py) (https://www.tracopower.com/products/tea1.pdf)
 DCDC-Converter TRACO TEA1 THT SIP-4 1W
+0
+4
+4
+Converter_DCDC
+Converter_DCDC_TRACO_TEA1E-xxxx_THT
+DCDC-Converter, TRACO, TEA1E-xxxx, 1W, Rev. September 7. 2023 (Script generated with StandardBox.py) (https://www.tracopower.com/products/tea1e.pdf)
+DCDC-Converter TRACO TEA1E THT SIP-7 1W
+0
+4
+4
+Converter_DCDC
+Converter_DCDC_TRACO_TEA1HI-xxxx_THT
+DCDC-Converter, TRACO, TEA1HI-xxxx, 1W, Rev. September 21. 2023 (Script generated with StandardBox.py) (https://www.tracopower.com/products/tea1hi.pdf)
+DCDC-Converter TRACO TEA1HI THT SIP-7 1W
 0
 4
 4
@@ -50534,29 +50562,29 @@ DCDC-Converter TRACO THN30 Generic
 6
 Converter_DCDC
 Converter_DCDC_TRACO_TMA-05xxD_12xxD_Dual_THT
-DCDC-Converter, TRACO, TMA-05xxD, TMA-12xxD, Dual, 1W, Rev. November 10. 2023 (Script generated with StandardBox.py) (https://www.tracopower.com/products/tma.pdf)
-DCDC-Converter TRACO TMA THT SIP-7 1W
+DCDC-Converter, TRACO, TMA-05xxD, TMA-12xxD, Dual outputs, Rev. August 29. 2023, https://www.tracopower.com/products/tma.pdf
+DCDC-Converter TRACO TMA-05xxD TMA-12xxD Dual THT
 0
 5
 5
 Converter_DCDC
 Converter_DCDC_TRACO_TMA-05xxS_12xxS_Single_THT
-DCDC-Converter, TRACO, TMA-05xxS, TMA-12xxS, Single, 1W, Rev. November 10. 2023 (Script generated with StandardBox.py) (https://www.tracopower.com/products/tma.pdf)
-DCDC-Converter TRACO TMA THT SIP-7 1W
+DCDC-Converter, TRACO, TMA-05xxS, TMA-12xxS Single output, Rev. August 29. 2023, https://www.tracopower.com/products/tma.pdf
+DCDC-Converter TRACO TMA-05xxS TMA-12xxS Single THT
 0
 4
 4
 Converter_DCDC
 Converter_DCDC_TRACO_TMA-15xxD_24xxD_Dual_THT
-DCDC-Converter, TRACO, TMA-15xxD, TMA-25xxD, Dual, 1W, Rev. November 10. 2023 (Script generated with StandardBox.py) (https://www.tracopower.com/products/tma.pdf)
-DCDC-Converter TRACO TMA THT SIP-7 1W
+DCDC-Converter, TRACO, TMA-15xxD, TMA-24xxD, Dual outputs, Rev. August 29. 2023, https://www.tracopower.com/products/tma.pdf
+DCDC-Converter TRACO TMA-15xxD TMA-24xxD Dual THT
 0
 5
 5
 Converter_DCDC
 Converter_DCDC_TRACO_TMA-15xxS_24xxS_Single_THT
-DCDC-Converter, TRACO, TMA-15xxS, TMA-24xxS, Single, 1W, Rev. November 10. 2023 (Script generated with StandardBox.py) (https://www.tracopower.com/products/tma.pdf)
-DCDC-Converter TRACO TMA THT SIP-7 1W
+DCDC-Converter, TRACO, TMA-15xxS, TMA-24xxS, Single output, Rev. August 29. 2023, https://www.tracopower.com/products/tma.pdf
+DCDC-Converter TRACO TMA-15xxS TMA-24xxS Single THT
 0
 4
 4
@@ -54348,6 +54376,13 @@ Data General Nova Card-Edge 81-100
 20
 20
 Forgotten Machines
+Diode for Entrex-AMLDC Board
+Diode, DO-41_SOD81 series, Axial, Horizontal, pin pitch=12.7mm, , length*diameter=5.2*2.7mm^2, , http://www.diodes.com/_files/packages/DO-41%20(Plastic).pdf
+Diode DO-41_SOD81 series Axial Horizontal pin pitch 12.7mm  length 5.2mm diameter 2.7mm
+0
+2
+2
+Forgotten Machines
 Disc Capacitor Common Entrex Trapezoid
 
 
@@ -54530,6 +54565,13 @@ Through hole pin header THT 2x20 2.54mm double row
 86
 43
 Forgotten Machines
+RPi_Pico_SMD_TH - Backside Silkscreen Frontside Mount
+Through hole straight pin header, 2x20, 2.54mm pitch, double rows
+Through hole pin header THT 2x20 2.54mm double row
+0
+86
+43
+Forgotten Machines
 Resistor P17.70mm
 Resistor, Axial_DIN0309 series, Axial, Horizontal, pin pitch=12.7mm, 0.5W = 1/2W, length*diameter=9*3.2mm^2, http://cdn-reichelt.de/documents/datenblatt/B400/1_4W%23YAG.pdf
 Resistor Axial_DIN0309 series Axial Horizontal pin pitch 12.7mm 0.5W = 1/2W length 9mm diameter 3.2mm
@@ -54540,6 +54582,13 @@ Forgotten Machines
 Resistor P17.78mm
 Resistor, Axial_DIN0414 series, Axial, Horizontal, pin pitch=15.24mm, 2W, length*diameter=11.9*4.5mm^2, http://www.vishay.com/docs/20128/wkxwrx.pdf
 Resistor Axial_DIN0414 series Axial Horizontal pin pitch 15.24mm 2W length 11.9mm diameter 4.5mm
+0
+2
+2
+Forgotten Machines
+Resistor for Entrex-AMLDC Board
+Resistor, Axial_DIN0411 series, Axial, Horizontal, pin pitch=12.7mm, 1W, length*diameter=9.9*3.6mm^2
+Resistor Axial_DIN0411 series Axial Horizontal pin pitch 12.7mm 1W length 9.9mm diameter 3.6mm
 0
 2
 2
@@ -54599,6 +54648,20 @@ XK-001_Volt-Amp_Meter - Backside
 0
 5
 5
+Forgotten Machines
+portA_NovaMod
+
+
+0
+100
+100
+Forgotten Machines
+portB_NovaMod
+
+
+0
+100
+100
 Fuse
 FuseHolder_Blade_ATO_Littelfuse_FLR_178.6165
 Littelfuse fuse holder for ATO/FKS blade fuses, 80V, vertical, 20 x 6mm, PCB thickness up to 1.5mm, http://www.littelfuse.com/~/media/commercial-vehicle/datasheets/automotive-fuse-holders/ato/littelfuse-fuse-holder-ato-flr-pcb-datasheet.pdf
@@ -72254,6 +72317,20 @@ WQFN NoLead
 24
 15
 Package_DFN_QFN
+WQFN-16-1EP_3x3mm_P0.5mm_EP0.8x1.2mm
+WQFN, 16 Pin (https://www.ti.com/lit/ds/symlink/tps43060.pdf#page=40), generated with kicad-footprint-generator ipc_noLead_generator.py
+WQFN NoLead
+0
+21
+17
+Package_DFN_QFN
+WQFN-16-1EP_3x3mm_P0.5mm_EP0.8x1.2mm_ThermalVias
+WQFN, 16 Pin (https://www.ti.com/lit/ds/symlink/tps43060.pdf#page=40), generated with kicad-footprint-generator ipc_noLead_generator.py
+WQFN NoLead
+0
+23
+17
+Package_DFN_QFN
 WQFN-16-1EP_3x3mm_P0.5mm_EP1.6x1.6mm
 WQFN, 16 Pin (https://www.ti.com/lit/ds/symlink/tpa6132a2.pdf#page=24), generated with kicad-footprint-generator ipc_noLead_generator.py
 WQFN NoLead
@@ -83847,8 +83924,8 @@ relay socket
 14
 Relay_THT
 Relay_Socket_DPDT_Finder_96.12
-DPDT relay socket, 15A max 10A per contact, 2kV AC Isolation, https://gfinder.findernet.com/public/attachments/56/DE/S56DE.pdf
-finder relay socket 96.12 56.32
+https://gfinder.findernet.com/public/attachments/56/DE/S56DE.pdf
+Relay socket DPDT Finder 96.12 56.32
 0
 8
 8
