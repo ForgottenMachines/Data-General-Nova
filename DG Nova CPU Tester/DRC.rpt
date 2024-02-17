@@ -1,936 +1,529 @@
-** Drc report for D:\Data\MightyFrame\GitHub\Data-General-Nova\DG Nova CPU Tester\DG Nova CPU Tester.kicad_pcb **
-** Created on 2024-02-04 01:53:58 **
+** Drc report for D:/Data/MightyFrame/GitHub/Data-General-Nova/DG Nova CPU Tester/DG Nova CPU Tester.kicad_pcb **
+** Created on 2024-02-16 09:44:16 **
 
-** Found 122 DRC violations **
-[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
-    @(115.5150 mm, 136.4700 mm): Track [~{SKIP}] on F.Cu, length 38.3710 mm
-    @(115.1890 mm, 58.5470 mm): PTH pad GND2 [GND] of XA1
-[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1454 mm)
-    Rule: ; Severity: error
-    @(121.3400 mm, 102.3620 mm): Track [~{DATA15}] on F.Cu, length 50.0381 mm
-    @(120.2690 mm, 58.5470 mm): PTH pad 3V3 [unconnected-(XA1-3.3V-Pad3V3)] of XA1
-[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1914 mm)
-    Rule: ; Severity: error
-    @(122.9730 mm, 122.3380 mm): Track [~{MEM13}] on F.Cu, length 46.9900 mm
-    @(121.7930 mm, 106.8070 mm): PTH pad D11 [Net-(J23-Pin_4)] of XA1
-[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1647 mm)
-    Rule: ; Severity: error
-    @(141.1150 mm, 37.3200 mm): Track [~{MEM7}] on F.Cu, length 43.4526 mm
-    @(142.2400 mm, 43.8150 mm): PTH pad 8 [Net-(RN5-R8)] of BAR5
-[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.0994 mm)
-    Rule: ; Severity: error
-    @(118.1650 mm, 142.2150 mm): Track [~{MEM3}] on F.Cu, length 61.0070 mm
-    @(119.2530 mm, 106.8070 mm): PTH pad D10 [Net-(J23-Pin_3)] of XA1
+** Found 127 DRC violations **
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1990 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(328.8210 mm, 81.8060 mm): Track [~{DCHA}] on F.Cu, length 19.6490 mm
+    @(321.9450 mm, 108.9660 mm): Track [~{RQENB}] on F.Cu, length 13.2908 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1990 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(328.8210 mm, 101.4550 mm): Track [~{DCHA}] on F.Cu, length 12.3404 mm
+    @(321.9450 mm, 108.9660 mm): Track [~{RQENB}] on F.Cu, length 13.2908 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1990 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(321.9450 mm, 122.6350 mm): Track [~{RQENB}] on F.Cu, length 13.6690 mm
+    @(328.8210 mm, 101.4550 mm): Track [~{DCHA}] on F.Cu, length 12.3404 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1990 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(216.2810 mm, 76.5810 mm): Track [~{DATA9}] on B.Cu, length 3.0533 mm
+    @(215.7730 mm, 76.4540 mm): Track [~{DATA13}] on B.Cu, length 3.7901 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1990 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(216.2810 mm, 80.0100 mm): Track [~{DATA9}] on B.Cu, length 3.4290 mm
+    @(215.7730 mm, 76.4540 mm): Track [~{DATA13}] on B.Cu, length 3.7901 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.2000 mm; actual 0.1990 mm)
+    Rule: netclass 'Default'; Severity: error
+    @(218.4400 mm, 74.4220 mm): Track [~{DATA9}] on B.Cu, length 0.2540 mm
+    @(215.7730 mm, 76.4540 mm): Track [~{DATA13}] on B.Cu, length 3.7901 mm
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(30.4800 mm, 46.9900 mm): Footprint RN1
     @(76.2000 mm, 46.9900 mm): Footprint RN2
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
+    @(375.9200 mm, 55.4990 mm): Footprint JP2
+    @(375.9200 mm, 55.4990 mm): Footprint JP2
+[courtyards_overlap]: Courtyards overlap
+    Rule: board setup constraints courtyard; Severity: error
     @(200.6600 mm, 46.9900 mm): Footprint RN8
     @(243.8400 mm, 46.9900 mm): Footprint RN9
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(391.2870 mm, 32.6390 mm): Footprint R13
     @(375.9200 mm, 32.6390 mm): Footprint J17
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
+    @(378.5870 mm, 62.4840 mm): Footprint JP3
+    @(378.5870 mm, 62.4840 mm): Footprint JP3
+[courtyards_overlap]: Courtyards overlap
+    Rule: board setup constraints courtyard; Severity: error
     @(185.4200 mm, 27.3050 mm): Footprint D9
     @(172.7200 mm, 32.7660 mm): Footprint J18
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(302.2600 mm, 27.3050 mm): Footprint D19
     @(299.7200 mm, 27.3050 mm): Footprint D18
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(302.2600 mm, 27.3050 mm): Footprint D19
     @(304.8000 mm, 27.3050 mm): Footprint D20
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(302.2600 mm, 27.3050 mm): Footprint D19
     @(271.7800 mm, 32.7660 mm): Footprint J10
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(81.2800 mm, 43.8150 mm): Footprint BAR3
     @(106.6800 mm, 43.7075 mm): Footprint BAR4
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(325.1200 mm, 27.3050 mm): Footprint D25
     @(317.5000 mm, 32.7660 mm): Footprint J13
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(294.6400 mm, 27.3050 mm): Footprint D21
     @(292.1000 mm, 27.3050 mm): Footprint D17
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(294.6400 mm, 27.3050 mm): Footprint D21
     @(271.7800 mm, 32.7660 mm): Footprint J10
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(294.6400 mm, 27.3050 mm): Footprint D21
     @(297.1800 mm, 27.3050 mm): Footprint D22
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(332.7400 mm, 27.3050 mm): Footprint D26
     @(332.7400 mm, 32.6390 mm): Footprint J14
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(327.6600 mm, 37.4650 mm): Footprint R11
     @(317.5000 mm, 43.8150 mm): Footprint BAR13
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(327.6600 mm, 37.4650 mm): Footprint R11
     @(317.5000 mm, 32.7660 mm): Footprint J13
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(347.9800 mm, 32.6390 mm): Footprint J11
     @(373.3800 mm, 37.4650 mm): Footprint R15
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(287.0200 mm, 27.3050 mm): Footprint D12
     @(271.7800 mm, 32.7660 mm): Footprint J10
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(287.0200 mm, 27.3050 mm): Footprint D12
     @(289.5600 mm, 27.3050 mm): Footprint D16
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(76.2000 mm, 46.9900 mm): Footprint RN2
     @(78.7400 mm, 46.9900 mm): Footprint RN3
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(309.8800 mm, 43.8150 mm): Footprint BAR12
     @(304.8000 mm, 46.3550 mm): Footprint R10
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(78.7400 mm, 46.9900 mm): Footprint RN3
     @(121.9200 mm, 46.9900 mm): Footprint RN4
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(314.9600 mm, 46.9900 mm): Footprint RN13
     @(312.4200 mm, 51.4350 mm): Footprint R9
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(33.0200 mm, 32.7660 mm): Footprint J9
     @(71.1200 mm, 27.3050 mm): Footprint D7
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(124.4600 mm, 43.8150 mm): Footprint BAR5
     @(149.8600 mm, 43.8150 mm): Footprint BAR6
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(332.7400 mm, 43.8150 mm): Footprint BAR14
     @(342.9000 mm, 37.4650 mm): Footprint R14
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(332.7400 mm, 43.8150 mm): Footprint BAR14
     @(330.2000 mm, 37.4650 mm): Footprint R12
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(299.7200 mm, 27.3050 mm): Footprint D18
     @(271.7800 mm, 32.7660 mm): Footprint J10
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(299.7200 mm, 27.3050 mm): Footprint D18
     @(297.1800 mm, 27.3050 mm): Footprint D22
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(121.9200 mm, 46.9900 mm): Footprint RN5
     @(165.1000 mm, 46.9900 mm): Footprint RN6
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(121.9200 mm, 46.9900 mm): Footprint RN5
     @(121.9200 mm, 46.9900 mm): Footprint RN4
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(261.6200 mm, 27.3050 mm): Footprint D14
     @(264.1600 mm, 27.3050 mm): Footprint D15
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(261.6200 mm, 27.3050 mm): Footprint D14
     @(259.0800 mm, 27.3050 mm): Footprint D13
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(261.6200 mm, 27.3050 mm): Footprint D14
     @(246.3800 mm, 32.7660 mm): Footprint J12
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(58.4200 mm, 43.8150 mm): Footprint BAR2
     @(33.0200 mm, 43.8150 mm): Footprint BAR1
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(264.1600 mm, 27.3050 mm): Footprint D15
     @(246.3800 mm, 32.7660 mm): Footprint J12
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(307.3400 mm, 27.3050 mm): Footprint D23
     @(304.8000 mm, 27.3050 mm): Footprint D20
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(307.3400 mm, 27.3050 mm): Footprint D23
     @(271.7800 mm, 32.7660 mm): Footprint J10
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(172.7200 mm, 32.7660 mm): Footprint J18
     @(190.5000 mm, 27.3050 mm): Footprint D10
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(172.7200 mm, 32.7660 mm): Footprint J18
     @(193.0400 mm, 27.3050 mm): Footprint D11
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(167.6400 mm, 27.3050 mm): Footprint D8
     @(124.4600 mm, 32.7660 mm): Footprint J7
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(190.5000 mm, 27.3050 mm): Footprint D10
     @(193.0400 mm, 27.3050 mm): Footprint D11
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(337.8200 mm, 27.3050 mm): Footprint D24
     @(332.7400 mm, 32.6390 mm): Footprint J14
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(342.9000 mm, 37.4650 mm): Footprint R14
     @(332.7400 mm, 32.6390 mm): Footprint J14
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(243.8400 mm, 46.9900 mm): Footprint RN9
     @(243.8400 mm, 46.9900 mm): Footprint RN10
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(228.6000 mm, 43.8150 mm): Footprint BAR9
     @(203.2000 mm, 43.8150 mm): Footprint BAR8
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(292.1000 mm, 27.3050 mm): Footprint D17
     @(271.7800 mm, 32.7660 mm): Footprint J10
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(292.1000 mm, 27.3050 mm): Footprint D17
     @(289.5600 mm, 27.3050 mm): Footprint D16
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(304.8000 mm, 27.3050 mm): Footprint D20
     @(271.7800 mm, 32.7660 mm): Footprint J10
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(259.0800 mm, 27.3050 mm): Footprint D13
     @(246.3800 mm, 32.7660 mm): Footprint J12
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(373.3800 mm, 37.4650 mm): Footprint R15
     @(375.9200 mm, 43.8150 mm): Footprint BAR16
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(373.3800 mm, 37.4650 mm): Footprint R15
     @(347.9800 mm, 43.8150 mm): Footprint BAR15
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(373.3800 mm, 37.4650 mm): Footprint R15
     @(375.9200 mm, 32.6390 mm): Footprint J17
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(381.0000 mm, 27.3050 mm): Footprint D27
     @(375.9200 mm, 32.6390 mm): Footprint J17
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(271.7800 mm, 32.7660 mm): Footprint J10
     @(289.5600 mm, 27.3050 mm): Footprint D16
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(271.7800 mm, 32.7660 mm): Footprint J10
     @(297.1800 mm, 27.3050 mm): Footprint D22
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(375.9200 mm, 32.6390 mm): Footprint J17
     @(375.9200 mm, 27.3050 mm): Footprint D28
 [courtyards_overlap]: Courtyards overlap
-    Rule: ; Severity: error
+    Rule: board setup constraints courtyard; Severity: error
     @(330.2000 mm, 37.4650 mm): Footprint R12
     @(332.7400 mm, 32.6390 mm): Footprint J14
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0740 mm)
+    Rule: board setup constraints edge; Severity: error
+    @(28.4490 mm, 151.7660 mm): Line on Edge.Cuts
+    @(430.6570 mm, 149.7330 mm): Track [+5V] on B.Cu, length 1.7791 mm
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0740 mm)
+    Rule: board setup constraints edge; Severity: error
+    @(28.4490 mm, 151.7660 mm): Line on Edge.Cuts
+    @(429.3990 mm, 150.9910 mm): Track [+5V] on B.Cu, length 385.5960 mm
+[copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.075 mm; actual 0.074963 mm)
+    Rule: board setup constraints edge; Severity: error
+    @(28.4490 mm, 151.7660 mm): Line on Edge.Cuts
+    @(43.8030 mm, 150.9910 mm): Track [+5V] on B.Cu, length 0.1626 mm
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 51.4350 mm): Pad 1 [GND] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 54.6100 mm): Pad 2 [~{MEM15}] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 57.7850 mm): Pad 3 [~{MEM14}] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 60.9600 mm): Pad 4 [~{MBO13}] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 64.1350 mm): Pad 5 [~{MEM12}] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 67.3100 mm): Pad 6 [~{MBO11}] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 70.4850 mm): Pad 7 [~{MEM9}] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 73.6600 mm): Pad 8 [~{MBO9}] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 76.8350 mm): Pad 9 [~{MBO7}] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 80.0100 mm): Pad 10 [~{MEM6}] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 83.1850 mm): Pad 11 [~{MBO5}] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 86.3600 mm): Pad 12 [~{MBO14}] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 89.3850 mm): Pad 13 [~{MEM2}] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0150 mm)
-    Rule: ; Severity: error
-    @(15.8100 mm, 92.1200 mm): Line on Edge.Cuts
+    Rule: board setup constraints edge; Severity: error
+    @(30.8100 mm, 92.1200 mm): Line on Edge.Cuts
     @(19.9600 mm, 92.8600 mm): Pad 14 [~{MBO1}] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 95.8850 mm): Pad 15 [~{MBO2}] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 99.0600 mm): Pad 16 [~{MBO4}] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 102.2350 mm): Pad 17 [unconnected-(J5-Pin_17-Pad17)] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 105.4100 mm): Pad 18 [~{MBO8}] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 108.5850 mm): Pad 19 [RESTART ENABLE] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 111.7600 mm): Pad 20 [~{RST}] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 114.9350 mm): Pad 21 [~{CON RQ}] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 118.1100 mm): Pad 22 [~{CON INST}] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 121.2850 mm): Pad 23 [~{PL}] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 124.4600 mm): Pad 24 [~{ISTP}] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 127.6350 mm): Pad 25 [~{ION}] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 130.8100 mm): Pad 26 [~{RUN}] of J5 on B.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 51.4350 mm): Pad 27 [+5V] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 54.6100 mm): Pad 28 [~{MBO15}] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 57.7850 mm): Pad 29 [~{MEM13}] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 60.9600 mm): Pad 30 [~{MBO12}] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 64.1350 mm): Pad 31 [~{MEM11}] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 67.3100 mm): Pad 32 [~{MEM10}] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 70.4850 mm): Pad 33 [+12V Lamp] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 73.6600 mm): Pad 34 [~{MEM8}] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 76.8350 mm): Pad 35 [~{MBO6}] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 80.0100 mm): Pad 36 [~{MEM5}] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 83.1850 mm): Pad 37 [~{MEM4}] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 86.3600 mm): Pad 38 [~{MBO3}] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 49.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 89.3850 mm): Pad 39 [~{MEM0}] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0150 mm)
-    Rule: ; Severity: error
-    @(15.8100 mm, 92.1200 mm): Line on Edge.Cuts
+    Rule: board setup constraints edge; Severity: error
+    @(30.8100 mm, 92.1200 mm): Line on Edge.Cuts
     @(19.9600 mm, 92.8600 mm): Pad 40 [GND] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 95.8850 mm): Pad 41 [~{MEM1}] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 99.0600 mm): Pad 42 [~{MEM7}] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 102.2350 mm): Pad 43 [~{MEM3}] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 105.4100 mm): Pad 44 [~{MBO10}] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 108.5850 mm): Pad 45 [~{STOP}] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 111.7600 mm): Pad 46 [~{CON DATA}] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 114.9350 mm): Pad 47 [~{CONT+ISTP+MSTP}] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 118.1100 mm): Pad 48 [~{MSTP}] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 121.2850 mm): Pad 49 [~{CARRY}] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 124.4600 mm): Pad 50 [~{FETCH}] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 127.6350 mm): Pad 51 [~{EXEC}] of J5 on F.Cu
 [copper_edge_clearance]: Board edge clearance violation (board setup constraints edge clearance 0.0750 mm; actual 0.0000 mm)
-    Rule: ; Severity: error
+    Rule: board setup constraints edge; Severity: error
     @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
     @(19.9600 mm, 130.8100 mm): Pad 52 [~{DEFER}] of J5 on F.Cu
-[invalid_outline]: Board has malformed outline (not a closed shape)
+[starved_thermal]: Thermal relief connection to zone incomplete (zone min spoke count 2; actual 1)
     Local override; Severity: error
-    @(27.8100 mm, 35.2900 mm): Line on Edge.Cuts
-[invalid_outline]: Board has malformed outline (not a closed shape)
+    @(404.6220 mm, 45.0850 mm): Zone [GND After Meter] on F.Cu
+    @(422.5100 mm, 72.8100 mm): PTH pad 3 [GND After Meter] of J4
+[starved_thermal]: Thermal relief connection to zone incomplete (zone min spoke count 2; actual 1)
     Local override; Severity: error
-    @(28.4490 mm, 151.7660 mm): Line on Edge.Cuts
-[invalid_outline]: Board has malformed outline (not a closed shape)
-    Local override; Severity: error
-    @(28.8100 mm, 147.1200 mm): Arc on Edge.Cuts
-[invalid_outline]: Board has malformed outline (self-intersecting)
-    Local override; Severity: error
-    @(15.8100 mm, 92.1200 mm): Line on Edge.Cuts
-    @(15.8100 mm, 132.6200 mm): Line on Edge.Cuts
-[invalid_outline]: Board has malformed outline (not a closed shape)
-    Local override; Severity: error
-    @(28.8100 mm, 35.1200 mm): Arc on Edge.Cuts
-[invalid_outline]: Board has malformed outline (self-intersecting)
-    Local override; Severity: error
-    @(442.5950 mm, 151.7650 mm): Line on Edge.Cuts
-    @(442.5950 mm, 20.3200 mm): Line on Edge.Cuts
-[invalid_outline]: Board has malformed outline (not a closed shape)
-    Local override; Severity: error
-    @(27.8130 mm, 147.0406 mm): Line on Edge.Cuts
-[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
-    Rule: board setup solder mask min width; Severity: error
-    @(115.5150 mm, 136.4700 mm): Track [~{SKIP}] on F.Cu, length 38.3710 mm
-    @(115.1890 mm, 58.5470 mm): PTH pad GND2 [GND] of XA1
-
-** Found 135 unconnected pads **
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(115.1890 mm, 58.5470 mm): PTH pad GND2 [GND] of XA1
-    @(112.6490 mm, 58.5470 mm): PTH pad GND3 [GND] of XA1
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(330.2000 mm, 37.4650 mm): PTH pad 1 [GND] of R12
-    @(327.6600 mm, 37.4650 mm): PTH pad 1 [GND] of R11
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(59.3090 mm, 63.6270 mm): PTH pad GND6 [GND] of XA1
-    @(61.8490 mm, 63.6270 mm): PTH pad GND5 [GND] of XA1
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(401.9450 mm, 54.6100 mm): PTH pad 2 [GND] of JP1
-    @(401.9450 mm, 58.4200 mm): PTH pad 2 [GND] of JP4
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(69.2150 mm, 144.0650 mm): PTH pad 100 [GND] of J3
-    @(69.2150 mm, 137.7950 mm): PTH pad 99 [GND] of J3
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(69.2150 mm, 122.5550 mm): PTH pad 1 [GND] of J15
-    @(69.2150 mm, 128.8250 mm): PTH pad 2 [GND] of J15
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(414.0200 mm, 144.0750 mm): PTH pad 2 [GND] of J2
-    @(414.0200 mm, 137.8050 mm): PTH pad 1 [GND] of J2
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(120.0150 mm, 128.8250 mm): PTH pad 34 [GND] of J15
-    @(120.0150 mm, 122.5550 mm): PTH pad 33 [GND] of J15
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(414.0200 mm, 122.6350 mm): PTH pad 99 [GND] of J16
-    @(414.0200 mm, 128.9050 mm): PTH pad 100 [GND] of J16
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(157.3760 mm, -8.2550 mm): PTH pad 1 [GND] of SW1
-    @(150.8760 mm, -8.2550 mm): PTH pad 1 [GND] of SW1
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(398.1450 mm, 122.6350 mm): PTH pad 89 [GND] of J16
-    @(401.3200 mm, 128.9050 mm): PTH pad 92 [GND] of J16
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(414.0200 mm, 128.9050 mm): PTH pad 100 [GND] of J16
-    @(414.0200 mm, 137.8050 mm): PTH pad 1 [GND] of J2
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(69.2150 mm, 137.7950 mm): PTH pad 99 [GND] of J3
-    @(69.2150 mm, 128.8250 mm): PTH pad 2 [GND] of J15
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(530.9870 mm, -9.5250 mm): PTH pad 18 [GND] of U2
-    @(535.8370 mm, -18.4150 mm): PTH pad 42 [GND] of U2
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(535.8370 mm, -18.4150 mm): PTH pad 42 [GND] of U2
-    @(530.9870 mm, -27.3050 mm): PTH pad 23 [GND] of U2
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(505.5870 mm, -9.5250 mm): PTH pad 8 [GND] of U2
-    @(492.8870 mm, -9.5250 mm): PTH pad 3 [GND] of U2
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(505.5870 mm, -27.3050 mm): Pad 33 [GND] of U2 on F.Cu
-    @(492.8870 mm, -27.3050 mm): Pad 38 [GND] of U2 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(518.2870 mm, -27.3050 mm): PTH pad 28 [GND] of U2
-    @(505.5870 mm, -27.3050 mm): PTH pad 33 [GND] of U2
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(342.9000 mm, 37.4650 mm): PTH pad 1 [GND] of R14
-    @(330.2000 mm, 37.4650 mm): PTH pad 1 [GND] of R12
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(505.5870 mm, -9.5250 mm): Pad 8 [GND] of U2 on F.Cu
-    @(518.2870 mm, -9.5250 mm): Pad 13 [GND] of U2 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(530.9870 mm, -27.3050 mm): PTH pad 23 [GND] of U2
-    @(518.2870 mm, -27.3050 mm): PTH pad 28 [GND] of U2
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(518.2870 mm, -9.5250 mm): Pad 13 [GND] of U2 on F.Cu
-    @(530.9870 mm, -9.5250 mm): Pad 18 [GND] of U2 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(414.0200 mm, 128.9050 mm): PTH pad 100 [GND] of J16
-    @(401.3200 mm, 128.9050 mm): PTH pad 92 [GND] of J16
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(488.4420 mm, 108.0770 mm): PTH pad 1 [GND] of C1
-    @(475.7420 mm, 108.0770 mm): PTH pad 1 [GND] of C2
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(391.2870 mm, 32.6390 mm): PTH pad 1 [GND] of R13
-    @(404.4850 mm, 33.8850 mm): PTH pad 5 [GND] of MES1
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(36.1950 mm, 92.7100 mm): PTH pad 40 [GND] of J1
-    @(19.9600 mm, 92.8600 mm): Pad 40 [GND] of J5 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(120.0150 mm, 122.5550 mm): PTH pad 33 [GND] of J15
-    @(129.4130 mm, 106.8070 mm): PTH pad GND1 [GND] of XA1
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(391.2870 mm, 32.6390 mm): PTH pad 1 [GND] of R13
-    @(373.3800 mm, 37.4650 mm): PTH pad 1 [GND] of R15
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(432.4350 mm, 150.8760 mm): Track [GND] on F.Cu, length 69.4690 mm
-    @(414.0200 mm, 144.0750 mm): PTH pad 2 [GND] of J2
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(59.3090 mm, 63.6270 mm): PTH pad GND6 [GND] of XA1
-    @(42.4650 mm, 51.4350 mm): PTH pad 1 [GND] of J1
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(404.4850 mm, 33.8850 mm): PTH pad 5 [GND] of MES1
-    @(401.9450 mm, 54.6100 mm): PTH pad 2 [GND] of JP1
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(42.4650 mm, 51.4350 mm): PTH pad 1 [GND] of J1
-    @(19.9600 mm, 51.4350 mm): Pad 1 [GND] of J5 on B.Cu
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(61.8490 mm, 63.6270 mm): PTH pad GND5 [GND] of XA1
-    @(76.8350 mm, 43.8150 mm): PTH pad 1 [GND] of R7
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(148.4630 mm, 150.8760 mm): Track [GND] on F.Cu, length 107.1880 mm
-    @(69.2150 mm, 144.0650 mm): PTH pad 100 [GND] of J3
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(363.2200 mm, 144.0750 mm): Track [GND] on F.Cu, length 6.2700 mm
-    @(334.6450 mm, 128.9050 mm): PTH pad 50 [GND] of J16
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(373.3800 mm, 37.4650 mm): PTH pad 1 [GND] of R15
-    @(342.9000 mm, 37.4650 mm): PTH pad 1 [GND] of R14
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(148.5900 mm, 150.7490 mm): Track [GND] on F.Cu, length 6.6840 mm
-    @(120.0150 mm, 128.8250 mm): PTH pad 34 [GND] of J15
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(258.4450 mm, 137.8050 mm): Track [GND] on F.Cu, length 8.9000 mm
-    @(224.7900 mm, 144.0650 mm): Track [GND] on F.Cu, length 6.2700 mm
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(36.1950 mm, 92.7100 mm): PTH pad 40 [GND] of J1
-    @(59.3090 mm, 63.6270 mm): PTH pad GND6 [GND] of XA1
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(112.6490 mm, 58.5470 mm): PTH pad GND3 [GND] of XA1
-    @(76.8350 mm, 43.8150 mm): PTH pad 1 [GND] of R7
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(284.4800 mm, 38.7350 mm): PTH pad 1 [GND] of RN14
-    @(327.6600 mm, 37.4650 mm): PTH pad 1 [GND] of R11
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(36.1950 mm, 92.7100 mm): PTH pad 40 [GND] of J1
-    @(69.2150 mm, 122.5550 mm): PTH pad 1 [GND] of J15
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(168.9100 mm, 43.8150 mm): PTH pad 1 [GND] of R8
-    @(157.3760 mm, -8.2550 mm): PTH pad 1 [GND] of SW1
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(562.3560 mm, 35.5600 mm): Track [GND] on F.Cu, length 3.0787 mm
-    @(530.9870 mm, -9.5250 mm): Pad 18 [GND] of U2 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(212.7250 mm, 10.7950 mm): PTH pad 1 [GND] of RN11
-    @(168.9100 mm, 43.8150 mm): PTH pad 1 [GND] of R8
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(168.9100 mm, 43.8150 mm): PTH pad 1 [GND] of R8
-    @(115.1890 mm, 58.5470 mm): PTH pad GND2 [GND] of XA1
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(475.7420 mm, 108.0770 mm): PTH pad 1 [GND] of C2
-    @(435.9910 mm, 147.3200 mm): Track [GND] on F.Cu, length 5.0289 mm
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(401.9450 mm, 58.4200 mm): PTH pad 2 [GND] of JP4
-    @(398.1450 mm, 122.6350 mm): PTH pad 89 [GND] of J16
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(62.4840 mm, -51.4350 mm): PTH pad 10 [GND] of J19
-    @(76.8350 mm, 43.8150 mm): PTH pad 1 [GND] of R7
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(492.8870 mm, -9.5250 mm): Pad 3 [GND] of U2 on F.Cu
-    @(404.4850 mm, 33.8850 mm): PTH pad 5 [GND] of MES1
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(385.4450 mm, 137.8050 mm): Track [~{PL}] on F.Cu, length 1.8738 mm
-    @(494.7920 mm, 108.0770 mm): PTH pad 2 [~{PL}] of C1
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(372.7450 mm, 137.8050 mm): Track [~{CON RQ}] on F.Cu, length 1.8738 mm
-    @(482.0920 mm, 108.0770 mm): PTH pad 2 [~{CON RQ}] of C2
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(556.5140 mm, 39.2430 mm): Track [Net-(C3-Pad1)] on F.Cu, length 0.8980 mm
-    @(556.5140 mm, 39.2430 mm): Track [Net-(C3-Pad1)] on B.Cu, length 0.4313 mm
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(566.9280 mm, 42.2910 mm): Track [+5V] on B.Cu, length 0.3338 mm
-    @(566.9280 mm, 42.2910 mm): Track [+5V] on F.Cu, length 0.2051 mm
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(76.2000 mm, 46.9900 mm): PTH pad 1 [+5V] of RN2
-    @(78.7400 mm, 46.9900 mm): PTH pad 1 [+5V] of RN3
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(61.8490 mm, 106.8070 mm): PTH pad 5V3 [+5V] of XA1
+    @(15.4940 mm, 16.1290 mm): Zone [+5V] on B.Cu
     @(59.3090 mm, 106.8070 mm): PTH pad 5V4 [+5V] of XA1
+[starved_thermal]: Thermal relief connection to zone incomplete (zone min spoke count 2; actual 1)
+    Local override; Severity: error
+    @(14.0970 mm, 13.7160 mm): Zone [GND] on F.Cu
+    @(120.0150 mm, 122.5550 mm): PTH pad 33 [GND] of J15
+[starved_thermal]: Thermal relief connection to zone incomplete (zone min spoke count 2; actual 1)
+    Local override; Severity: error
+    @(15.4940 mm, 16.1290 mm): Zone [+5V] on B.Cu
+    @(36.1950 mm, 51.4350 mm): PTH pad 27 [+5V] of Front Panel Socket1
+[starved_thermal]: Thermal relief connection to zone incomplete (zone min spoke count 2; actual 1)
+    Local override; Severity: error
+    @(14.0970 mm, 13.7160 mm): Zone [GND] on F.Cu
+    @(362.9660 mm, 83.8200 mm): PTH pad 1 [GND] of Teensy 4.1
+[starved_thermal]: Thermal relief connection to zone incomplete (zone min spoke count 2; actual 1)
+    Local override; Severity: error
+    @(14.0970 mm, 13.7160 mm): Zone [GND] on F.Cu
+    @(347.9960 mm, 94.6216 mm): PTH pad 64 [GND] of Teensy 4.1
+[starved_thermal]: Thermal relief connection to zone incomplete (zone min spoke count 2; actual 1)
+    Local override; Severity: error
+    @(14.0970 mm, 13.7160 mm): Zone [GND] on F.Cu
+    @(278.1200 mm, 97.3500 mm): PTH pad 1 [GND] of SW3
+
+** Found 11 unconnected pads **
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(428.0100 mm, 102.2100 mm): PTH pad 22 [+5V] of J4
-    @(428.0100 mm, 98.0100 mm): PTH pad 21 [+5V] of J4
+    @(334.6450 mm, 128.9050 mm): PTH pad 50 [GND] of J16
+    @(14.0970 mm, 13.7160 mm): Zone [GND] on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
-    @(428.0100 mm, 106.4100 mm): PTH pad 23 [+5V] of J4
-    @(428.0100 mm, 102.2100 mm): PTH pad 22 [+5V] of J4
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(165.1000 mm, 46.9900 mm): PTH pad 1 [+5V] of RN6
-    @(170.1800 mm, 46.9900 mm): PTH pad 1 [+5V] of RN7
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(407.0350 mm, 39.3700 mm): PTH pad 3 [+5V] of MES1
-    @(401.9550 mm, 39.3700 mm): PTH pad 1 [+5V] of MES1
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(312.4200 mm, 51.4350 mm): PTH pad 1 [+5V] of R9
-    @(314.9600 mm, 46.9900 mm): PTH pad 1 [+5V] of RN13
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(410.8450 mm, 128.9050 mm): PTH pad 98 [+5V] of J16
-    @(410.8450 mm, 122.6350 mm): PTH pad 97 [+5V] of J16
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(410.8450 mm, 144.0750 mm): PTH pad 4 [+5V] of J2
-    @(410.8450 mm, 137.8050 mm): PTH pad 3 [+5V] of J2
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(72.3900 mm, 128.8250 mm): PTH pad 4 [+5V] of J15
-    @(72.3900 mm, 122.5550 mm): PTH pad 3 [+5V] of J15
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(72.3900 mm, 144.0650 mm): PTH pad 98 [+5V] of J3
-    @(72.3900 mm, 137.7950 mm): PTH pad 97 [+5V] of J3
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(30.4800 mm, 46.9900 mm): PTH pad 1 [+5V] of RN1
-    @(36.1950 mm, 51.4350 mm): PTH pad 27 [+5V] of J1
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(117.7290 mm, 58.5470 mm): PTH pad 5V1 [+5V] of XA1
-    @(110.1090 mm, 58.5470 mm): PTH pad VIN [+5V] of XA1
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(421.9360 mm, 84.8360 mm): Track [+5V] on B.Cu, length 0.8118 mm
-    @(422.5100 mm, 77.0100 mm): PTH pad 4 [+5V] of J4
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(410.8450 mm, 137.8050 mm): PTH pad 3 [+5V] of J2
-    @(410.8450 mm, 128.9050 mm): PTH pad 98 [+5V] of J16
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(72.3900 mm, 137.7950 mm): PTH pad 97 [+5V] of J3
-    @(72.3900 mm, 128.8250 mm): PTH pad 4 [+5V] of J15
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(312.4200 mm, 51.4350 mm): PTH pad 1 [+5V] of R9
-    @(304.8000 mm, 46.3550 mm): PTH pad 1 [+5V] of R10
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(30.4800 mm, 46.9900 mm): PTH pad 1 [+5V] of RN1
-    @(19.9600 mm, 51.4350 mm): Pad 27 [+5V] of J5 on F.Cu
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(117.7290 mm, 58.5470 mm): PTH pad 5V1 [+5V] of XA1
-    @(121.9200 mm, 46.9900 mm): PTH pad 1 [+5V] of RN5
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(421.9360 mm, 84.8360 mm): Track [+5V] on B.Cu, length 0.8118 mm
-    @(428.0100 mm, 98.0100 mm): PTH pad 21 [+5V] of J4
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(72.3900 mm, 122.5550 mm): PTH pad 3 [+5V] of J15
-    @(61.8490 mm, 106.8070 mm): PTH pad 5V3 [+5V] of XA1
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(410.8450 mm, 144.0750 mm): PTH pad 4 [+5V] of J2
-    @(429.3990 mm, 150.9910 mm): Track [+5V] on B.Cu, length 385.5960 mm
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(221.6150 mm, 128.8250 mm): Track [+5V] on F.Cu, length 6.2700 mm
-    @(241.5540 mm, 150.8760 mm): Track [+5V] on F.Cu, length 33.6550 mm
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(241.5540 mm, 150.8760 mm): Track [+5V] on F.Cu, length 33.6550 mm
-    @(261.6200 mm, 122.6350 mm): Track [+5V] on F.Cu, length 6.2700 mm
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(410.8450 mm, 122.6350 mm): PTH pad 97 [+5V] of J16
-    @(428.0100 mm, 106.4100 mm): PTH pad 23 [+5V] of J4
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(269.2400 mm, 46.9900 mm): PTH pad 1 [+5V] of RN12
-    @(243.8400 mm, 46.9900 mm): PTH pad 1 [+5V] of RN9
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(373.3800 mm, 46.9900 mm): PTH pad 1 [+5V] of RN16
-    @(345.4400 mm, 46.9900 mm): PTH pad 1 [+5V] of RN15
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(429.3990 mm, 150.9910 mm): Track [+5V] on B.Cu, length 385.5960 mm
-    @(72.3900 mm, 144.0650 mm): PTH pad 98 [+5V] of J3
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(401.9550 mm, 39.3700 mm): PTH pad 1 [+5V] of MES1
-    @(373.3800 mm, 46.9900 mm): PTH pad 1 [+5V] of RN16
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(345.4400 mm, 46.9900 mm): PTH pad 1 [+5V] of RN15
-    @(314.9600 mm, 46.9900 mm): PTH pad 1 [+5V] of RN13
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(200.6600 mm, 46.9900 mm): PTH pad 1 [+5V] of RN8
-    @(170.1800 mm, 46.9900 mm): PTH pad 1 [+5V] of RN7
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(110.1090 mm, 58.5470 mm): PTH pad VIN [+5V] of XA1
-    @(78.7400 mm, 46.9900 mm): PTH pad 1 [+5V] of RN3
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(269.2400 mm, 46.9900 mm): PTH pad 1 [+5V] of RN12
-    @(304.8000 mm, 46.3550 mm): PTH pad 1 [+5V] of R10
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(76.2000 mm, 46.9900 mm): PTH pad 1 [+5V] of RN2
-    @(36.1950 mm, 51.4350 mm): PTH pad 27 [+5V] of J1
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(422.5100 mm, 77.0100 mm): PTH pad 4 [+5V] of J4
-    @(407.0350 mm, 39.3700 mm): PTH pad 3 [+5V] of MES1
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(165.1000 mm, 46.9900 mm): PTH pad 1 [+5V] of RN6
-    @(121.9200 mm, 46.9900 mm): PTH pad 1 [+5V] of RN5
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(200.6600 mm, 46.9900 mm): PTH pad 1 [+5V] of RN8
-    @(243.8400 mm, 46.9900 mm): PTH pad 1 [+5V] of RN9
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(241.5540 mm, 150.8760 mm): Track [+5V] on F.Cu, length 33.6550 mm
-    @(243.8400 mm, 46.9900 mm): PTH pad 1 [+5V] of RN9
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(525.0000 mm, 44.9400 mm): Track [+5V] on B.Cu, length 1.7706 mm
-    @(490.3470 mm, -27.3050 mm): PTH pad 39 [+5V] of U2
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(525.0000 mm, 44.9400 mm): Track [+5V] on B.Cu, length 1.7706 mm
-    @(422.5100 mm, 77.0100 mm): PTH pad 4 [+5V] of J4
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(42.4650 mm, 57.7850 mm): Track [~{MEM14}] on B.Cu, length 4.1830 mm
-    @(59.3090 mm, 73.7870 mm): Track [~{MEM14}] on B.Cu, length 1.6809 mm
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(380.4200 mm, 61.2690 mm): Track [~{CON INST}] on F.Cu, length 0.0778 mm
-    @(515.3660 mm, 88.6460 mm): PTH pad 1 [~{CON INST}] of JP3
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(497.5860 mm, 88.6460 mm): PTH pad 1 [~{CON DATA}] of JP2
-    @(370.8950 mm, 142.2250 mm): Track [~{CON DATA}] on F.Cu, length 42.8560 mm
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(394.9700 mm, 137.8050 mm): Track [~{FETCH}] on F.Cu, length 1.9799 mm
-    @(337.8200 mm, 137.8050 mm): Track [~{FETCH}] on F.Cu, length 1.8738 mm
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(405.8200 mm, 76.3820 mm): Track [~{POWER FAIL}] on F.Cu, length 0.0778 mm
-    @(580.8980 mm, 32.8930 mm): PTH pad 8 [~{POWER FAIL}] of U1
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(570.7380 mm, 32.8930 mm): PTH pad 12 [+5V OK] of U1
-    @(402.6450 mm, 72.4450 mm): Track [+5V OK] on F.Cu, length 0.0778 mm
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(575.8180 mm, 32.8930 mm): PTH pad 10 [MEM OK] of U1
-    @(399.9230 mm, 66.2940 mm): Track [MEM OK] on F.Cu, length 0.0915 mm
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(515.3660 mm, 91.1860 mm): PTH pad 2 [Entrex P10.19] of JP3
-    @(377.7700 mm, 142.7500 mm): Track [Entrex P10.19] on F.Cu, length 78.8140 mm
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(497.5860 mm, 91.1860 mm): PTH pad 2 [Entrex P10.30] of JP2
-    @(368.1700 mm, 136.4050 mm): Track [Entrex P10.30] on F.Cu, length 76.9690 mm
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(528.9550 mm, 115.1890 mm): PTH pad 1 [Entrex Backplane S01B53 to S13B53] of TP1
-    @(143.1150 mm, 109.2890 mm): Track [Entrex Backplane S01B53 to S13B53] on F.Cu, length 3.8537 mm
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(347.3450 mm, 126.8180 mm): Track [~{DATA5}] on B.Cu, length 4.1830 mm
-    @(570.4201 mm, 45.3551 mm): Track [~{DATA5}] on B.Cu, length 0.0267 mm
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(96.0576 mm, 61.9760 mm): Track [~{READ IO}] on F.Cu, length 0.1726 mm
-    @(96.0120 mm, 83.9470 mm): Track [~{READ IO}] on F.Cu, length 0.0645 mm
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(422.5100 mm, 64.4100 mm): PTH pad 1 [+3v3] of J4
-    @(422.5100 mm, 68.6100 mm): PTH pad 2 [+3v3] of J4
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(428.0100 mm, 64.4100 mm): PTH pad 13 [+3v3] of J4
-    @(422.5100 mm, 64.4100 mm): PTH pad 1 [+3v3] of J4
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(422.5100 mm, 68.6100 mm): PTH pad 2 [+3v3] of J4
-    @(422.5100 mm, 110.6100 mm): PTH pad 12 [+3v3] of J4
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(421.2590 mm, 104.2670 mm): Track [-5V] on F.Cu, length 1.9999 mm
-    @(385.4450 mm, 122.6350 mm): Track [-5V] on F.Cu, length 56.1054 mm
+    @(334.6450 mm, 128.9050 mm): PTH pad 50 [GND] of J16
+    @(14.0970 mm, 13.7160 mm): Zone [GND] on F.Cu
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
     @(75.5650 mm, 128.8250 mm): PTH pad 6 [-5V] of J15
-    @(385.4450 mm, 122.6350 mm): Track [-5V] on F.Cu, length 56.1054 mm
+    @(385.4450 mm, 122.6350 mm): Track [-5V] on F.Cu, length 5.4140 mm
 [unconnected_items]: Missing connection between items
     Local override; Severity: error
     @(97.7900 mm, 128.8250 mm): PTH pad 20 [INH GND] of J15
@@ -963,70 +556,6 @@
     Local override; Severity: error
     @(81.9150 mm, 128.8250 mm): PTH pad 10 [+VINH] of J15
     @(388.6200 mm, 128.9050 mm): PTH pad 84 [+VINH] of J16
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(157.3760 mm, -12.7550 mm): PTH pad 2 [Net-(XA1-RESET)] of SW1
-    @(150.8760 mm, -12.7550 mm): PTH pad 2 [Net-(XA1-RESET)] of SW1
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(150.8760 mm, -12.7550 mm): PTH pad 2 [Net-(XA1-RESET)] of SW1
-    @(122.8090 mm, 58.5470 mm): PTH pad RST1 [Net-(XA1-RESET)] of XA1
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(52.3240 mm, -59.5630 mm): PTH pad 1 [Logic1] of J20
-    @(52.3240 mm, -53.9750 mm): PTH pad 1 [Logic1] of J19
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(52.3240 mm, -51.4350 mm): PTH pad 2 [Logic2] of J19
-    @(54.8640 mm, -59.5630 mm): PTH pad 2 [Logic2] of J20
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(54.8640 mm, -53.9750 mm): PTH pad 3 [Logic3] of J19
-    @(57.4040 mm, -59.5630 mm): PTH pad 3 [Logic3] of J20
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(54.8640 mm, -51.4350 mm): PTH pad 4 [Logic4] of J19
-    @(59.9440 mm, -59.5630 mm): PTH pad 4 [Logic4] of J20
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(57.4040 mm, -53.9750 mm): PTH pad 5 [Logic5] of J19
-    @(62.4840 mm, -59.5630 mm): PTH pad 5 [Logic5] of J20
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(57.4040 mm, -51.4350 mm): PTH pad 6 [Logic6] of J19
-    @(65.0240 mm, -59.5630 mm): PTH pad 6 [Logic6] of J20
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(59.9440 mm, -53.9750 mm): PTH pad 7 [Logic7] of J19
-    @(67.5640 mm, -59.5630 mm): PTH pad 7 [Logic7] of J20
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(59.9440 mm, -51.4350 mm): PTH pad 8 [Logic8] of J19
-    @(70.1040 mm, -59.5630 mm): PTH pad 8 [Logic8] of J20
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(185.4200 mm, 27.3050 mm): PTH pad 1 [Net-(D9-K)] of D9
-    @(215.2650 mm, 10.7950 mm): PTH pad 2 [Net-(D9-K)] of RN11
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(190.5000 mm, 27.3050 mm): PTH pad 1 [Net-(D10-K)] of D10
-    @(217.8050 mm, 10.7950 mm): PTH pad 3 [Net-(D10-K)] of RN11
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(193.0400 mm, 27.3050 mm): PTH pad 1 [Net-(D11-K)] of D11
-    @(220.3450 mm, 10.7950 mm): PTH pad 4 [Net-(D11-K)] of RN11
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(227.9650 mm, 10.7950 mm): PTH pad 7 [Net-(D13-K)] of RN11
-    @(259.0800 mm, 27.3050 mm): PTH pad 1 [Net-(D13-K)] of D13
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(230.5050 mm, 10.7950 mm): PTH pad 8 [Net-(D14-K)] of RN11
-    @(261.6200 mm, 27.3050 mm): PTH pad 1 [Net-(D14-K)] of D14
-[unconnected_items]: Missing connection between items
-    Local override; Severity: error
-    @(233.0450 mm, 10.7950 mm): PTH pad 9 [Net-(D15-K)] of RN11
-    @(264.1600 mm, 27.3050 mm): PTH pad 1 [Net-(D15-K)] of D15
 
 ** Found 0 Footprint errors **
 
