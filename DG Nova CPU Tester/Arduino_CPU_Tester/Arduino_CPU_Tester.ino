@@ -24,7 +24,7 @@ constexpr int EndPin = 51;
 //BUT we don't need to define them separately because the loops below set them all as output, and then re-assign the Data Light pins as inputs.
 
 constexpr int Mem0StartPin = 33; //Data Light 0
-int Mem15EndPin = 48; //Data Light 15  (should be 48 but I'm testing re-using the last 2 lamps)
+int Mem15EndPin = 46; //Data Light 15  (should be 48 but I'm testing re-using the last 2 lamps)
 
 constexpr int blinky = 10;
 constexpr int fastcycle = 0;
@@ -77,21 +77,17 @@ void setup() {
 
 void loop() {
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
-if (digitalRead(DIP4) == LOW){ ///// Test all Lower Switches
+if (digitalRead(DIP4) == LOW){ ///// Test CON_RQ from front panel
 
-////////////////////////LOWER CONTROL SWITCH TEST SECTION//////////////////////////////
+pinMode(CON_INST, INPUT_PULLUP);
 
-Mem15EndPin = 46; // was 48 but we're re-using the last 2 lamps for RESET and STOP indicators
+
 
   for (int i = Mem0StartPin; i <= Mem15EndPin; i = i + 1) {   //For testing Data Switches 0-15
        pinMode(i, INPUT_PULLUP);  
   }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
 
 
  digitalWrite(CON_RQ, LOW);  
@@ -102,12 +98,32 @@ Mem15EndPin = 46; // was 48 but we're re-using the last 2 lamps for RESET and ST
 
 }
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
-else if (digitalRead(DIP3) == LOW){ ///// Test All Data Switches
+else if (digitalRead(DIP3) == LOW){ ///// Test "Program counter"
 
-////////////////////////DATA SWITCH TEST SECTION//////////////////////////////
+  for (int i = Mem0StartPin; i <= Mem15EndPin-8; i = i + 1) {   
+       pinMode(i, OUTPUT);  
+  }
+ pinMode(CON_INST, OUTPUT);
+
+ digitalWrite(CON_INST, LOW);  
+      digitalWrite(33, LOW);  
+      digitalWrite(34, LOW);  
+      digitalWrite(35, LOW);  
+      digitalWrite(36, LOW);  
+      digitalWrite(37, LOW);  
+      digitalWrite(38, LOW);  
+      digitalWrite(39, LOW);  
+      digitalWrite(40, LOW);  
+
+ delay(2000);  
+
+ digitalWrite(CON_INST, HIGH);  
+for (int i = Mem0StartPin; i <= Mem15EndPin-8; i = i + 1) {   
+          digitalWrite(i, HIGH);  
+ }
+ delay(2000);  
 
 
-/////////////////////////DATA SWITCH TEST SECTION END///////////////////////////
 
 }
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
