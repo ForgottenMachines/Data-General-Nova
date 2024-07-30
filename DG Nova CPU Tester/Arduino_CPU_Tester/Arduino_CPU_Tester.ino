@@ -24,7 +24,7 @@ constexpr int EndPin = 51;
 //BUT we don't need to define them separately because the loops below set them all as output, and then re-assign the Data Light pins as inputs.
 
 constexpr int Mem0StartPin = 33; //Data Light 0
-int Mem15EndPin = 46; //Data Light 15  (should be 48 but I'm testing re-using the last 2 lamps)
+int Mem15EndPin = 48; //Data Light 15  (should be 48 but I'm testing re-using the last 2 lamps)
 
 constexpr int blinky = 10;
 constexpr int fastcycle = 0;
@@ -111,9 +111,11 @@ else if (digitalRead(DIP3) == LOW){ ///// Test "Program counter"
       digitalWrite(35, LOW);  
       digitalWrite(36, LOW);  
       digitalWrite(37, LOW);  
-      digitalWrite(38, LOW);  
-      digitalWrite(39, LOW);  
-      digitalWrite(40, LOW);  
+//      digitalWrite(38, LOW);  
+//      digitalWrite(39, LOW);  
+      digitalWrite(40, LOW); 
+ 
+       
 
  delay(2000);  
 
