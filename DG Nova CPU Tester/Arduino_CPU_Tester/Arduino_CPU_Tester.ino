@@ -103,9 +103,11 @@ else if (digitalRead(DIP3) == LOW){ ///// Test "Program counter"
   for (int i = Mem0StartPin; i <= Mem15EndPin-8; i = i + 1) {   
        pinMode(i, OUTPUT);  
   }
- pinMode(CON_INST, OUTPUT);
+ pinMode(CON_RQ, OUTPUT);
 
- digitalWrite(CON_INST, LOW);  
+for (int j = 0; j <= 5; j = j + 1) { 
+
+  digitalWrite(CON_RQ, LOW);  
       digitalWrite(33, LOW);  
       digitalWrite(34, LOW);  
       digitalWrite(35, LOW);  
@@ -114,18 +116,40 @@ else if (digitalRead(DIP3) == LOW){ ///// Test "Program counter"
 //      digitalWrite(38, LOW);  
 //      digitalWrite(39, LOW);  
       digitalWrite(40, LOW); 
- 
-       
 
- delay(2000);  
+ delay(200);  
 
- digitalWrite(CON_INST, HIGH);  
+ digitalWrite(CON_RQ, HIGH);  
 for (int i = Mem0StartPin; i <= Mem15EndPin-8; i = i + 1) {   
           digitalWrite(i, HIGH);  
  }
- delay(2000);  
+ delay(200); 
+
+} 
+
+for (int j = 0; j <= 50; j = j + 1) {   
+
+  digitalWrite(CON_RQ, LOW);  
+      digitalWrite(33, LOW);  
+      digitalWrite(34, LOW);  
+      digitalWrite(35, LOW);  
+      digitalWrite(36, LOW);  
+      digitalWrite(37, LOW);  
+      digitalWrite(38, LOW);  
+//      digitalWrite(39, LOW);  
+//      digitalWrite(40, LOW); 
+
+ delay(200);  
+
+ digitalWrite(CON_RQ, HIGH);  
+for (int i = Mem0StartPin; i <= Mem15EndPin-8; i = i + 1) {   
+          digitalWrite(i, HIGH);  
+ }
+ delay(200);  
 
 
+
+ }
 
 }
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
