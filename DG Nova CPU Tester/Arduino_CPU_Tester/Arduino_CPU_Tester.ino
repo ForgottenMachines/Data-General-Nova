@@ -154,17 +154,20 @@ for (int i = Mem0StartPin; i <= Mem15EndPin-8; i = i + 1) {
 }
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
 else if (digitalRead(DIP2) == LOW){ ///// NOT YET DEFINED
+
+
+}
+//////////////////////TEST MODE SWITCHER///////////////////////////////////////
+else if (digitalRead(DIP1) == LOW){ ///// Test how fast this can switch signals
+
 digitalWrite(CON_RQ, LOW);  
 digitalWrite(CON_RQ, HIGH);  
 
-
 }
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
-else if (digitalRead(DIP1) == LOW){ ///// All Lights Sequential
+else{ /////  digitalWrite(CON_RQ, HIGH);  
 
-}
-//////////////////////TEST MODE SWITCHER///////////////////////////////////////
-else{ /////  All Lights Blink in Unison
+digitalWrite(CON_RQ, HIGH); 
 
 
 }
