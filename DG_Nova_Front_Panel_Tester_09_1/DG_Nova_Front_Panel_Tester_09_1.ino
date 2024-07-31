@@ -199,6 +199,8 @@ for (int i = Mem0StartPin + 1; i <= Mem15EndPin; i = i + 1) {  //loop through al
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
 else if (digitalRead(DIP2) == LOW){ ///// NOT YET DEFINED
 
+
+
 }
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
 else if (digitalRead(DIP1) == LOW){ ///// All Lights Sequential

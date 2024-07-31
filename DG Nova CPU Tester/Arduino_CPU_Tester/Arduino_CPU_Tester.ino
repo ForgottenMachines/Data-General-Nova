@@ -154,6 +154,9 @@ for (int i = Mem0StartPin; i <= Mem15EndPin-8; i = i + 1) {
 }
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
 else if (digitalRead(DIP2) == LOW){ ///// NOT YET DEFINED
+digitalWrite(CON_RQ, LOW);  
+digitalWrite(CON_RQ, HIGH);  
+
 
 }
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
