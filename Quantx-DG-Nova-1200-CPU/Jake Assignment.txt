@@ -1,0 +1,12 @@
+Yes, but back to the Novae CPU diagnostics topic here, since you're well-engaged in this topic, I'd like to give you an assignment:  Check out these two schematics:  
+
+1)  https://github.com/ForgottenMachines/Data-General-Nova/blob/main/Quantx-DG-Nova-1200-CPU/DG%20Nova%201200%20CPU.kicad_sch
+
+2)  https://github.com/ForgottenMachines/Data-General-Nova/blob/main/Quantx-DG-Nova-1200-CPU/DG%20Nova%201200%20CPU%20-%20CON_RQ%20to%20CON_INST%20extract.kicad_sch
+
+Schematic 2 is extracted from schematic 1, to try to simplify the task at hand.
+
+In order for the CPU to respond to most switches on the front panel, say for example "Examine", the front panel makes CON_RQ low.  In response, a CPU would respond by making CON_INST low, which does other things we can get to later.  But for now, a healthy CPU's response to CON_RQ input is a CON_INST output.  
+
+so, what's wrong when this fails to happen?  Well, I've tried to isolate
+
