@@ -160,6 +160,7 @@ else if (digitalRead(DIP2) == LOW){ ///// NOT YET DEFINED
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
 else if (digitalRead(DIP1) == LOW){ ///// Test how fast this can switch signals
 
+
 digitalWrite(CON_RQ, LOW); 
 delay(1000);  
 digitalWrite(CON_RQ, HIGH);  
