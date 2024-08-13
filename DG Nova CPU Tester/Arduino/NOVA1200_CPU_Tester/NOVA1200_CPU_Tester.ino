@@ -17,6 +17,15 @@ constexpr int SwitchDiag1 = 9;
 constexpr int SwitchCON_INST = 8;
 constexpr int SwitchCON_DATA = 7;
 
+constexpr int MEM0 = A15;
+constexpr int MEM1 = A14;
+constexpr int MEM2 = A13;
+constexpr int MEM3 = A12;
+constexpr int MEM4 = A11;
+constexpr int MEM5 = A10;
+constexpr int MEM6 = A9;
+constexpr int MEM7 = A8;
+
 constexpr int StartPin = 15;
 constexpr int EndPin = 51;
 
@@ -160,6 +169,14 @@ else if (digitalRead(DIP2) == LOW){ ///// NOT YET DEFINED
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
 else if (digitalRead(DIP1) == LOW){ ///// Test how fast this can switch signals
 
+digitalWrite(MEM0, LOW);
+digitalWrite(MEM1, LOW);
+digitalWrite(MEM2, LOW);
+digitalWrite(MEM3, LOW);
+digitalWrite(MEM4, LOW);
+digitalWrite(MEM5, HIGH);
+digitalWrite(MEM6, HIGH);
+digitalWrite(MEM7, LOW);
 
 digitalWrite(CON_RQ, LOW); 
 delay(1000);  
