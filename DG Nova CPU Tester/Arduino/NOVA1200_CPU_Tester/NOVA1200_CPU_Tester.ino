@@ -33,7 +33,7 @@ constexpr int EndPin = 51;
 //BUT we don't need to define them separately because the loops below set them all as output, and then re-assign the Data Light pins as inputs.
 
 constexpr int Mem0StartPin = 33; //Data Light 0
-int Mem15EndPin = 48; //Data Light 15  (should be 48 but I'm testing re-using the last 2 lamps)
+int Mem15EndPin = 48; //Data Light 15  (should be 48 )
 
 constexpr int blinky = 10;
 constexpr int fastcycle = 0;
@@ -64,15 +64,26 @@ void setup() {
 
        pinMode(CON_INST_LED, OUTPUT);  
        pinMode(CON_DATA_LED, OUTPUT); 
-       
+
+       pinMode(MEM0, OUTPUT); 
+       pinMode(MEM1, OUTPUT); 
+       pinMode(MEM2, OUTPUT); 
+       pinMode(MEM3, OUTPUT); 
+       pinMode(MEM4, OUTPUT); 
+       pinMode(MEM5, OUTPUT); 
+       pinMode(MEM6, OUTPUT); 
+       pinMode(MEM7, OUTPUT); 
+     
 
 
   for (int i = StartPin; i <= EndPin; i = i + 1) {   //For Testing all the pretty lights
         pinMode(i, INPUT_PULLUP);
-//      pinMode(i, OUTPUT);  don't do any of that with the CPU installed in the tester
-//      digitalWrite(i, HIGH);  
   }
-
+  
+  for (int i = Mem0StartPin; i <= Mem15EndPin; i = i + 1) {   //For testing Data Switches 0-15
+       pinMode(i, INPUT_PULLUP);  
+  }
+  
   digitalWrite(RESTART_ENAB, LOW);  // input from the CPU... connected to center/common of Reset & Stop switches, so must be low to test those
 
 // set mode switches on tester board
@@ -82,6 +93,15 @@ void setup() {
   pinMode(DIP3, INPUT_PULLUP);
   pinMode(DIP4, INPUT_PULLUP);
 
+  digitalWrite(MEM0, HIGH);
+  digitalWrite(MEM1, HIGH);
+  digitalWrite(MEM2, HIGH);
+  digitalWrite(MEM3, HIGH);
+  digitalWrite(MEM4, HIGH);
+  digitalWrite(MEM5, HIGH);
+  digitalWrite(MEM6, HIGH);
+  digitalWrite(MEM7, HIGH);
+
 }
 
 void loop() {
@@ -89,8 +109,6 @@ void loop() {
 if (digitalRead(DIP4) == LOW){ ///// Test CON_RQ from front panel
 
 pinMode(CON_INST, INPUT_PULLUP);
-
-
 
   for (int i = Mem0StartPin; i <= Mem15EndPin; i = i + 1) {   //For testing Data Switches 0-15
        pinMode(i, INPUT_PULLUP);  
@@ -107,58 +125,9 @@ pinMode(CON_INST, INPUT_PULLUP);
 
 }
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
-else if (digitalRead(DIP3) == LOW){ ///// Test "Program counter"
-
-  for (int i = Mem0StartPin; i <= Mem15EndPin-8; i = i + 1) {   
-       pinMode(i, OUTPUT);  
-  }
- pinMode(CON_RQ, OUTPUT);
-
-for (int j = 0; j <= 5; j = j + 1) { 
-
-  digitalWrite(CON_RQ, LOW);  
-      digitalWrite(33, LOW);  
-      digitalWrite(34, LOW);  
-      digitalWrite(35, LOW);  
-      digitalWrite(36, LOW);  
-      digitalWrite(37, LOW);  
-//      digitalWrite(38, LOW);  
-//      digitalWrite(39, LOW);  
-      digitalWrite(40, LOW); 
-
- delay(200);  
-
- digitalWrite(CON_RQ, HIGH);  
-for (int i = Mem0StartPin; i <= Mem15EndPin-8; i = i + 1) {   
-          digitalWrite(i, HIGH);  
- }
- delay(200); 
-
-} 
-
-for (int j = 0; j <= 50; j = j + 1) {   
-
-  digitalWrite(CON_RQ, LOW);  
-      digitalWrite(33, LOW);  
-      digitalWrite(34, LOW);  
-      digitalWrite(35, LOW);  
-      digitalWrite(36, LOW);  
-      digitalWrite(37, LOW);  
-      digitalWrite(38, LOW);  
-//      digitalWrite(39, LOW);  
-//      digitalWrite(40, LOW); 
-
- delay(200);  
-
- digitalWrite(CON_RQ, HIGH);  
-for (int i = Mem0StartPin; i <= Mem15EndPin-8; i = i + 1) {   
-          digitalWrite(i, HIGH);  
- }
- delay(200);  
+else if (digitalRead(DIP3) == LOW){ ///// NOT YET DEFINED
 
 
-
- }
 
 }
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
@@ -167,20 +136,24 @@ else if (digitalRead(DIP2) == LOW){ ///// NOT YET DEFINED
 
 }
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
-else if (digitalRead(DIP1) == LOW){ ///// Test how fast this can switch signals
+else if (digitalRead(DIP1) == LOW){ ///// simulate EXAMINE signal command from front panel
+
+pinMode(CON_INST, OUTPUT);
 
 digitalWrite(MEM0, LOW);
 digitalWrite(MEM1, LOW);
 digitalWrite(MEM2, LOW);
 digitalWrite(MEM3, LOW);
 digitalWrite(MEM4, LOW);
-digitalWrite(MEM5, HIGH);
-digitalWrite(MEM6, HIGH);
+digitalWrite(MEM5, LOW);
+digitalWrite(MEM6, LOW);
 digitalWrite(MEM7, LOW);
 
 digitalWrite(CON_RQ, LOW); 
+digitalWrite(CON_INST, LOW); 
 delay(1000);  
 digitalWrite(CON_RQ, HIGH);  
+digitalWrite(CON_INST, HIGH);  
 delay(1000);  
 
 
