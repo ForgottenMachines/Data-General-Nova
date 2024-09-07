@@ -1,3 +1,5 @@
+constexpr int DelayAmount = 1000; // time to wait between front panel commands
+
 constexpr int RESTART_ENAB = A7; // input from the CPU... connected to center/common of Reset & Stop switches, so must be low to test those
 constexpr int RST = A6; // RESET
 constexpr int CON_RQ = A5; //used by multiple switches????
@@ -138,6 +140,8 @@ else if (digitalRead(DIP2) == LOW){ ///// NOT YET DEFINED
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
 else if (digitalRead(DIP1) == LOW){ ///// simulate EXAMINE signal command from front panel
 
+
+
 pinMode(CON_INST, OUTPUT);
 
 digitalWrite(MEM0, LOW);
@@ -151,13 +155,29 @@ digitalWrite(MEM7, LOW);
 
 digitalWrite(CON_RQ, LOW); 
 digitalWrite(CON_INST, LOW); 
-delay(1000);  
+delay(DelayAmount);  
 digitalWrite(CON_RQ, HIGH);  
 digitalWrite(CON_INST, HIGH);  
-delay(1000);  
+delay(DelayAmount);  
 
  for (int dg = 0 dg <= 25; dg++) {  
-       
+
+digitalWrite(MEM0, LOW);
+digitalWrite(MEM1, LOW);
+digitalWrite(MEM2, LOW);
+digitalWrite(MEM3, LOW);
+digitalWrite(MEM4, LOW);
+digitalWrite(MEM5, HIGH);
+digitalWrite(MEM6, HIGH);
+digitalWrite(MEM7, LOW);
+
+digitalWrite(CON_RQ, LOW); 
+digitalWrite(CON_INST, LOW); 
+delay(DelayAmount);  
+digitalWrite(CON_RQ, HIGH);  
+digitalWrite(CON_INST, HIGH);  
+delay(DelayAmount);  
+
   }
 
 
