@@ -145,8 +145,8 @@ digitalWrite(MEM1, LOW);
 digitalWrite(MEM2, LOW);
 digitalWrite(MEM3, LOW);
 digitalWrite(MEM4, LOW);
-digitalWrite(MEM5, LOW);
-digitalWrite(MEM6, LOW);
+digitalWrite(MEM5, HIGH);
+digitalWrite(MEM6, HIGH);
 digitalWrite(MEM7, LOW);
 
 digitalWrite(CON_RQ, LOW); 
@@ -155,6 +155,12 @@ delay(1000);
 digitalWrite(CON_RQ, HIGH);  
 digitalWrite(CON_INST, HIGH);  
 delay(1000);  
+
+ for (int dg = 0 dg <= 25; dg++) {  
+       
+  }
+
+
 
 
 }
