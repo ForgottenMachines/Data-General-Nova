@@ -1,4 +1,4 @@
-constexpr int DelayAmount = 1000; // time to wait between front panel commands
+constexpr int DelayAmount = 100; // time to wait between front panel commands
 
 constexpr int RESTART_ENAB = A7; // input from the CPU... connected to center/common of Reset & Stop switches, so must be low to test those
 constexpr int RST = A6; // RESET
