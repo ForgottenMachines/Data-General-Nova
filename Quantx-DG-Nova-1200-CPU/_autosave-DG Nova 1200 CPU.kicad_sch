@@ -28287,7 +28287,7 @@
     (property "Reference" "U70" (at 237.49 29.21 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "045" (at 237.49 34.29 0)
+    (property "Value" "045" (at 236.855 35.56 0)
       (effects (font (size 1.27 1.27)))
     )
     (property "Footprint" "" (at 237.49 34.29 0)
