@@ -136,6 +136,7 @@ else if (digitalRead(DIP3) == LOW){ ///// NOT YET DEFINED
 else if (digitalRead(DIP2) == LOW){ ///// NOT YET DEFINED
 
 
+
 }
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
 else if (digitalRead(DIP1) == LOW){ ///// simulate EXAMINE signal command from front panel
@@ -156,14 +157,14 @@ delay(DelayAmount);
 
  for (int dg = 0; dg <= 25; dg++) {  
 
-digitalWrite(MEM0, LOW);
+digitalWrite(MEM0, LOW);   ///// simulate EXAMINE NEXT signal command from front panel
 digitalWrite(MEM1, LOW);
 digitalWrite(MEM2, LOW);
 digitalWrite(MEM3, LOW);
 digitalWrite(MEM4, LOW);
 digitalWrite(MEM5, LOW);
 digitalWrite(MEM6, HIGH);
-digitalWrite(MEM7, HIGH);
+digitalWrite(MEM7, HIGH);  
 
 digitalWrite(CON_RQ, LOW); 
 delay(DelayAmount);  
