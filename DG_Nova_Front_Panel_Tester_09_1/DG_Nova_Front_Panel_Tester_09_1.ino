@@ -173,7 +173,7 @@ Mem15EndPin = 48; // back to 48 because we're not re-using the last 2 lamps for 
   }
 
   //DEFINES THE MODE OF ALL SWITCHES....SO PAY ATTENTION HERE  
-  //ONLY ONE OF THESE SIGNALS SHOULD BE LOW AT ONE TIME. 
+  //ONLY ONE OF THESE SIGNALS SHOULD BE LOW AT ONE TIME
   digitalWrite(CON_INST, HIGH);  
   digitalWrite(CON_DATA, LOW);  
   
@@ -197,9 +197,36 @@ for (int i = Mem0StartPin + 1; i <= Mem15EndPin; i = i + 1) {  //loop through al
 
 }
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
-else if (digitalRead(DIP2) == LOW){ ///// NOT YET DEFINED
+else if (digitalRead(DIP2) == LOW){ ///// ALL LIGHTS SEQUENTIALLY FOR CPU TESTER ONLY!
 
+  for (int i = Mem0StartPin; i <= Mem15EndPin; i = i + 1) {   //For testing Data Lights 0-15
+      pinMode(i, OUTPUT);  
+      digitalWrite(i, HIGH);  
+  }
 
+  //DEFINES THE MODE OF ALL SWITCHES....SO PAY ATTENTION HERE  
+  //ONLY ONE OF THESE SIGNALS SHOULD BE LOW AT ONE TIME. 
+  //WHEN A REAL FRONT PANEL IS CONNECTED
+  //HOWEVER, THIS IS THE CPU TESTER, WITH NO FRONT PANEL CONNECTED
+  //WE HOPE....................................................
+  digitalWrite(CON_INST, HIGH);  
+  digitalWrite(CON_DATA, HIGH);  
+
+  for (int i = StartPin; i <= EndPin; i = i + 1) {   //sequence the lights 
+  digitalWrite(i, LOW);
+  delay(200);           
+  digitalWrite(i, HIGH);  
+    }
+  for (int c = 1; c <= blinky; c = c + 1) {          //blink the lights [blinky] times
+    for (int i = StartPin; i <= EndPin; i = i + 1) { //turn all the lights on at once
+        digitalWrite(i, LOW);
+    }
+  delay(200);                                        //leave them on for 2/10ths of a second
+    for (int i = StartPin; i <= EndPin; i = i + 1) { //turn all the lights off at once
+        digitalWrite(i, HIGH);
+    }
+  delay(200);  
+  }
 
 }
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
