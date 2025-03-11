@@ -72,7 +72,7 @@ void setup() {
   pinMode(DIP3, INPUT_PULLUP);
   pinMode(DIP4, INPUT_PULLUP);
 
-  Serial.begin(115200);
+//  Serial.begin(115200);  //Enabling Serial hijacks/breaks D0 and D1, and thus hijacks CON_DATA & CONT_ISTP_MSTP
   Serial.println("Arduino Live!");
 
 
