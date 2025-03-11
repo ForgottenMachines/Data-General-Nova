@@ -72,12 +72,27 @@ void setup() {
   pinMode(DIP3, INPUT_PULLUP);
   pinMode(DIP4, INPUT_PULLUP);
 
+  Serial.begin(115200);
+  Serial.println("Arduino Live!");
+
+
 }
 
 void loop() {
+//Make sure we put inputs back to inputs after testing the CPU tester board by itself:
+pinMode(STOP, INPUT_PULLUP);
+pinMode(CON_RQ, INPUT_PULLUP);
+pinMode(CON_INST, INPUT_PULLUP);
+pinMode(CON_DATA, INPUT_PULLUP);
+pinMode(CONT_ISTP_MSTP, INPUT_PULLUP);
+pinMode(MSTP, INPUT_PULLUP);
+pinMode(ISTP, INPUT_PULLUP);
+pinMode(PL, INPUT_PULLUP);
+pinMode(RST, INPUT_PULLUP);
+
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
 if (digitalRead(DIP4) == LOW){ ///// Test all Lower Switches
-
+  Serial.println("DIP4");
 
 ////////////////////////LOWER CONTROL SWITCH TEST SECTION//////////////////////////////
 
@@ -162,6 +177,7 @@ digitalWrite(32, HIGH); //turn off the Carry light
 }
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
 else if (digitalRead(DIP3) == LOW){ ///// Test All Data Switches
+  Serial.println("DIP3");
 
 ////////////////////////DATA SWITCH TEST SECTION//////////////////////////////
 
@@ -198,6 +214,16 @@ for (int i = Mem0StartPin + 1; i <= Mem15EndPin; i = i + 1) {  //loop through al
 }
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
 else if (digitalRead(DIP2) == LOW){ ///// ALL LIGHTS SEQUENTIALLY FOR CPU TESTER ONLY!
+  Serial.println("DIP2");
+pinMode(STOP, OUTPUT);
+pinMode(CON_RQ, OUTPUT);
+pinMode(CON_INST, OUTPUT);
+pinMode(CON_DATA, OUTPUT);
+pinMode(CONT_ISTP_MSTP, OUTPUT);
+pinMode(MSTP, OUTPUT);
+pinMode(ISTP, OUTPUT);
+pinMode(PL, OUTPUT);
+pinMode(RST, OUTPUT);
 
   for (int i = Mem0StartPin; i <= Mem15EndPin; i = i + 1) {   //For testing Data Lights 0-15
       pinMode(i, OUTPUT);  
@@ -209,15 +235,73 @@ else if (digitalRead(DIP2) == LOW){ ///// ALL LIGHTS SEQUENTIALLY FOR CPU TESTER
   //WHEN A REAL FRONT PANEL IS CONNECTED
   //HOWEVER, THIS IS THE CPU TESTER, WITH NO FRONT PANEL CONNECTED
   //WE HOPE....................................................
-  digitalWrite(CON_INST, HIGH);  
-  digitalWrite(CON_DATA, HIGH);  
+//  digitalWrite(CON_INST, HIGH);  
+//  digitalWrite(CON_DATA, HIGH);  
 
-  for (int i = StartPin; i <= EndPin; i = i + 1) {   //sequence the lights 
+  digitalWrite(30, LOW);
+  delay(200);           
+  digitalWrite(31, LOW);
+  delay(200);           
+  digitalWrite(49, LOW);
+  delay(200);           
+  digitalWrite(50, LOW);
+  delay(200);           
+  digitalWrite(51, LOW);
+  delay(200);           
+  digitalWrite(32, LOW);
+  delay(200);           
+
+  digitalWrite(STOP, LOW);
+  delay(200);           
+  digitalWrite(CON_RQ, LOW);
+  delay(200);           
+  digitalWrite(CON_INST, LOW);
+  delay(200);           
+  digitalWrite(CON_DATA, LOW);
+  delay(200);           
+  digitalWrite(CONT_ISTP_MSTP, LOW);
+  delay(200);           
+  digitalWrite(MSTP, LOW);
+  delay(200);           
+  digitalWrite(ISTP, LOW);
+  delay(200);           
+  digitalWrite(PL, LOW);
+  delay(200);           
+  digitalWrite(RESTART_ENAB, HIGH);  //Active HIGH
+  delay(200);           
+  digitalWrite(RST, LOW);
+  delay(200);           
+
+  for (int i = StartPin; i <= 29; i = i + 1) {   //sequence the lights 
   digitalWrite(i, LOW);
   delay(200);           
-  digitalWrite(i, HIGH);  
     }
-  for (int c = 1; c <= blinky; c = c + 1) {          //blink the lights [blinky] times
+  for (int i = 33; i <= 48; i = i + 1) {   //sequence the lights 
+  digitalWrite(i, LOW);
+  delay(200);           
+  }
+
+//turn all the lights off at once
+
+  digitalWrite(STOP, HIGH);  
+  digitalWrite(CON_RQ, HIGH);  
+  digitalWrite(CON_INST, HIGH);  
+  digitalWrite(CON_DATA, HIGH);  
+  digitalWrite(CONT_ISTP_MSTP, HIGH);  
+  digitalWrite(MSTP, HIGH);  
+  digitalWrite(ISTP, HIGH);  
+  digitalWrite(PL, HIGH);  
+  digitalWrite(RESTART_ENAB, LOW);  
+  digitalWrite(RST, HIGH);  
+
+    for (int i = StartPin; i <= EndPin; i = i + 1) { //turn all the lights off at once
+        digitalWrite(i, HIGH);
+    }
+
+
+
+//  for (int c = 1; c <= blinky; c = c + 1) {          //blink the lights [blinky] times
+  for (int c = 1; c <= 0; c = c + 1) {          //blink the lights [blinky] times
     for (int i = StartPin; i <= EndPin; i = i + 1) { //turn all the lights on at once
         digitalWrite(i, LOW);
     }
@@ -231,6 +315,8 @@ else if (digitalRead(DIP2) == LOW){ ///// ALL LIGHTS SEQUENTIALLY FOR CPU TESTER
 }
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
 else if (digitalRead(DIP1) == LOW){ ///// All Lights Sequential
+  Serial.println("DIP1");
+
   for (int i = Mem0StartPin; i <= Mem15EndPin; i = i + 1) {   //For testing Data Lights 0-15
       pinMode(i, OUTPUT);  
       digitalWrite(i, HIGH);  
