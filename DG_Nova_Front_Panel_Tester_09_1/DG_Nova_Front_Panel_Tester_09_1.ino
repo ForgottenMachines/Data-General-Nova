@@ -213,7 +213,8 @@ for (int i = Mem0StartPin + 1; i <= Mem15EndPin; i = i + 1) {  //loop through al
 
 }
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
-else if (digitalRead(DIP2) == LOW){ ///// ALL LIGHTS SEQUENTIALLY FOR CPU TESTER ONLY!
+else if (1 == 0){ ///// Disable this option, as it could be fatal or dangerous to the front panel, because it creates conflicts with output signals.
+//else if (digitalRead(DIP2) == LOW){ ///// ALL LIGHTS SEQUENTIALLY FOR CPU TESTER ONLY!
   Serial.println("DIP2");
 pinMode(STOP, OUTPUT);
 pinMode(CON_RQ, OUTPUT);
