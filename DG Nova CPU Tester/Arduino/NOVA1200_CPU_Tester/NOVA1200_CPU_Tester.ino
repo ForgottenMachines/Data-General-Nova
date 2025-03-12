@@ -140,8 +140,8 @@ digitalWrite(MEM6,  LOW);
 digitalWrite(MEM7, HIGH);
 
 ///temporary CON_INST test
-pinMode(CON_INST, OUTPUT);
-digitalWrite(CON_INST, LOW); 
+//pinMode(CON_INST, OUTPUT);
+//digitalWrite(CON_INST, LOW); 
 
 digitalWrite(CON_RQ, LOW); 
 delay(DelayAmount);  
@@ -179,8 +179,8 @@ else if (digitalRead(DIP3) == LOW){ ///// NOT YET DEFINED
 
 
 }
-
-else if (digitalRead(DIP4) == LOW){ ///// ALL LIGHTS SEQUENTIALLY FOR CPU TESTER ONLY!  WARNING------DO NOT USE WHEN CPU BOARD IS CONNECTED!
+else if (1 == 0){ ///// BIPASS THE BELOW ROUTINE FOR SAFETY
+//else if (digitalRead(DIP4) == LOW){ ///// ALL LIGHTS SEQUENTIALLY FOR CPU TESTER ONLY with ALL CHIPS REMOVED!  WARNING------DO NOT USE WHEN CPU BOARD IS CONNECTED OR ANY CHIPS INSTALLED IN THE TESTER!
 pinMode(STOP, OUTPUT);
 pinMode(CON_RQ, OUTPUT);
 pinMode(CON_INST, OUTPUT);
