@@ -34,6 +34,7 @@ constexpr int DIP2 = 9;
 constexpr int DIP3 = 8;
 constexpr int DIP4 = 7;
 
+
 void setup() {
        pinMode(SwitchPattern1, INPUT_PULLUP);
        pinMode(SwitchDiag1, INPUT_PULLUP);
@@ -298,18 +299,37 @@ pinMode(RST, OUTPUT);
     for (int i = StartPin; i <= EndPin; i = i + 1) { //turn all the lights off at once
         digitalWrite(i, HIGH);
     }
+  delay(200);  
 
 
-
-//  for (int c = 1; c <= blinky; c = c + 1) {          //blink the lights [blinky] times
-  for (int c = 1; c <= 0; c = c + 1) {          //blink the lights [blinky] times
+  for (int c = 1; c <= blinky; c = c + 1) {          //blink the lights [blinky] times
     for (int i = StartPin; i <= EndPin; i = i + 1) { //turn all the lights on at once
         digitalWrite(i, LOW);
     }
+  digitalWrite(STOP, LOW);  
+  digitalWrite(CON_RQ, LOW);  
+  digitalWrite(CON_INST, LOW);  
+  digitalWrite(CON_DATA, LOW);  
+  digitalWrite(CONT_ISTP_MSTP, LOW);  
+  digitalWrite(MSTP, LOW);  
+  digitalWrite(ISTP, LOW);  
+  digitalWrite(PL, LOW);  
+  digitalWrite(RESTART_ENAB, HIGH);  
+  digitalWrite(RST, LOW);  
   delay(200);                                        //leave them on for 2/10ths of a second
     for (int i = StartPin; i <= EndPin; i = i + 1) { //turn all the lights off at once
         digitalWrite(i, HIGH);
     }
+  digitalWrite(STOP, HIGH);  
+  digitalWrite(CON_RQ, HIGH);  
+  digitalWrite(CON_INST, HIGH);  
+  digitalWrite(CON_DATA, HIGH);  
+  digitalWrite(CONT_ISTP_MSTP, HIGH);  
+  digitalWrite(MSTP, HIGH);  
+  digitalWrite(ISTP, HIGH);  
+  digitalWrite(PL, HIGH);  
+  digitalWrite(RESTART_ENAB, LOW);  
+  digitalWrite(RST, HIGH);  
   delay(200);  
   }
 
