@@ -1,4 +1,6 @@
-constexpr int DelayAmount = 100; // time to wait between front panel commands
+constexpr int DelayAmount = 600; // time to wait between front panel commands
+constexpr int Loops = 5; // time to wait between front panel commands
+
 
 constexpr int RESTART_ENAB = A7; // input from the CPU... connected to center/common of Reset & Stop switches, so must be low to test those
 constexpr int RST = A6; // RESET
@@ -51,12 +53,15 @@ void setup() {
        pinMode(SwitchDiag1, INPUT_PULLUP);
        pinMode(SwitchCON_DATA, INPUT_PULLUP);
        pinMode(SwitchCON_INST, INPUT_PULLUP);
-       pinMode(RST, INPUT_PULLUP);
+       pinMode(RST, OUTPUT);
+       digitalWrite(RST, HIGH);  
        pinMode(CON_RQ, OUTPUT); 
+       digitalWrite(CON_RQ, HIGH); 
        pinMode(CON_INST, INPUT_PULLUP);
        pinMode(PL, INPUT_PULLUP);
        pinMode(ISTP, INPUT_PULLUP);
-       pinMode(STOP, INPUT_PULLUP);
+       pinMode(STOP, OUTPUT);
+       digitalWrite(STOP, HIGH);
        pinMode(CON_DATA, INPUT_PULLUP);
        pinMode(CONT_ISTP_MSTP, INPUT_PULLUP);
        pinMode(MSTP, INPUT_PULLUP);
@@ -108,14 +113,15 @@ void setup() {
 
 void loop() {
 //Make sure we put inputs back to inputs after testing the CPU tester board by itself:
-pinMode(STOP, INPUT_PULLUP);
+digitalWrite(CON_RQ, HIGH);
+digitalWrite(RST, HIGH);  
+digitalWrite(STOP, HIGH);
 pinMode(CON_INST, INPUT_PULLUP);
 pinMode(CON_DATA, INPUT_PULLUP);
 pinMode(CONT_ISTP_MSTP, INPUT_PULLUP);
 pinMode(MSTP, INPUT_PULLUP);
 pinMode(ISTP, INPUT_PULLUP);
 pinMode(PL, INPUT_PULLUP);
-pinMode(RST, INPUT_PULLUP);
 pinMode(RESTART_ENAB, INPUT);
   for (int i = StartPin; i <= EndPin; i = i + 1) {   //For Testing all the pretty lights
         pinMode(i, INPUT_PULLUP);
@@ -125,10 +131,47 @@ pinMode(RESTART_ENAB, INPUT);
   }
 
 
-
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
 if (digitalRead(DIP1) == LOW){ ///// Test EXAMINE & EXAMINE NEXT fron front panel, all addresses 0
 
+digitalWrite(CON_RQ, HIGH); 
+digitalWrite(RST, HIGH); 
+digitalWrite(STOP, HIGH);
+digitalWrite(MEM0, HIGH);
+digitalWrite(MEM1, HIGH);
+digitalWrite(MEM2, HIGH);
+digitalWrite(MEM3, HIGH);
+digitalWrite(MEM4, HIGH);
+digitalWrite(MEM5, HIGH);
+digitalWrite(MEM6, HIGH);
+digitalWrite(MEM7, HIGH);
+
+
+digitalWrite(STOP, LOW); 
+delay(DelayAmount);  
+digitalWrite(STOP, HIGH);  
+delay(DelayAmount);  
+digitalWrite(STOP, LOW); 
+delay(DelayAmount);  
+digitalWrite(STOP, HIGH);  
+delay(DelayAmount);  
+digitalWrite(STOP, LOW); 
+delay(DelayAmount);  
+digitalWrite(STOP, HIGH);  
+delay(DelayAmount);  
+
+digitalWrite(RST, LOW); 
+delay(DelayAmount);  
+digitalWrite(RST, HIGH);  
+delay(DelayAmount);  
+digitalWrite(RST, LOW); 
+delay(DelayAmount);  
+digitalWrite(RST, HIGH);  
+delay(DelayAmount);  
+digitalWrite(RST, LOW); 
+delay(DelayAmount);  
+digitalWrite(RST, HIGH);  
+delay(DelayAmount);  
 
 digitalWrite(MEM0, HIGH);///front panel code for EXAMINE (NOTE: these signals are inverted from how the NOVA sees them)
 digitalWrite(MEM1, HIGH);
@@ -148,7 +191,7 @@ delay(DelayAmount);
 digitalWrite(CON_RQ, HIGH);  
 delay(DelayAmount);  
 
- for (int dg = 0; dg <= 25; dg++) {  
+ for (int dg = 0; dg <= Loops; dg++) {  
 
 digitalWrite(MEM0, HIGH); ///front panel code for EXAMINE NEXT (NOTE: these signals are inverted from how the NOVA sees them)
 digitalWrite(MEM1, HIGH);
