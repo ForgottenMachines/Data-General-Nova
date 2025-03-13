@@ -1,5 +1,5 @@
-constexpr int DelayAmount = 600; // time to wait between front panel commands
-constexpr int Loops = 5; // time to wait between front panel commands
+constexpr int DelayAmount = 20; // time to wait between front panel commands
+constexpr int Loops = 5000; // time to wait between front panel commands
 
 
 constexpr int RESTART_ENAB = A7; // input from the CPU... connected to center/common of Reset & Stop switches, so must be low to test those
@@ -155,15 +155,7 @@ digitalWrite(STOP, LOW);
 delay(DelayAmount);  
 digitalWrite(STOP, HIGH);  
 delay(DelayAmount);  
-digitalWrite(STOP, LOW); 
-delay(DelayAmount);  
-digitalWrite(STOP, HIGH);  
-delay(DelayAmount);  
 
-digitalWrite(RST, LOW); 
-delay(DelayAmount);  
-digitalWrite(RST, HIGH);  
-delay(DelayAmount);  
 digitalWrite(RST, LOW); 
 delay(DelayAmount);  
 digitalWrite(RST, HIGH);  
