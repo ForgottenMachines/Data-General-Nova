@@ -1,3 +1,12 @@
+Address = "07757"
+EnterData = "126440"
+
+http://www.bitsavers.org/pdf/dg/software/utility/093-000002-01_Bootstrap_Loader70.pdf#page=8
+
+https://www.codeconvert.ai/vb.net-to-c++-converter
+
+
+
 int DataPin1 = 3;  
 int ClockPin1 = 4; 
 int LatchPin1 = 5; 
