@@ -3,9 +3,9 @@ EnterData = "126440"
 
 http://www.bitsavers.org/pdf/dg/software/utility/093-000002-01_Bootstrap_Loader70.pdf#page=8
 
+https://forum.arduino.cc/t/msbfirst-and-lsbfirst-on-shift-register/1100980/2
+
 https://www.codeconvert.ai/vb.net-to-c++-converter
-
-
 
 int DataPin1 = 3;  
 int ClockPin1 = 4; 
@@ -26,7 +26,6 @@ void setup()
   pinMode(LatchPin2, OUTPUT);
 }
 
-
 void loop()
 {
   
@@ -35,7 +34,6 @@ void loop()
   SOS();        // All LEDs ON and OFF 10 times
   OneByOne();   // LEDs Glow one by one from 0 to 7
   delay(2000);
-  
 
 }
 
