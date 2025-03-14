@@ -1,14 +1,14 @@
-int DataPin = 2;  // Data Pin is connected to Pin No. 2
-int ClockPin = 3; // Data Pin is connected to Pin No. 3
-int LatchPin = 4; // Data Pin is connected to Pin No. 4
+int DataPin1 = 3;  
+int ClockPin1 = 4; 
+int LatchPin1 = 5; 
 
-byte Data = 0;  // 8 Bit Data to be sent through DataPin
+byte Data = 0;  // 8 Bit Data to be sent through DataPin1
 
 void setup()
 {
-  pinMode(DataPin, OUTPUT);   // All 3 pins are output
-  pinMode(ClockPin, OUTPUT);  
-  pinMode(LatchPin, OUTPUT);
+  pinMode(DataPin1, OUTPUT);   // All 3 pins are output
+  pinMode(ClockPin1, OUTPUT);  
+  pinMode(LatchPin1, OUTPUT);
 }
 
 
@@ -29,9 +29,9 @@ void loop()
 void shiftWrite(int Pin, boolean State) // Function is similar to digitalWrite 
 {                                       // State-0/1 | Pin - Pin No.
   bitWrite(Data,Pin,State);             // Making Pin(Bit) 0 or 1
-  shiftOut(DataPin, ClockPin, MSBFIRST, Data); // Data out at DataPin
-  digitalWrite(LatchPin, HIGH);                // Latching Data
-  digitalWrite(LatchPin, LOW);
+  shiftOut(DataPin1, ClockPin1, MSBFIRST, Data); // Data out at DataPin1
+  digitalWrite(LatchPin1, HIGH);                // Latching Data
+  digitalWrite(LatchPin1, LOW);
 }
 
 void increment()   //LEDs increment start from 0 - 7 
