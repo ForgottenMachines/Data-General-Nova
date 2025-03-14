@@ -1,14 +1,20 @@
 int DataPin1 = 3;  
 int ClockPin1 = 4; 
 int LatchPin1 = 5; 
+int DataPin2 = 6;  
+int ClockPin2 = 11; 
+int LatchPin2 = 12; 
 
-byte Data = 0;  // 8 Bit Data to be sent through DataPin1
+byte Data = 0;  // 8 Bit Data to be sent through DataPin1/2
 
 void setup()
 {
   pinMode(DataPin1, OUTPUT);   // All 3 pins are output
   pinMode(ClockPin1, OUTPUT);  
   pinMode(LatchPin1, OUTPUT);
+  pinMode(DataPin2, OUTPUT);   // All 3 pins are output
+  pinMode(ClockPin2, OUTPUT);  
+  pinMode(LatchPin2, OUTPUT);
 }
 
 
