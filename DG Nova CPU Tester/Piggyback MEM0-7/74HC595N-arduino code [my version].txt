@@ -28,10 +28,16 @@ void setup()
 
 void loop() {
 
-digitalWrite(latchPin,LOW);
-shiftOut(dataPin,clockPin,MSBFIRST,LEDs);
-digitalWrite(latchPin,HIGH);
+digitalWrite(LatchPin1,LOW);
+shiftOut(DataPin1,ClockPin1,MSBFIRST,Upper);
+digitalWrite(LatchPin1,HIGH);
+digitalWrite(LatchPin2,LOW);
+shiftOut(DataPin2,ClockPin2,MSBFIRST,Upper);
+digitalWrite(LatchPin2,HIGH);
+
+
 }
+
 
 
 void shiftWrite(int Pin, boolean State) // Function is similar to digitalWrite 
