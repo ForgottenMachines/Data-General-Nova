@@ -1,0 +1,107 @@
+Address = "07757"
+EnterData = "126440"
+
+http://www.bitsavers.org/pdf/dg/software/utility/093-000002-01_Bootstrap_Loader70.pdf#page=8
+
+https://forum.arduino.cc/t/msbfirst-and-lsbfirst-on-shift-register/1100980/2
+
+https://www.codeconvert.ai/vb.net-to-c++-converter
+
+int DataPin1 = 3;  
+int ClockPin1 = 4; 
+int LatchPin1 = 5; 
+int DataPin2 = 6;  
+int ClockPin2 = 11; 
+int LatchPin2 = 12; 
+
+byte Data = 0;  // 8 Bit Data to be sent through DataPin1/2
+
+void setup()
+{
+  pinMode(DataPin1, OUTPUT);   // All 3 pins are output
+  pinMode(ClockPin1, OUTPUT);  
+  pinMode(LatchPin1, OUTPUT);
+  pinMode(DataPin2, OUTPUT);   // All 3 pins are output
+  pinMode(ClockPin2, OUTPUT);  
+  pinMode(LatchPin2, OUTPUT);
+}
+
+void loop() {
+
+digitalWrite(latchPin,LOW);
+shiftOut(dataPin,clockPin,MSBFIRST,LEDs);
+digitalWrite(latchPin,HIGH);
+}
+
+
+void shiftWrite(int Pin, boolean State) // Function is similar to digitalWrite 
+{                                       // State-0/1 | Pin - Pin No.
+  bitWrite(Data,Pin,State);             // Making Pin(Bit) 0 or 1
+  shiftOut(DataPin1, ClockPin1, MSBFIRST, Data); // Data out at DataPin1
+  digitalWrite(LatchPin1, HIGH);                // Latching Data
+  digitalWrite(LatchPin1, LOW);
+}
+
+void increment()   //LEDs increment start from 0 - 7 
+{
+  int PinNo = 0;
+  int Delay = 100; 
+  
+  for(PinNo = 0; PinNo < 8; PinNo++)
+  {
+    shiftWrite(PinNo, HIGH);
+    delay(Delay);                
+  }
+  for(PinNo = 7; PinNo >= 0; PinNo--)
+  {
+    shiftWrite(PinNo, LOW);
+    delay(Delay);                
+  }
+}
+
+void OneByOne()  // LEDs Glow one by one from 0 to 7
+{
+  int PinNo = 0;
+  int Delay = 100; 
+  
+  for(PinNo = 0; PinNo < 8; PinNo++)
+  {
+    shiftWrite(PinNo, HIGH);
+    delay(Delay); 
+    shiftWrite(PinNo, LOW);    
+  }
+  for(PinNo = 7; PinNo >=0 ; PinNo--)
+  {
+    shiftWrite(PinNo, HIGH);
+    delay(Delay); 
+    shiftWrite(PinNo, LOW);    
+  }
+
+}
+
+void AllHigh()   // sets all High
+{
+  int PinNo = 0;
+  for(PinNo = 0; PinNo < 8; PinNo++)
+  {
+   shiftWrite(PinNo, HIGH);  
+  }
+}
+
+void AllLow()   // Sets all low
+{
+  int PinNo = 0;
+  for(PinNo = 0; PinNo < 8; PinNo++)
+  {
+   shiftWrite(PinNo, LOW);  
+  }
+}
+
+void SOS(){                  // All LEDs ON and OFF 10 times
+  for (int x=0; x<10; x++){    
+  AllHigh();
+  delay(100);
+  AllLow();
+  delay(100);
+  }
+}
