@@ -1,16 +1,13 @@
 String Address = "07757";
 String EnterData = "126440";
 String Octal = "0";
-String Binary = "";
+String Binary = "0";
+String TestStr = "";
+String Upper = "";
 
 void setup() {
   Serial.begin(115200);
   Serial.println("====================");
-
-//for c = 1 to len(MyString)
-//Hex = Mid(MyString,len(MyString),1)
-//Hex = Mid(Address,c,1)
-//Next c
 
 for (size_t c = 1; c <= Address.length(); ++c) {
   Octal = Address[c - 1]; // Get the last character
@@ -20,10 +17,16 @@ if(Octal == "5") {Binary = Binary + "101";};
 if(Octal == "7") {Binary = Binary + "111";};
 };
 
+Binary = "1234567890123456";
+
+Upper = Binary.SubStr(7, 8);
+  Serial.println(Upper);
+
 }
 
 void loop() {
  Serial.println(Binary);
-   delay(20000);
+ Serial.println(Upper);
+    delay(20000);
 
 }
