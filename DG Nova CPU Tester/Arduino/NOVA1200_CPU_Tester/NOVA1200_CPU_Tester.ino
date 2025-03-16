@@ -217,43 +217,11 @@ delay(DelayAmount);
 digitalWrite(RST, HIGH);  
 delay(DelayAmount);  
 
-///////SET ADDRESSES HERE
-digitalWrite(LatchPin1,LOW);  //Send bits 0-7 into the 74
-for (uint8_t i = Upper.length(); i >0 ; i--)  {
-  digitalWrite(DataPin1, Upper.charAt(i-1)&0x01);               
-  digitalWrite(ClockPin1, HIGH);
-  digitalWrite(ClockPin1, LOW);   
-}
-digitalWrite(LatchPin1,HIGH);
-digitalWrite(LatchPin2,LOW);  //Send bits 8-15 into the other 74
-for (uint8_t j = Lower.length(); j >0 ; j--)  {
-  digitalWrite(DataPin2, Lower.charAt(j-1)&0x01);               
-  digitalWrite(ClockPin2, HIGH);
-  digitalWrite(ClockPin2, LOW);   
-}
-digitalWrite(LatchPin2,HIGH);
-///END SET ADDRESSES
 
-digitalWrite(MEM0, HIGH);  ///front panel code for EXAMINE (NOTE: these signals are inverted from how the NOVA sees them)
-digitalWrite(MEM1, HIGH);
-digitalWrite(MEM2, HIGH);
-digitalWrite(MEM3, HIGH);
-digitalWrite(MEM4, HIGH);
-digitalWrite(MEM5,  LOW);
-digitalWrite(MEM6,  LOW);
-digitalWrite(MEM7, HIGH);
-
-///temporary CON_INST test
-//pinMode(CON_INST, OUTPUT);
-//digitalWrite(CON_INST, LOW); 
-
-digitalWrite(CON_RQ, LOW); 
+digitalWrite(RST, LOW); 
 delay(DelayAmount);  
-digitalWrite(CON_RQ, HIGH);  
+digitalWrite(RST, HIGH);  
 delay(DelayAmount);  
-
-delay(RepeatAt);
-for (int dg = 0; dg <= Loops; dg++) {  ///front panel code for EXAMINE NEXT (NOTE: these signals are inverted from how the NOVA sees them)
 
 digitalWrite(MEM0, HIGH); 
 digitalWrite(MEM1, HIGH);
@@ -286,7 +254,6 @@ else if (digitalRead(DIP3) == LOW){ ///// NOT YET DEFINED
 Address = "22222"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
 ResetAddress();
 }
-
 
 else if (digitalRead(DIP4) == LOW){ ///// NOT YET DEFINED
 
@@ -455,4 +422,34 @@ if(Octal == "7") {Binary = Binary + "111";};
 };
 Upper = Binary.substring(0, 8);
 Lower = Binary.substring(8, 16);
+}
+
+void SetAddress() {
+
+///////SET ADDRESSES HERE
+digitalWrite(LatchPin1,LOW);  //Send bits 0-7 into the 74
+for (uint8_t i = Upper.length(); i >0 ; i--)  {
+  digitalWrite(DataPin1, Upper.charAt(i-1)&0x01);               
+  digitalWrite(ClockPin1, HIGH);
+  digitalWrite(ClockPin1, LOW);   
+}
+digitalWrite(LatchPin1,HIGH);
+digitalWrite(LatchPin2,LOW);  //Send bits 8-15 into the other 74
+for (uint8_t j = Lower.length(); j >0 ; j--)  {
+  digitalWrite(DataPin2, Lower.charAt(j-1)&0x01);               
+  digitalWrite(ClockPin2, HIGH);
+  digitalWrite(ClockPin2, LOW);   
+}
+digitalWrite(LatchPin2,HIGH);
+///END SET ADDRESSES
+
+digitalWrite(MEM0, HIGH);  ///front panel code for EXAMINE (NOTE: these signals are inverted from how the NOVA sees them)
+digitalWrite(MEM1, HIGH);
+digitalWrite(MEM2, HIGH);
+digitalWrite(MEM3, HIGH);
+digitalWrite(MEM4, HIGH);
+digitalWrite(MEM5,  LOW);
+digitalWrite(MEM6,  LOW);
+digitalWrite(MEM7, HIGH);
+
 }
