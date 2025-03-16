@@ -5,6 +5,7 @@ constexpr int Loops = 5000; // Examine Next Count Limit
 String Address = "00000"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
 String EnterData = "126440"; //NOT even used yet, too complicated so far
 
+
 String Octal = "";
 String Binary = "0";
 String TestStr = "";
@@ -253,7 +254,7 @@ digitalWrite(CON_RQ, HIGH);
 delay(DelayAmount);  
 
 delay(RepeatAt);
-for (int dg = 0; dg <= Loops; dg++) {  ///front panel code for EXAMINE NEXT (NOTE: these signals are inverted from how the NOVA sees them)
+ for (int dg = 0; dg <= Loops; dg++) {  ///front panel code for EXAMINE NEXT (NOTE: these signals are inverted from how the NOVA sees them)
 
 digitalWrite(MEM0, HIGH); 
 digitalWrite(MEM1, HIGH);
@@ -269,17 +270,17 @@ delay(DelayAmount);
 digitalWrite(CON_RQ, HIGH);  
 delay(DelayAmount);  
 
-  }
-
-
+//  }
 delay(RepeatAt);
 }
+
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
 else if (digitalRead(DIP2) == LOW){ ///// NOT YET DEFINED
 
 Address = "11111"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
 ResetAddress();
 }
+
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
 else if (digitalRead(DIP3) == LOW){ ///// NOT YET DEFINED
 
@@ -429,7 +430,6 @@ digitalWrite(CON_RQ, HIGH);
 }
 
 }
-
 
 void ResetAddress() {
 Binary = "0";
