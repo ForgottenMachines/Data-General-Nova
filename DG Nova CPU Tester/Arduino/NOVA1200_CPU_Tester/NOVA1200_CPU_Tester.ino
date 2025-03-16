@@ -1,4 +1,4 @@
-constexpr int DelayAmount = 40; // time to wait between INDIVIDUAL front panel commands
+constexpr int DelayAmount = 80; // time to wait between INDIVIDUAL front panel commands
 constexpr int RepeatAt = 800; // Repeat all commands after this delay
 constexpr int Loops = 5000; // Examine Next Count Limit
 
@@ -63,7 +63,6 @@ constexpr int DIP2 = 8;
 constexpr int DIP3 = 9;
 constexpr int DIP4 = 10;
 
-
 void setup() {
 //       Serial.begin(115200);  //Using this MAY hijack pins D0-D1, which is hard-wired to /CON DATA & /CONT+ISTP+MSTP.
 //       Serial.println("====================");
@@ -127,10 +126,6 @@ void setup() {
   digitalWrite(MEM6, HIGH);
   digitalWrite(MEM7, HIGH);
 
-/// SETUP Sending Address Switches 
-//  Serial.println("Address:");
-//  Serial.println(Address);
-//  Serial.println("");
 
 for (size_t c = 1; c <= Address.length(); ++c) {
   Octal = Address[c - 1]; // Get the last character
@@ -146,12 +141,6 @@ if(Octal == "7") {Binary = Binary + "111";};
 
 Upper = Binary.substring(0, 8);
 Lower = Binary.substring(8, 16);
-//Serial.println("Upper:");
-//Serial.println(Upper);
-//Serial.println("");
-//Serial.println("Lower:");
-//Serial.println(Lower);
-//Serial.println("");
 
 
   pinMode(DataPin1, OUTPUT); 
@@ -185,74 +174,104 @@ pinMode(RESTART_ENAB, INPUT);
 
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
 if (digitalRead(DIP1) == LOW){ ///// Test EXAMINE & EXAMINE NEXT fron front panel, all addresses 0
+InitializeSignals();
 
-digitalWrite(CON_RQ, HIGH); 
-digitalWrite(RST, HIGH); 
-digitalWrite(STOP, HIGH);
-digitalWrite(MEM0, HIGH);
-digitalWrite(MEM1, HIGH);
-digitalWrite(MEM2, HIGH);
-digitalWrite(MEM3, HIGH);
-digitalWrite(MEM4, HIGH);
-digitalWrite(MEM5, HIGH);
-digitalWrite(MEM6, HIGH);
-digitalWrite(MEM7, HIGH);
-
-
-digitalWrite(STOP, LOW); 
-delay(DelayAmount);  
-digitalWrite(STOP, HIGH);  
-delay(DelayAmount);  
-digitalWrite(STOP, LOW); 
-delay(DelayAmount);  
-digitalWrite(STOP, HIGH);  
-delay(DelayAmount);  
-
-digitalWrite(RST, LOW); 
-delay(DelayAmount);  
-digitalWrite(RST, HIGH);  
-delay(DelayAmount);  
-digitalWrite(RST, LOW); 
-delay(DelayAmount);  
-digitalWrite(RST, HIGH);  
-delay(DelayAmount);  
-
-
-digitalWrite(RST, LOW); 
-delay(DelayAmount);  
-digitalWrite(RST, HIGH);  
-delay(DelayAmount);  
-
-digitalWrite(MEM0, HIGH); 
-digitalWrite(MEM1, HIGH);
-digitalWrite(MEM2, HIGH);
-digitalWrite(MEM3, HIGH);
-digitalWrite(MEM4, HIGH);
-digitalWrite(MEM5, HIGH);
-digitalWrite(MEM6,  LOW);
-digitalWrite(MEM7,  LOW); 
-
-digitalWrite(CON_RQ, LOW); 
-delay(DelayAmount);  
-digitalWrite(CON_RQ, HIGH);  
-delay(DelayAmount);  
-
-  }
-
+Stop2Reset2();
+Address = "00000"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+ResetAddress();
+SetAddress();
+Examine();
+delay(RepeatAt);
+for (int dg = 0; dg <= Loops; dg++) {  ///front panel code for EXAMINE NEXT (NOTE: these signals are inverted from how the NOVA sees them)
+ExamineNext();
+delay(RepeatAt);
+}
 
 delay(RepeatAt);
 }
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
 else if (digitalRead(DIP2) == LOW){ ///// NOT YET DEFINED
+InitializeSignals();
 
-Address = "11111"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+
+Address = "00001"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
 ResetAddress();
+SetAddress();
+Examine();
+delay(RepeatAt);
+Address = "22332"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+ResetAddress();
+SetAddress();
+Examine();
+delay(RepeatAt);
+Address = "11223"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+ResetAddress();
+SetAddress();
+Examine();
+delay(RepeatAt);
+Address = "33221"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+ResetAddress();
+SetAddress();
+Examine();
+delay(RepeatAt);
+Address = "17711"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+ResetAddress();
+SetAddress();
+Examine();
+delay(RepeatAt);
+Address = "11777"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+ResetAddress();
+SetAddress();
+Examine();
+delay(RepeatAt);
+Address = "66666"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+ResetAddress();
+SetAddress();
+Examine();
+delay(RepeatAt);
+Address = "55555"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+ResetAddress();
+SetAddress();
+Examine();
+delay(RepeatAt);
+Address = "44444"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+ResetAddress();
+SetAddress();
+Examine();
+delay(RepeatAt);
+Address = "33333"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+ResetAddress();
+SetAddress();
+Examine();
+delay(RepeatAt);
+Address = "22222"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+ResetAddress();
+SetAddress();
+Examine();
+delay(RepeatAt);
+Address = "77777"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+ResetAddress();
+SetAddress();
+Examine();
+delay(RepeatAt);
+
 }
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
 else if (digitalRead(DIP3) == LOW){ ///// NOT YET DEFINED
+InitializeSignals();
 
-Address = "22222"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+Stop2Reset2();
+Address = "00001"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
 ResetAddress();
+SetAddress();
+Deposit();
+delay(RepeatAt);
+for (int dg = 0; dg <= Loops; dg++) {  ///front panel code for EXAMINE NEXT (NOTE: these signals are inverted from how the NOVA sees them)
+DepositNext();
+delay(RepeatAt);
+}
+
+delay(RepeatAt);
 }
 
 else if (digitalRead(DIP4) == LOW){ ///// NOT YET DEFINED
@@ -443,6 +462,10 @@ for (uint8_t j = Lower.length(); j >0 ; j--)  {
 digitalWrite(LatchPin2,HIGH);
 ///END SET ADDRESSES
 
+}
+
+void Examine() {
+
 digitalWrite(MEM0, HIGH);  ///front panel code for EXAMINE (NOTE: these signals are inverted from how the NOVA sees them)
 digitalWrite(MEM1, HIGH);
 digitalWrite(MEM2, HIGH);
@@ -450,6 +473,103 @@ digitalWrite(MEM3, HIGH);
 digitalWrite(MEM4, HIGH);
 digitalWrite(MEM5,  LOW);
 digitalWrite(MEM6,  LOW);
+digitalWrite(MEM7, HIGH);
+
+digitalWrite(CON_RQ, LOW); 
+delay(DelayAmount);  
+digitalWrite(CON_RQ, HIGH);  
+delay(DelayAmount);  
+
+}
+
+void ExamineNext() {
+
+digitalWrite(MEM0, HIGH); 
+digitalWrite(MEM1, HIGH);
+digitalWrite(MEM2, HIGH);
+digitalWrite(MEM3, HIGH);
+digitalWrite(MEM4, HIGH);
+digitalWrite(MEM5, HIGH);
+digitalWrite(MEM6,  LOW);
+digitalWrite(MEM7,  LOW); 
+
+digitalWrite(CON_RQ, LOW); 
+delay(DelayAmount);  
+digitalWrite(CON_RQ, HIGH);  
+delay(DelayAmount);  
+
+}
+
+void Stop2Reset2() {
+
+digitalWrite(STOP, LOW);  //STOP TWICE
+delay(DelayAmount);  
+digitalWrite(STOP, HIGH);  
+delay(DelayAmount);  
+digitalWrite(STOP, LOW); 
+delay(DelayAmount);  
+digitalWrite(STOP, HIGH);  
+delay(DelayAmount);  
+
+digitalWrite(RST, LOW);  //RESET TWICE
+delay(DelayAmount);  
+digitalWrite(RST, HIGH);  
+delay(DelayAmount);  
+digitalWrite(RST, LOW); 
+delay(DelayAmount);  
+digitalWrite(RST, HIGH);  
+delay(DelayAmount);  
+
+}
+
+void Deposit() {
+
+digitalWrite(MEM0, HIGH);
+digitalWrite(MEM1, HIGH);
+digitalWrite(MEM2,  LOW);
+digitalWrite(MEM3, HIGH);
+digitalWrite(MEM4, HIGH);
+digitalWrite(MEM5, HIGH);
+digitalWrite(MEM6,  LOW);
+digitalWrite(MEM7, HIGH);
+
+digitalWrite(CON_RQ, LOW); 
+delay(DelayAmount);  
+digitalWrite(CON_RQ, HIGH);  
+delay(DelayAmount);  
+
+}
+
+void DepositNext() {
+
+digitalWrite(MEM0, HIGH); 
+digitalWrite(MEM1, HIGH);
+digitalWrite(MEM2,  LOW);
+digitalWrite(MEM3, HIGH);
+digitalWrite(MEM4, HIGH);
+digitalWrite(MEM5, HIGH);
+digitalWrite(MEM6,  LOW);
+digitalWrite(MEM7,  LOW);
+
+digitalWrite(CON_RQ, LOW); 
+delay(DelayAmount);  
+digitalWrite(CON_RQ, HIGH);  
+delay(DelayAmount);  
+
+}
+
+void InitializeSignals() {
+
+digitalWrite(CON_RQ, HIGH);  // INITIALIZE SIGNALS?
+digitalWrite(RST, HIGH); 
+digitalWrite(STOP, HIGH);
+digitalWrite(MEM0, HIGH);
+digitalWrite(MEM1, HIGH);
+digitalWrite(MEM2, HIGH);
+digitalWrite(MEM3, HIGH);
+digitalWrite(MEM4, HIGH);
+digitalWrite(MEM5, HIGH);
+digitalWrite(MEM6, HIGH);
 digitalWrite(MEM7, HIGH);
 
 }
