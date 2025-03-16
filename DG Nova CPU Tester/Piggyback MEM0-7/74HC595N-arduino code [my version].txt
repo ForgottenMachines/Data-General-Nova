@@ -1,11 +1,9 @@
 Address = "07757"
 EnterData = "126440"
 
-http://www.bitsavers.org/pdf/dg/software/utility/093-000002-01_Bootstrap_Loader70.pdf#page=8
-
-https://forum.arduino.cc/t/msbfirst-and-lsbfirst-on-shift-register/1100980/2
-
-https://www.codeconvert.ai/vb.net-to-c++-converter
+///http://www.bitsavers.org/pdf/dg/software/utility/093-000002-01_Bootstrap_Loader70.pdf#page=8
+///https://forum.arduino.cc/t/msbfirst-and-lsbfirst-on-shift-register/1100980/2
+///https://www.codeconvert.ai/vb.net-to-c++-converter
 
 int DataPin1 = 3;  
 int ClockPin1 = 4; 
@@ -18,10 +16,10 @@ byte Data = 0;  // 8 Bit Data to be sent through DataPin1/2
 
 void setup()
 {
-  pinMode(DataPin1, OUTPUT);   // All 3 pins are output
+  pinMode(DataPin1, OUTPUT); 
   pinMode(ClockPin1, OUTPUT);  
   pinMode(LatchPin1, OUTPUT);
-  pinMode(DataPin2, OUTPUT);   // All 3 pins are output
+  pinMode(DataPin2, OUTPUT);  
   pinMode(ClockPin2, OUTPUT);  
   pinMode(LatchPin2, OUTPUT);
 }

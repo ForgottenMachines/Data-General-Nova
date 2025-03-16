@@ -1,6 +1,23 @@
-constexpr int DelayAmount = 20; // time to wait between front panel commands
-constexpr int Loops = 5000; // time to wait between front panel commands
+constexpr int DelayAmount = 40; // time to wait between INDIVIDUAL front panel commands
+constexpr int RepeatAt = 800; // Repeat all commands after this delay
+constexpr int Loops = 5000; // Examine Next Count Limit
 
+String Address = "77777"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+String EnterData = "126440"; //NOT even used yet, too complicated so far
+
+
+String Octal = "0";
+String Binary = "0";
+String TestStr = "";
+String Upper = "";
+String Lower = "";
+
+constexpr int DataPin1 = 3;  
+constexpr int ClockPin1 = 4; 
+constexpr int LatchPin1 = 5; 
+constexpr int DataPin2 = 6;  
+constexpr int ClockPin2 = 11; 
+constexpr int LatchPin2 = 12; 
 
 constexpr int RESTART_ENAB = A7; // input from the CPU... connected to center/common of Reset & Stop switches, so must be low to test those
 constexpr int RST = A6; // RESET
@@ -109,6 +126,32 @@ void setup() {
   digitalWrite(MEM6, HIGH);
   digitalWrite(MEM7, HIGH);
 
+/// SETUP Sending Address Switches 
+for (size_t c = 1; c <= Address.length(); ++c) {
+  Octal = Address[c - 1]; // Get the last character
+  Serial.println(Octal);
+if(Octal == "0") {Binary = Binary + "000";};
+if(Octal == "1") {Binary = Binary + "001";};
+if(Octal == "2") {Binary = Binary + "010";};
+if(Octal == "3") {Binary = Binary + "011";};
+if(Octal == "4") {Binary = Binary + "100";};
+if(Octal == "5") {Binary = Binary + "101";};
+if(Octal == "6") {Binary = Binary + "110";};
+if(Octal == "7") {Binary = Binary + "111";};
+};
+
+//Binary = "1234567890123456";
+
+Upper = Binary.substring(0, 8);
+Lower = Binary.substring(8, 16);
+
+  pinMode(DataPin1, OUTPUT); 
+  pinMode(ClockPin1, OUTPUT);  
+  pinMode(LatchPin1, OUTPUT);
+  pinMode(DataPin2, OUTPUT);  
+  pinMode(ClockPin2, OUTPUT);  
+  pinMode(LatchPin2, OUTPUT);
+
 }
 
 void loop() {
@@ -165,7 +208,27 @@ delay(DelayAmount);
 digitalWrite(RST, HIGH);  
 delay(DelayAmount);  
 
-digitalWrite(MEM0, HIGH);///front panel code for EXAMINE (NOTE: these signals are inverted from how the NOVA sees them)
+///////SET ADDRESSES HERE
+digitalWrite(LatchPin1,LOW);  //Send bits 16-8 into the 
+for (uint8_t i = 0; i < Upper.length() ; i++)  {
+  Serial.println(Upper.charAt(i)&0x01);
+  digitalWrite(DataPin1, Upper.charAt(i)&0x01);               
+  digitalWrite(ClockPin1, HIGH);
+  digitalWrite(ClockPin1, LOW);            
+}
+digitalWrite(LatchPin1,HIGH);
+Serial.println("---------------");
+digitalWrite(LatchPin2,LOW);
+for (uint8_t i = 0; i < Lower.length() ; i++)  {
+  Serial.println(Lower.charAt(i)&0x01);
+  digitalWrite(DataPin2, Lower.charAt(i)&0x01);               
+  digitalWrite(ClockPin2, HIGH);
+  digitalWrite(ClockPin2, LOW);            
+}
+digitalWrite(LatchPin2,HIGH);
+///END SET ADDRESSES
+
+digitalWrite(MEM0, HIGH);  ///front panel code for EXAMINE (NOTE: these signals are inverted from how the NOVA sees them)
 digitalWrite(MEM1, HIGH);
 digitalWrite(MEM2, HIGH);
 digitalWrite(MEM3, HIGH);
@@ -183,9 +246,10 @@ delay(DelayAmount);
 digitalWrite(CON_RQ, HIGH);  
 delay(DelayAmount);  
 
- for (int dg = 0; dg <= Loops; dg++) {  
+delay(RepeatAt);
+// for (int dg = 0; dg <= Loops; dg++) {  ///front panel code for EXAMINE NEXT (NOTE: these signals are inverted from how the NOVA sees them)
 
-digitalWrite(MEM0, HIGH); ///front panel code for EXAMINE NEXT (NOTE: these signals are inverted from how the NOVA sees them)
+digitalWrite(MEM0, HIGH); 
 digitalWrite(MEM1, HIGH);
 digitalWrite(MEM2, HIGH);
 digitalWrite(MEM3, HIGH);
@@ -199,8 +263,11 @@ delay(DelayAmount);
 digitalWrite(CON_RQ, HIGH);  
 delay(DelayAmount);  
 
-  }
+//  }
 
+
+
+delay(RepeatAt);
 }
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
 else if (digitalRead(DIP2) == LOW){ ///// NOT YET DEFINED
