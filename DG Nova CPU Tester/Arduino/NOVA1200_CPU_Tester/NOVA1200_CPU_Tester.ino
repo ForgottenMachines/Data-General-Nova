@@ -177,10 +177,13 @@ if (digitalRead(DIP1) == LOW){ ///// Test EXAMINE & EXAMINE NEXT fron front pane
 InitializeSignals();
 
 Stop2Reset2();
-Address = "00000"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+Address = "00003"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
 ResetAddress();
 SetAddress();
 Examine();
+Address = "01003"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+ResetAddress();
+SetAddress();
 delay(RepeatAt);
 for (int dg = 0; dg <= Loops; dg++) {  ///front panel code for EXAMINE NEXT (NOTE: these signals are inverted from how the NOVA sees them)
 ExamineNext();
@@ -261,7 +264,7 @@ else if (digitalRead(DIP3) == LOW){ ///// NOT YET DEFINED
 InitializeSignals();
 
 Stop2Reset2();
-Address = "00001"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+Address = "00003"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
 ResetAddress();
 SetAddress();
 Deposit();
