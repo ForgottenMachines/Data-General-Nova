@@ -290,6 +290,15 @@ ResetAddress();
 
 else if (digitalRead(DIP4) == LOW){ ///// NOT YET DEFINED
 
+digitalWrite(RST, LOW); 
+delay(DelayAmount);  
+digitalWrite(RST, HIGH);  
+delay(DelayAmount);  
+digitalWrite(RST, LOW); 
+delay(DelayAmount);  
+digitalWrite(RST, HIGH);  
+delay(DelayAmount);  
+
 Address = "77777"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
 ResetAddress();
 }
