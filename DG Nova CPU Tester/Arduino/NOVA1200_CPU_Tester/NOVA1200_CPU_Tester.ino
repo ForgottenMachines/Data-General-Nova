@@ -2,11 +2,11 @@ constexpr int DelayAmount = 40; // time to wait between INDIVIDUAL front panel c
 constexpr int RepeatAt = 800; // Repeat all commands after this delay
 constexpr int Loops = 5000; // Examine Next Count Limit
 
-String Address = "77777"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+String Address = "00000"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
 String EnterData = "126440"; //NOT even used yet, too complicated so far
 
 
-String Octal = "0";
+String Octal = "";
 String Binary = "0";
 String TestStr = "";
 String Upper = "";
@@ -66,6 +66,8 @@ constexpr int DIP4 = 10;
 
 
 void setup() {
+//       Serial.begin(115200);  //Using this MAY hijack pins D0-D1, which is hard-wired to /CON DATA & /CONT+ISTP+MSTP.
+//       Serial.println("====================");
        pinMode(SwitchPattern1, INPUT_PULLUP);
        pinMode(SwitchDiag1, INPUT_PULLUP);
        pinMode(SwitchCON_DATA, INPUT_PULLUP);
@@ -127,9 +129,12 @@ void setup() {
   digitalWrite(MEM7, HIGH);
 
 /// SETUP Sending Address Switches 
+//  Serial.println("Address:");
+//  Serial.println(Address);
+//  Serial.println("");
+
 for (size_t c = 1; c <= Address.length(); ++c) {
   Octal = Address[c - 1]; // Get the last character
-  Serial.println(Octal);
 if(Octal == "0") {Binary = Binary + "000";};
 if(Octal == "1") {Binary = Binary + "001";};
 if(Octal == "2") {Binary = Binary + "010";};
@@ -140,10 +145,15 @@ if(Octal == "6") {Binary = Binary + "110";};
 if(Octal == "7") {Binary = Binary + "111";};
 };
 
-//Binary = "1234567890123456";
-
 Upper = Binary.substring(0, 8);
 Lower = Binary.substring(8, 16);
+//Serial.println("Upper:");
+//Serial.println(Upper);
+//Serial.println("");
+//Serial.println("Lower:");
+//Serial.println(Lower);
+//Serial.println("");
+
 
   pinMode(DataPin1, OUTPUT); 
   pinMode(ClockPin1, OUTPUT);  
@@ -209,21 +219,18 @@ digitalWrite(RST, HIGH);
 delay(DelayAmount);  
 
 ///////SET ADDRESSES HERE
-digitalWrite(LatchPin1,LOW);  //Send bits 16-8 into the 
-for (uint8_t i = 0; i < Upper.length() ; i++)  {
-  Serial.println(Upper.charAt(i)&0x01);
-  digitalWrite(DataPin1, Upper.charAt(i)&0x01);               
+digitalWrite(LatchPin1,LOW);  //Send bits 0-7 into the 74
+for (uint8_t i = Upper.length(); i >0 ; i--)  {
+  digitalWrite(DataPin1, Upper.charAt(i-1)&0x01);               
   digitalWrite(ClockPin1, HIGH);
-  digitalWrite(ClockPin1, LOW);            
+  digitalWrite(ClockPin1, LOW);   
 }
 digitalWrite(LatchPin1,HIGH);
-Serial.println("---------------");
-digitalWrite(LatchPin2,LOW);
-for (uint8_t i = 0; i < Lower.length() ; i++)  {
-  Serial.println(Lower.charAt(i)&0x01);
-  digitalWrite(DataPin2, Lower.charAt(i)&0x01);               
+digitalWrite(LatchPin2,LOW);  //Send bits 8-15 into the other 74
+for (uint8_t j = Lower.length(); j >0 ; j--)  {
+  digitalWrite(DataPin2, Lower.charAt(j-1)&0x01);               
   digitalWrite(ClockPin2, HIGH);
-  digitalWrite(ClockPin2, LOW);            
+  digitalWrite(ClockPin2, LOW);   
 }
 digitalWrite(LatchPin2,HIGH);
 ///END SET ADDRESSES
@@ -272,15 +279,65 @@ delay(RepeatAt);
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
 else if (digitalRead(DIP2) == LOW){ ///// NOT YET DEFINED
 
-
+Address = "11111"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+Binary = "0";
+for (size_t c = 1; c <= Address.length(); ++c) {
+  Octal = Address[c - 1]; // Get the last character
+if(Octal == "0") {Binary = Binary + "000";};
+if(Octal == "1") {Binary = Binary + "001";};
+if(Octal == "2") {Binary = Binary + "010";};
+if(Octal == "3") {Binary = Binary + "011";};
+if(Octal == "4") {Binary = Binary + "100";};
+if(Octal == "5") {Binary = Binary + "101";};
+if(Octal == "6") {Binary = Binary + "110";};
+if(Octal == "7") {Binary = Binary + "111";};
+};
+Upper = Binary.substring(0, 8);
+Lower = Binary.substring(8, 16);
 
 }
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
 else if (digitalRead(DIP3) == LOW){ ///// NOT YET DEFINED
 
-
+Address = "22222"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+Binary = "0";
+for (size_t c = 1; c <= Address.length(); ++c) {
+  Octal = Address[c - 1]; // Get the last character
+if(Octal == "0") {Binary = Binary + "000";};
+if(Octal == "1") {Binary = Binary + "001";};
+if(Octal == "2") {Binary = Binary + "010";};
+if(Octal == "3") {Binary = Binary + "011";};
+if(Octal == "4") {Binary = Binary + "100";};
+if(Octal == "5") {Binary = Binary + "101";};
+if(Octal == "6") {Binary = Binary + "110";};
+if(Octal == "7") {Binary = Binary + "111";};
+};
+Upper = Binary.substring(0, 8);
+Lower = Binary.substring(8, 16);
 
 }
+
+
+else if (digitalRead(DIP4) == LOW){ ///// NOT YET DEFINED
+
+Address = "77777"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+Binary = "0";
+for (size_t c = 1; c <= Address.length(); ++c) {
+  Octal = Address[c - 1]; // Get the last character
+if(Octal == "0") {Binary = Binary + "000";};
+if(Octal == "1") {Binary = Binary + "001";};
+if(Octal == "2") {Binary = Binary + "010";};
+if(Octal == "3") {Binary = Binary + "011";};
+if(Octal == "4") {Binary = Binary + "100";};
+if(Octal == "5") {Binary = Binary + "101";};
+if(Octal == "6") {Binary = Binary + "110";};
+if(Octal == "7") {Binary = Binary + "111";};
+};
+Upper = Binary.substring(0, 8);
+Lower = Binary.substring(8, 16);
+
+}
+
 else if (1 == 0){ ///// BIPASS THE BELOW ROUTINE FOR SAFETY
 //else if (digitalRead(DIP4) == LOW){ ///// ALL LIGHTS SEQUENTIALLY FOR CPU TESTER ONLY with ALL CHIPS REMOVED!  WARNING------DO NOT USE WHEN CPU BOARD IS CONNECTED OR ANY CHIPS INSTALLED IN THE TESTER!
 pinMode(STOP, OUTPUT);
