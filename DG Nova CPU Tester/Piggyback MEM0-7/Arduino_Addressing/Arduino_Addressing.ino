@@ -1,5 +1,5 @@
-String Address = "07757";
-String EnterData = "126440";
+String Address = "07757"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+String EnterData = "126440"; //NOT even used yet, too complicated so far
 ///http://www.bitsavers.org/pdf/dg/software/utility/093-000002-01_Bootstrap_Loader70.pdf#page=8
 ///https://forum.arduino.cc/t/msbfirst-and-lsbfirst-on-shift-register/1100980/2
 ///https://www.codeconvert.ai/vb.net-to-c++-converter
@@ -16,7 +16,6 @@ int LatchPin1 = 5;
 int DataPin2 = 6;  
 int ClockPin2 = 11; 
 int LatchPin2 = 12; 
-
 
 void setup() {
   Serial.begin(115200);
@@ -47,7 +46,6 @@ Lower = Binary.substring(8, 16);
   pinMode(ClockPin2, OUTPUT);  
   pinMode(LatchPin2, OUTPUT);
 
-
 }
 
 void loop() {
@@ -55,18 +53,28 @@ void loop() {
  Serial.println(Upper);
  Serial.println(Lower);
 
-
 ///https://forum.arduino.cc/t/converting-string-to-binary-code/115562
 ///https://docs.arduino.cc/built-in-examples/strings/StringToInt/
+///https://forum.arduino.cc/t/converting-a-string-representing-binary-value-for-use-in-shiftout/1363955
 
-digitalWrite(LatchPin1,LOW);
-shiftOut(DataPin1,ClockPin1,MSBFIRST,Upper);
+digitalWrite(LatchPin1,LOW);  //Send bits 16-8 into the 
+for (uint8_t i = 0; i < Upper.length() ; i++)  {
+  Serial.println(Upper.charAt(i)&0x01);
+  digitalWrite(DataPin1, Upper.charAt(i)&0x01);               
+  digitalWrite(ClockPin1, HIGH);
+  digitalWrite(ClockPin1, LOW);            
+}
 digitalWrite(LatchPin1,HIGH);
+Serial.println("---------------");
 digitalWrite(LatchPin2,LOW);
-shiftOut(DataPin2,ClockPin2,MSBFIRST,Upper);
+for (uint8_t i = 0; i < Lower.length() ; i++)  {
+  Serial.println(Lower.charAt(i)&0x01);
+  digitalWrite(DataPin2, Lower.charAt(i)&0x01);               
+  digitalWrite(ClockPin2, HIGH);
+  digitalWrite(ClockPin2, LOW);            
+}
 digitalWrite(LatchPin2,HIGH);
 
-     delay(20000);
-
+     delay(10000);
 
 }
