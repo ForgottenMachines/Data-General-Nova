@@ -1,8 +1,8 @@
-constexpr int DelayAmount = 5; // time to wait between INDIVIDUAL front panel commands
+constexpr int DelayAmount = 500; // time to wait between INDIVIDUAL front panel commands
 constexpr int RepeatAt = 800; // Repeat all commands after this delay
-constexpr int Loops = 100000; // Examine Next Count Limit
+constexpr int Loops = 10; // Examine Next Count Limit
 
-String Address = "00000"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
+String Address = "00000"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
 String EnterData = "126440"; //NOT even used yet, too complicated so far
 
 String Octal = "";
@@ -177,12 +177,10 @@ if (digitalRead(DIP1) == LOW){ ///// Test EXAMINE & EXAMINE NEXT fron front pane
 InitializeSignals();
 
 Stop2Reset2();
-Address = "00003"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
-ResetAddress();
+Address = "00003"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
 SetAddress();
 Examine();
-Address = "01003"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
-ResetAddress();
+Address = "01003"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
 SetAddress();
 delay(RepeatAt);
 for (int dg = 0; dg <= Loops; dg++) {  ///front panel code for EXAMINE NEXT (NOTE: these signals are inverted from how the NOVA sees them)
@@ -197,52 +195,52 @@ else if (digitalRead(DIP2) == LOW){ ///// NOT YET DEFINED
 InitializeSignals();
 
 
-Address = "00001"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
-ResetAddress();
+Address = "00001"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
 Examine();
 delay(RepeatAt);
-Address = "22332"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
-ResetAddress();
+Address = "22332"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
 Examine();
 delay(RepeatAt);
-Address = "11223"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
-ResetAddress();
+Address = "11223"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
 Examine();
 delay(RepeatAt);
-Address = "33221"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
-ResetAddress();
+Address = "33221"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
 Examine();
 delay(RepeatAt);
-Address = "17711"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
-ResetAddress();
+Address = "17711"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
 Examine();
 delay(RepeatAt);
-Address = "11777"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
-ResetAddress();
+Address = "11777"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
 Examine();
 delay(RepeatAt);
-Address = "66666"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
-ResetAddress();
+Address = "66666"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
 Examine();
 delay(RepeatAt);
-Address = "55555"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
-ResetAddress();
+Address = "55555"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
 Examine();
 delay(RepeatAt);
-Address = "44444"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
-ResetAddress();
+Address = "44444"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
 Examine();
 delay(RepeatAt);
-Address = "33333"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
-ResetAddress();
+Address = "33333"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
 Examine();
 delay(RepeatAt);
-Address = "22222"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
-ResetAddress();
+Address = "22222"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
 Examine();
 delay(RepeatAt);
-Address = "77777"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
-ResetAddress();
+Address = "77777"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
 Examine();
 delay(RepeatAt);
 
@@ -252,13 +250,27 @@ else if (digitalRead(DIP3) == LOW){ ///// NOT YET DEFINED
 InitializeSignals();
 
 Stop2Reset2();
-Address = "00003"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
-ResetAddress();
+/////////////////////Deposit test atarting at address 0
+Address = "00000"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
+Examine();
+delay(DelayAmount); 
+Address = "77777"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
 Deposit();
-delay(RepeatAt);
+delay(DelayAmount); 
 for (int dg = 0; dg <= Loops; dg++) {  ///front panel code for EXAMINE NEXT (NOTE: these signals are inverted from how the NOVA sees them)
 DepositNext();
-delay(RepeatAt);
+delay(DelayAmount); 
+}
+/////////////////////Examine what you deposited
+Address = "00000"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
+Examine();
+delay(DelayAmount); 
+for (int dg = 0; dg <= Loops; dg++) {  ///front panel code for EXAMINE NEXT (NOTE: these signals are inverted from how the NOVA sees them)
+ExamineNext();
+delay(DelayAmount); 
 }
 
 delay(RepeatAt);
@@ -266,18 +278,23 @@ delay(RepeatAt);
 
 else if (digitalRead(DIP4) == LOW){ ///// NOT YET DEFINED
 
-digitalWrite(RST, LOW); 
-delay(DelayAmount);  
-digitalWrite(RST, HIGH);  
-delay(DelayAmount);  
-digitalWrite(RST, LOW); 
-delay(DelayAmount);  
-digitalWrite(RST, HIGH);  
-delay(DelayAmount);  
-
-Address = "77777"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
-ResetAddress();
+/////////////////////Deposit test atarting at address 0
+Address = "00000"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
+Examine();
+delay(DelayAmount); 
+Address = "77777"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
+Deposit();
+delay(DelayAmount); 
+for (int dg = 0; dg <= Loops; dg++) {  ///front panel code for EXAMINE NEXT (NOTE: these signals are inverted from how the NOVA sees them)
+DepositNext();
+delay(DelayAmount); 
 }
+
+delay(RepeatAt);
+}
+
 
 else if (1 == 0){ ///// BIPASS THE BELOW ROUTINE FOR SAFETY
 //else if (digitalRead(DIP4) == LOW){ ///// ALL LIGHTS SEQUENTIALLY FOR CPU TESTER ONLY with ALL CHIPS REMOVED!  WARNING------DO NOT USE WHEN CPU BOARD IS CONNECTED OR ANY CHIPS INSTALLED IN THE TESTER!
