@@ -1,6 +1,6 @@
-constexpr int DelayAmount = 80; // time to wait between INDIVIDUAL front panel commands
+constexpr int DelayAmount = 5; // time to wait between INDIVIDUAL front panel commands
 constexpr int RepeatAt = 800; // Repeat all commands after this delay
-constexpr int Loops = 5000; // Examine Next Count Limit
+constexpr int Loops = 100000; // Examine Next Count Limit
 
 String Address = "00000"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
 String EnterData = "126440"; //NOT even used yet, too complicated so far
@@ -187,7 +187,7 @@ SetAddress();
 delay(RepeatAt);
 for (int dg = 0; dg <= Loops; dg++) {  ///front panel code for EXAMINE NEXT (NOTE: these signals are inverted from how the NOVA sees them)
 ExamineNext();
-delay(RepeatAt);
+delay(DelayAmount);
 }
 
 delay(RepeatAt);
@@ -199,62 +199,50 @@ InitializeSignals();
 
 Address = "00001"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
 ResetAddress();
-SetAddress();
 Examine();
 delay(RepeatAt);
 Address = "22332"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
 ResetAddress();
-SetAddress();
 Examine();
 delay(RepeatAt);
 Address = "11223"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
 ResetAddress();
-SetAddress();
 Examine();
 delay(RepeatAt);
 Address = "33221"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
 ResetAddress();
-SetAddress();
 Examine();
 delay(RepeatAt);
 Address = "17711"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
 ResetAddress();
-SetAddress();
 Examine();
 delay(RepeatAt);
 Address = "11777"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
 ResetAddress();
-SetAddress();
 Examine();
 delay(RepeatAt);
 Address = "66666"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
 ResetAddress();
-SetAddress();
 Examine();
 delay(RepeatAt);
 Address = "55555"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
 ResetAddress();
-SetAddress();
 Examine();
 delay(RepeatAt);
 Address = "44444"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
 ResetAddress();
-SetAddress();
 Examine();
 delay(RepeatAt);
 Address = "33333"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
 ResetAddress();
-SetAddress();
 Examine();
 delay(RepeatAt);
 Address = "22222"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
 ResetAddress();
-SetAddress();
 Examine();
 delay(RepeatAt);
 Address = "77777"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
 ResetAddress();
-SetAddress();
 Examine();
 delay(RepeatAt);
 
@@ -266,7 +254,6 @@ InitializeSignals();
 Stop2Reset2();
 Address = "00003"; //MUST be 5 digita octal because that length is foolishly hard-coded into this program
 ResetAddress();
-SetAddress();
 Deposit();
 delay(RepeatAt);
 for (int dg = 0; dg <= Loops; dg++) {  ///front panel code for EXAMINE NEXT (NOTE: these signals are inverted from how the NOVA sees them)
@@ -447,7 +434,7 @@ Lower = Binary.substring(8, 16);
 }
 
 void SetAddress() {
-
+ResetAddress();
 ///////SET ADDRESSES HERE
 digitalWrite(LatchPin1,LOW);  //Send bits 0-7 into the 74
 for (uint8_t i = Upper.length(); i >0 ; i--)  {
