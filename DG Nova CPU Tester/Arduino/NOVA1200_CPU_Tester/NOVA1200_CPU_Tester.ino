@@ -1,3 +1,4 @@
+
 constexpr int DelayAmount = 5; // time to wait between INDIVIDUAL front panel commands
 constexpr int RepeatAt = 800; // Repeat all commands after this delay
 constexpr int Loops = 10; // Examine Next Count Limit
@@ -64,6 +65,15 @@ constexpr int DIP3 = 9;
 constexpr int DIP4 = 10;
 
 void setup() {
+if (digitalRead(DIP1) == LOW){
+}
+if (digitalRead(DIP2) == LOW){
+}
+if (digitalRead(DIP3) == LOW){
+}
+if (digitalRead(DIP4) == LOW){
+}
+
 //       Serial.begin(115200);  //Using this MAY hijack pins D0-D1, which is hard-wired to /CON DATA & /CONT+ISTP+MSTP.
 //       Serial.println("====================");
        pinMode(SwitchPattern1, INPUT_PULLUP);
@@ -194,57 +204,18 @@ delay(RepeatAt);
 else if (digitalRead(DIP2) == LOW){ ///// NOT YET DEFINED
 InitializeSignals();
 
-
-Address = "00001"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+Address = "00000"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
 SetAddress();
 Examine();
-delay(RepeatAt);
-Address = "22332"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
-SetAddress();
-Examine();
-delay(RepeatAt);
-Address = "11223"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
-SetAddress();
-Examine();
-delay(RepeatAt);
-Address = "33221"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
-SetAddress();
-Examine();
-delay(RepeatAt);
-Address = "17711"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
-SetAddress();
-Examine();
-delay(RepeatAt);
-Address = "11777"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
-SetAddress();
-Examine();
-delay(RepeatAt);
-Address = "66666"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
-SetAddress();
-Examine();
-delay(RepeatAt);
-Address = "55555"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
-SetAddress();
-Examine();
-delay(RepeatAt);
-Address = "44444"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
-SetAddress();
-Examine();
-delay(RepeatAt);
-Address = "33333"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
-SetAddress();
-Examine();
-delay(RepeatAt);
-Address = "22222"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
-SetAddress();
-Examine();
-delay(RepeatAt);
-Address = "77777"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
-SetAddress();
-Examine();
-delay(RepeatAt);
+delay(DelayAmount); 
+for (int dg = 0; dg <= Loops; dg++) {  ///front panel code for EXAMINE NEXT (NOTE: these signals are inverted from how the NOVA sees them)
+ExamineNext();
+delay(DelayAmount); 
+}
 
 }
+
+
 //////////////////////TEST MODE SWITCHER///////////////////////////////////////
 else if (digitalRead(DIP3) == LOW){ ///// NOT YET DEFINED
 InitializeSignals();
