@@ -1,4 +1,4 @@
-constexpr int DelayAmount = 500; // time to wait between INDIVIDUAL front panel commands
+constexpr int DelayAmount = 5; // time to wait between INDIVIDUAL front panel commands
 constexpr int RepeatAt = 800; // Repeat all commands after this delay
 constexpr int Loops = 10; // Examine Next Count Limit
 
@@ -278,6 +278,7 @@ delay(RepeatAt);
 
 else if (digitalRead(DIP4) == LOW){ ///// NOT YET DEFINED
 
+Stop2Reset2();
 /////////////////////Deposit test atarting at address 0
 Address = "00000"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
 SetAddress();
@@ -286,15 +287,51 @@ delay(DelayAmount);
 Address = "77777"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
 SetAddress();
 Deposit();
+Address = "66666"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
+delay(DelayAmount); 
+DepositNext();
+Address = "55555"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
+delay(DelayAmount); 
+DepositNext();
+Address = "44444"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
+delay(DelayAmount); 
+DepositNext();
+Address = "33333"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
+delay(DelayAmount); 
+DepositNext();
+Address = "22222"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
+delay(DelayAmount); 
+DepositNext();
+Address = "11111"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
+delay(DelayAmount); 
+DepositNext();
+Address = "15252"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
+delay(DelayAmount); 
+DepositNext();
+Address = "00000"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
+delay(DelayAmount); 
+DepositNext();
+
+/////////////////////Examine what you deposited
+Address = "00000"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
+SetAddress();
+Examine();
 delay(DelayAmount); 
 for (int dg = 0; dg <= Loops; dg++) {  ///front panel code for EXAMINE NEXT (NOTE: these signals are inverted from how the NOVA sees them)
-DepositNext();
+ExamineNext();
 delay(DelayAmount); 
 }
 
 delay(RepeatAt);
 }
-
 
 else if (1 == 0){ ///// BIPASS THE BELOW ROUTINE FOR SAFETY
 //else if (digitalRead(DIP4) == LOW){ ///// ALL LIGHTS SEQUENTIALLY FOR CPU TESTER ONLY with ALL CHIPS REMOVED!  WARNING------DO NOT USE WHEN CPU BOARD IS CONNECTED OR ANY CHIPS INSTALLED IN THE TESTER!
