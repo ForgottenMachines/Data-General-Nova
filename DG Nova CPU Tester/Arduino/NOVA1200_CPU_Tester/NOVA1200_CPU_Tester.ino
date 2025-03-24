@@ -66,13 +66,14 @@ constexpr int DIP4 = 10;
 
 void setup() {
 if (digitalRead(DIP1) == LOW){
-}
+  constexpr int DelayAmount = 5;
 if (digitalRead(DIP2) == LOW){
-}
+  constexpr int DelayAmount = 50;
 if (digitalRead(DIP3) == LOW){
-}
+  constexpr int DelayAmount = 300;
 if (digitalRead(DIP4) == LOW){
-}
+  constexpr int DelayAmount = 800;
+}}}}
 
 //       Serial.begin(115200);  //Using this MAY hijack pins D0-D1, which is hard-wired to /CON DATA & /CONT+ISTP+MSTP.
 //       Serial.println("====================");
