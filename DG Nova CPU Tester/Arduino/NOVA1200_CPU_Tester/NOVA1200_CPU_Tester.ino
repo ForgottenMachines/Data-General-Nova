@@ -1,7 +1,7 @@
 
-constexpr int DelayAmount = 5; // time to wait between INDIVIDUAL front panel commands
-constexpr int RepeatAt = 800; // Repeat all commands after this delay
-constexpr int Loops = 10; // Examine Next Count Limit
+int DelayAmount = 5; // time to wait between INDIVIDUAL front panel commands
+int RepeatAt = 800; // Repeat all commands after this delay
+int Loops = 10; // Examine Next Count Limit
 
 String Address = "00000"; //MUST be 5 digits octal because that length is foolishly hard-coded into this program
 String EnterData = "126440"; //NOT even used yet, too complicated so far
@@ -66,14 +66,18 @@ constexpr int DIP4 = 10;
 
 void setup() {
 if (digitalRead(DIP1) == LOW){
-  constexpr int DelayAmount = 5;
-if (digitalRead(DIP2) == LOW){
-  constexpr int DelayAmount = 50;
-if (digitalRead(DIP3) == LOW){
-  constexpr int DelayAmount = 300;
-if (digitalRead(DIP4) == LOW){
-  constexpr int DelayAmount = 800;
-}}}}
+  int DelayAmount = 5;
+  if (digitalRead(DIP2) == LOW){
+  int DelayAmount = 50;
+    if (digitalRead(DIP3) == LOW){
+    int DelayAmount = 300;
+      if (digitalRead(DIP4) == LOW){
+      int DelayAmount = 800;
+      }
+    }
+  }
+}
+
 
 //       Serial.begin(115200);  //Using this MAY hijack pins D0-D1, which is hard-wired to /CON DATA & /CONT+ISTP+MSTP.
 //       Serial.println("====================");
