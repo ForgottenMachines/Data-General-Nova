@@ -12,7 +12,7 @@ int prog_delays[] = { //use 4 switches to assign one of the values in this array
   300,
   800
 };
-int DelayAmount = 250; // time to wait between INDIVIDUAL front panel commands
+int DelayAmount = 400; // time to wait between INDIVIDUAL front panel commands
 int RepeatAt = 800; // Repeat all commands after this delay
 int Loops = 10; // Examine Next Count Limit
 
@@ -84,6 +84,7 @@ void setup() {
     (digitalRead(DIP2) ? 0 : 2) |
     (digitalRead(DIP3) ? 0 : 4) |
     (digitalRead(DIP4) ? 0 : 8);
+    
   for (int i = 0; i < (sizeof(prog_delays) / sizeof(prog_delays[0])); i++) {
     if (sw_bits & (1 << i)) DelayAmount = prog_delays[i];
     else break;
@@ -115,12 +116,16 @@ void setup() {
   digitalWrite(CON_RQ, HIGH);
   pinMode(CON_INST, INPUT_PULLUP);
   pinMode(PL, INPUT_PULLUP);
-  pinMode(ISTP, INPUT_PULLUP);
   pinMode(STOP, OUTPUT);
   digitalWrite(STOP, HIGH);
   pinMode(CON_DATA, INPUT_PULLUP);
-  pinMode(CONT_ISTP_MSTP, INPUT_PULLUP);
-  pinMode(MSTP, INPUT_PULLUP);
+  
+  digitalWrite(CONT_ISTP_MSTP, HIGH);
+  pinMode(CONT_ISTP_MSTP, OUTPUT);
+  digitalWrite(MSTP, HIGH);
+  pinMode(MSTP, OUTPUT);
+  digitalWrite(ISTP, HIGH);
+  pinMode(ISTP, OUTPUT);
 
   pinMode(RESTART_ENAB, INPUT);
   pinMode(CON_INST, INPUT_PULLUP);
@@ -202,7 +207,6 @@ void setup() {
   pinMode(DataPin2, OUTPUT);
   pinMode(ClockPin2, OUTPUT);
   pinMode(LatchPin2, OUTPUT);
-
 }
 
 void loop() {
@@ -212,9 +216,13 @@ void loop() {
   digitalWrite(STOP, HIGH);
   pinMode(CON_INST, INPUT_PULLUP);
   pinMode(CON_DATA, INPUT_PULLUP);
+
+  /*
   pinMode(CONT_ISTP_MSTP, INPUT_PULLUP);
   pinMode(MSTP, INPUT_PULLUP);
   pinMode(ISTP, INPUT_PULLUP);
+  */
+  
   pinMode(PL, INPUT_PULLUP);
   pinMode(RESTART_ENAB, INPUT);
   for (int i = StartPin; i <= EndPin; i = i + 1) { //For Testing all the pretty lights
@@ -241,6 +249,7 @@ void loop() {
     for (int i = 1; i < (sizeof(load_code) / sizeof(load_code[0])); i++) {
       fp_set(load_code[i]);
       DepositNext();
+      delay(DelayAmount);
     }
 
     // PUT CODE-SPECIFIC INSTRUCTIONS HERE
@@ -248,16 +257,21 @@ void loop() {
     fp_set(5);
     Deposit_AC(3);
     delay(DelayAmount);
+    
     fp_set(0102);
     Examine();
-    Start();
-    delay(DelayAmount);
+    delay(DelayAmount * 2);
+
+    // Start();
+    while (true) {
+      Memory_Step();
+      delay(DelayAmount * 2);
+    }
 
     // read computed value from address 0
     Examine_AC(0);
     delay(DelayAmount);
-    delay(DelayAmount);    
-    delay(DelayAmount);
+
     while(true);
   }
 
@@ -609,7 +623,6 @@ void Examine() {
 }
 
 void ExamineNext() {
-
   digitalWrite(MEM0, HIGH);
   digitalWrite(MEM1, HIGH);
   digitalWrite(MEM2, HIGH);
@@ -620,32 +633,30 @@ void ExamineNext() {
   digitalWrite(MEM7, LOW);
 
   digitalWrite(CON_RQ, LOW);
-  delay(DelayAmount);
+  delay(50);
   digitalWrite(CON_RQ, HIGH);
-  delay(DelayAmount);
+  delay(50);
 
 }
 
 void Stop2Reset2() {
-
   digitalWrite(STOP, LOW); //STOP TWICE
-  delay(DelayAmount);
+  delay(50);
   digitalWrite(STOP, HIGH);
-  delay(DelayAmount);
+  delay(50);
   digitalWrite(STOP, LOW);
-  delay(DelayAmount);
+  delay(50);
   digitalWrite(STOP, HIGH);
-  delay(DelayAmount);
+  delay(50);
 
   digitalWrite(RST, LOW); //RESET TWICE
-  delay(DelayAmount);
+  delay(50);
   digitalWrite(RST, HIGH);
-  delay(DelayAmount);
+  delay(50);
   digitalWrite(RST, LOW);
-  delay(DelayAmount);
+  delay(50);
   digitalWrite(RST, HIGH);
-  delay(DelayAmount);
-
+  delay(50);
 }
 
 void Deposit() {
@@ -660,10 +671,9 @@ void Deposit() {
   digitalWrite(MEM7, HIGH);
 
   digitalWrite(CON_RQ, LOW);
-  delay(DelayAmount);
+  delay(50);
   digitalWrite(CON_RQ, HIGH);
-  delay(DelayAmount);
-
+  delay(50);
 }
 
 void DepositNext() {
@@ -677,9 +687,9 @@ void DepositNext() {
   digitalWrite(MEM7, LOW);
 
   digitalWrite(CON_RQ, LOW);
-  delay(DelayAmount);
+  delay(50);
   digitalWrite(CON_RQ, HIGH);
-  delay(DelayAmount);
+  delay(50);
 }
 
 void Start() {
@@ -693,9 +703,9 @@ void Start() {
   digitalWrite(MEM7, HIGH);
 
   digitalWrite(CON_RQ, LOW);
-  delay(DelayAmount);
+  delay(50);
   digitalWrite(CON_RQ, HIGH);
-  delay(DelayAmount);
+  delay(50);
 }
 
 void InitializeSignals() {
@@ -727,9 +737,9 @@ void Deposit_AC(uint8_t ac)
   digitalWrite(MEM7, HIGH); 
 
   digitalWrite(CON_RQ, LOW);
-  delay(DelayAmount);
+  delay(50);
   digitalWrite(CON_RQ, HIGH);
-  delay(DelayAmount);
+  delay(50);
 }
 
 void Examine_AC(uint8_t ac)
@@ -746,7 +756,49 @@ void Examine_AC(uint8_t ac)
   digitalWrite(MEM7, HIGH); 
 
   digitalWrite(CON_RQ, LOW);
-  delay(DelayAmount);
+  delay(50);
   digitalWrite(CON_RQ, HIGH);
-  delay(DelayAmount);
+  delay(50);
+}
+
+void Instruction_Step()
+{
+  digitalWrite(MEM0, HIGH);
+  digitalWrite(MEM1, HIGH);
+  digitalWrite(MEM2, HIGH);
+  digitalWrite(MEM3, HIGH);
+  digitalWrite(MEM4, HIGH);
+  digitalWrite(MEM5, HIGH);
+  digitalWrite(MEM6, HIGH);
+  digitalWrite(MEM7, HIGH);
+
+  digitalWrite(ISTP, LOW);
+  digitalWrite(CONT_ISTP_MSTP, LOW);
+  digitalWrite(CON_RQ, LOW);
+  delay(50);
+  digitalWrite(ISTP, HIGH);
+  digitalWrite(CONT_ISTP_MSTP, HIGH);
+  digitalWrite(CON_RQ, HIGH);
+  delay(50);
+}
+
+void Memory_Step()
+{
+  digitalWrite(MEM0, HIGH);
+  digitalWrite(MEM1, HIGH);
+  digitalWrite(MEM2, HIGH);
+  digitalWrite(MEM3, HIGH);
+  digitalWrite(MEM4, HIGH);
+  digitalWrite(MEM5, HIGH);
+  digitalWrite(MEM6, HIGH);
+  digitalWrite(MEM7, HIGH);
+
+  digitalWrite(MSTP, LOW);
+  digitalWrite(CONT_ISTP_MSTP, LOW);
+  digitalWrite(CON_RQ, LOW);
+  delay(50);
+  digitalWrite(MSTP, HIGH);
+  digitalWrite(CONT_ISTP_MSTP, HIGH);
+  digitalWrite(CON_RQ, HIGH);
+  delay(50);
 }
