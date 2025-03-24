@@ -1,4 +1,9 @@
-
+int prog_delays[] = {//use 4 switches to assign one of the values in this array
+    5,
+    30,
+    300,
+    800
+};
 int DelayAmount = 5; // time to wait between INDIVIDUAL front panel commands
 int RepeatAt = 800; // Repeat all commands after this delay
 int Loops = 10; // Examine Next Count Limit
@@ -65,19 +70,28 @@ constexpr int DIP3 = 9;
 constexpr int DIP4 = 10;
 
 void setup() {
+    uint8_t sw_bits = (digitalRead(DIP1) ? 0 : 1) |
+                      (digitalRead(DIP2) ? 0 : 2) |
+                      (digitalRead(DIP3) ? 0 : 4) |
+                      (digitalRead(DIP4) ? 0 : 8);
+     for (int i = 0; i < (sizeof(prog_delays) / sizeof(prog_delays[0])); i++) {
+    	if (sw_bits & (1 << i)) DelayAmount = prog_delays[i];
+    	else break;
+    }
+/*
 if (digitalRead(DIP1) == LOW){
-  int DelayAmount = 5;
+  DelayAmount = 5;
   if (digitalRead(DIP2) == LOW){
-  int DelayAmount = 50;
+    DelayAmount = 50;
     if (digitalRead(DIP3) == LOW){
-    int DelayAmount = 300;
+      DelayAmount = 300;
       if (digitalRead(DIP4) == LOW){
-      int DelayAmount = 800;
+        DelayAmount = 800;
       }
     }
   }
 }
-
+*/
 
 //       Serial.begin(115200);  //Using this MAY hijack pins D0-D1, which is hard-wired to /CON DATA & /CONT+ISTP+MSTP.
 //       Serial.println("====================");
