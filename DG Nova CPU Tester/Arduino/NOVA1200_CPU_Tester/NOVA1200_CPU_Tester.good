@@ -260,7 +260,7 @@ void loop() {
         fp_set(start_addr);
         Examine();
           
-        for (uint16_t i = start_addr; i < start_addr + 64; i++) {
+        for (uint16_t i = start_addr; i < 64; i++) {
           s = i & 0xf;
           s = 1 << s;
           
@@ -269,7 +269,7 @@ void loop() {
           delay(30);
         }
 
-        for (uint16_t i = start_addr; i < start_addr + 64; i++) {
+        for (uint16_t i = start_addr; i < 64; i++) {
           fp_set(i);
           Examine();
           delay(60);
@@ -281,35 +281,26 @@ void loop() {
     }
     case (0x4): {     // DIP3
       Stop2Reset2();
-
-      uint16_t r = 0;
-      uint16_t lit;
-      uint8_t dir = 0;
       
       while(true) {
-        r++;
-        
-        if (r > 15) {
-          r = 0;
-          dir ^= 1;
-        }
+        uint16_t r, s;
+          
+        for (uint8_t i = 0; i < 14; i++) {
+          r = s = 0100;
+          if (i < 8) {
+            r >>= i;
+            s <<= i;
+          } else {
+            r >>= 12 - i;
+            s <<= 12 - i;
+          }
 
-        if (dir) {
-          lit = 1 << r;           // light the segment
-          if (r)
-            lit |= 1 << (r - 1);  // trail
-        } else {
-          lit = 1 << (15 - r);    // light the segment
-          if (r)
-            lit |= 1 << (16 - r);  // trail
+          fp_set(r | s);
+          Examine();
+          
+          delay(30);
         }
-
-        fp_set(lit);
-        Examine();
-        
-        delay(15);
       }
-      
       break;
     }
     case (0x8): {     // DIP4
