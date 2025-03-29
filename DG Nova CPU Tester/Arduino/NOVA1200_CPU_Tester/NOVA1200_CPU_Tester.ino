@@ -45,6 +45,7 @@ constexpr int SwitchPattern1 = 10;
 constexpr int SwitchDiag1 = 9;
 constexpr int SwitchCON_INST = 8;
 constexpr int SwitchCON_DATA = 7;
+constexpr int PauseSwitch = 13;
 
 constexpr int MEM0  = A15;
 constexpr int MEM1  = A14;
@@ -77,7 +78,6 @@ constexpr int DIP4 = 10;
 
 uint8_t sw_bits;
 
-
 void setup() {
   sw_bits = (digitalRead(DIP1) ? 0 : 1) |
     (digitalRead(DIP2) ? 0 : 2) |
@@ -88,23 +88,10 @@ void setup() {
     if (sw_bits & (1 << i)) DelayAmount = prog_delays[i];
     else break;
   }
-  /*
-  if (digitalRead(DIP1) == LOW){
-    DelayAmount = 5;
-    if (digitalRead(DIP2) == LOW){
-      DelayAmount = 50;
-      if (digitalRead(DIP3) == LOW){
-        DelayAmount = 300;
-        if (digitalRead(DIP4) == LOW){
-          DelayAmount = 800;
-        }
-      }
-    }
-  }
-  */
 
   //       Serial.begin(115200);  //Using this MAY hijack pins D0-D1, which is hard-wired to /CON DATA & /CONT+ISTP+MSTP.
   //       Serial.println("====================");
+  pinMode(PauseSwitch, INPUT_PULLUP);
   pinMode(SwitchPattern1, INPUT_PULLUP);
   pinMode(SwitchDiag1, INPUT_PULLUP);
   pinMode(SwitchCON_DATA, INPUT_PULLUP);
@@ -267,11 +254,13 @@ void loop() {
           fp_set(s);
           DepositNext();
           delay(30);
+          Pause();
         }
         for (uint16_t i = start_addr; i < start_addr + 0100; i++) {
           fp_set(i);
           Examine();
           delay(60);
+          Pause();
         }
         delay(1000);
         fp_set(start_addr);
@@ -282,11 +271,13 @@ void loop() {
           fp_set(s);
           DepositNext();
           delay(30);
+          Pause();
         }
         for (uint16_t i = start_addr; i < start_addr + 0100; i++) {
           fp_set(i);
           Examine();
           delay(60);
+          Pause();
         }
         delay(1000);
       }
@@ -567,3 +558,11 @@ void Memory_Step()
   digitalWrite(CON_RQ, HIGH);
   delay(50);
 }
+
+void Pause() 
+{
+  while(digitalRead(PauseSwitch) == LOW){
+//just loop endlessly until the switch goes high again
+  }
+}
+
