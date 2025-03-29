@@ -254,22 +254,36 @@ void loop() {
       Stop2Reset2();
 
       while(true) {
-        start_addr ^= 0x200;
+        start_addr ^= 01000;  //Exclusive OR 
 
         // start at address 0
         fp_set(start_addr);
         Examine();
           
-        for (uint16_t i = start_addr; i < start_addr + 64; i++) {
-          s = i & 0xf;
+        for (uint16_t i = start_addr; i < start_addr + 0100; i++) {
+          s = i & 017;
           s = 1 << s;
           
           fp_set(s);
           DepositNext();
           delay(30);
         }
-
-        for (uint16_t i = start_addr; i < start_addr + 64; i++) {
+        for (uint16_t i = start_addr; i < start_addr + 0100; i++) {
+          fp_set(i);
+          Examine();
+          delay(60);
+        }
+        delay(1000);
+        fp_set(start_addr);
+        Examine();
+        delay(1000);
+        for (uint16_t i = start_addr; i < start_addr + 0100; i++) {
+          s = 0177777;
+          fp_set(s);
+          DepositNext();
+          delay(30);
+        }
+        for (uint16_t i = start_addr; i < start_addr + 0100; i++) {
           fp_set(i);
           Examine();
           delay(60);
