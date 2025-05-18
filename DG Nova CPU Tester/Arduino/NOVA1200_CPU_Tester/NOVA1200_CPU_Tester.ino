@@ -38,9 +38,6 @@ constexpr int CON_DATA = 0; // input from the CPU..."the twin of CON_INST - neve
 constexpr int CONT_ISTP_MSTP = 1; // used only by CONTINUE MEM STEP & INST STEP
 constexpr int MSTP = 2; // MEM STEP - Has it's own wire to p1-48
 
-constexpr int CON_INST_LED = 11;
-constexpr int CON_DATA_LED = 12;
-
 constexpr int SwitchPattern1 = 10;
 constexpr int SwitchDiag1 = 9;
 constexpr int SwitchCON_INST = 8;
@@ -100,11 +97,11 @@ void setup() {
   digitalWrite(RST, HIGH);
   pinMode(CON_RQ, OUTPUT);
   digitalWrite(CON_RQ, HIGH);
-  pinMode(CON_INST, INPUT_PULLUP);
-  pinMode(PL, INPUT_PULLUP);
+  pinMode(CON_INST, INPUT_PULLUP); //should be input NO Pullup?
+  pinMode(PL, INPUT);
   pinMode(STOP, OUTPUT);
   digitalWrite(STOP, HIGH);
-  pinMode(CON_DATA, INPUT_PULLUP);
+  pinMode(CON_DATA, INPUT);
   
   digitalWrite(CONT_ISTP_MSTP, HIGH);
   pinMode(CONT_ISTP_MSTP, OUTPUT);
@@ -117,9 +114,6 @@ void setup() {
   pinMode(CON_INST, INPUT_PULLUP);
   pinMode(CON_DATA, INPUT_PULLUP);
 
-  pinMode(CON_INST_LED, OUTPUT);
-  pinMode(CON_DATA_LED, OUTPUT);
-
   pinMode(MEM0, OUTPUT);
   pinMode(MEM1, OUTPUT);
   pinMode(MEM2, OUTPUT);
@@ -130,11 +124,11 @@ void setup() {
   pinMode(MEM7, OUTPUT);
 
   for (int i = StartPin; i <= EndPin; i = i + 1) { //For Testing all the pretty lights
-    pinMode(i, INPUT_PULLUP);
+    pinMode(i, INPUT);
   }
 
   for (int i = Mem0StartPin; i <= Mem15EndPin; i = i + 1) { //For testing Data Switches 0-15
-    pinMode(i, INPUT_PULLUP);
+    pinMode(i, INPUT);
   }
 
   // set mode switches on tester board
@@ -152,6 +146,8 @@ void setup() {
   digitalWrite(MEM5, HIGH);
   digitalWrite(MEM6, HIGH);
   digitalWrite(MEM7, HIGH);
+
+  //2025-05-18 Usagi says don't do digital write high, instead do pinmode inputd [NO Pullup]
 
   fp_set(017777);
 
@@ -179,13 +175,13 @@ void loop() {
   pinMode(ISTP, INPUT_PULLUP);
   */
   
-  pinMode(PL, INPUT_PULLUP);
+  pinMode(PL, INPUT);
   pinMode(RESTART_ENAB, INPUT);
   for (int i = StartPin; i <= EndPin; i = i + 1) { //For Testing all the pretty lights
-    pinMode(i, INPUT_PULLUP);
+    pinMode(i, INPUT);
   }
   for (int i = Mem0StartPin; i <= Mem15EndPin; i = i + 1) { //For testing Data Switches 0-15
-    pinMode(i, INPUT_PULLUP);
+    pinMode(i, INPUT);
   }
 
   InitializeSignals();
@@ -335,7 +331,7 @@ void loop() {
   */
 }
 
-void fp_set(uint16_t switches)
+void fp_set(uint16_t switches) 
 {
   uint16_t s;
     
