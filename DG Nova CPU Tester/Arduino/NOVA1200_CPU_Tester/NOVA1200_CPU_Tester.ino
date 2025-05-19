@@ -314,7 +314,58 @@ void loop() {
       break;
     }
     case (0x8): {     // DIP4
+      uint16_t s;
+      uint16_t start_addr = 0;
+      
       Stop2Reset2();
+
+      while(true) {
+        start_addr = 010000;  //Exclusive OR 
+
+        // clear low addresses
+        fp_set(0);
+        Examine();
+
+        for (uint16_t i = start_addr; i < start_addr + 0100; i++) {
+          
+          fp_set(0);
+          DepositNext();
+          delay(20);
+          Pause();
+        }
+
+        // set pattern to high addresses
+        fp_set(start_addr);
+        Examine();
+
+        for (uint16_t i = start_addr; i < start_addr + 0100; i++) {
+          s = i & 017;
+          s = 1 << s;
+          
+          fp_set(s);
+          DepositNext();
+          delay(20);
+          Pause();
+        }
+
+        // read from high addresses
+        for (uint16_t i = start_addr; i < start_addr + 0100; i++) {
+          fp_set(i);
+          Examine();
+          delay(60);
+          Pause();
+        }
+
+        // read from low addresses
+        for (uint16_t i = 0; i < 0100; i++) {
+          fp_set(i);
+          Examine();
+          delay(60);
+          Pause();
+        }
+        delay(1000);
+    }
+
       break;
     }
   }
