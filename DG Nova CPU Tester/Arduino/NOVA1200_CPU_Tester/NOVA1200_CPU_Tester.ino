@@ -288,13 +288,13 @@ void loop() {
         // start at address 0
         fp_set(start_addr);
         Examine();
-        delay(60);
+        delay(10);
         Pause();
           
         s = 0177777;
         fp_set(s);
         Deposit();
-        delay(60);
+        delay(5);
         Pause();
 
       }
