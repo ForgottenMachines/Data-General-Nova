@@ -230,6 +230,12 @@ void loop() {
       }
       break;
     }
+    case (0x3): {     // DIP2+1
+      uint16_t s;
+      uint16_t start_addr = 0;
+    
+
+    }
     case (0x2): {     // DIP2
       uint16_t s;
       uint16_t start_addr = 0;
@@ -280,6 +286,7 @@ void loop() {
       
       break;
     }
+
     case (0x4): {     // DIP3
       Stop2Reset2();
 
