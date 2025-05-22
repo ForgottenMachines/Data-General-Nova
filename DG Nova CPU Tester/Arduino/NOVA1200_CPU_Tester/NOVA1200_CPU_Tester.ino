@@ -230,12 +230,6 @@ void loop() {
       }
       break;
     }
-    case (0x3): {     // DIP2+1
-      uint16_t s;
-      uint16_t start_addr = 0;
-    
-
-    }
     case (0x2): {     // DIP2
       uint16_t s;
       uint16_t start_addr = 0;
@@ -286,7 +280,27 @@ void loop() {
       
       break;
     }
+    case (0x3): {     // DIP2+1
+      uint16_t s;
+      uint16_t start_addr = 0;
 
+      while(true) {
+        // start at address 0
+        fp_set(start_addr);
+        Examine();
+        delay(60);
+        Pause();
+          
+        s = 0177777;
+        fp_set(s);
+        Deposit();
+        delay(60);
+        Pause();
+
+      }
+      
+      break;
+    }
     case (0x4): {     // DIP3
       Stop2Reset2();
 
