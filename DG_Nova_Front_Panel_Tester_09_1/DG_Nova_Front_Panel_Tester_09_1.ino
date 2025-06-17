@@ -29,11 +29,17 @@ int Mem15EndPin = 48; //Data Light 15  (should be 48 but I'm testing re-using th
 constexpr int blinky = 10;
 constexpr int fastcycle = 0;
 
-constexpr int DIP1 = 10;
-constexpr int DIP2 = 9;
-constexpr int DIP3 = 8;
-constexpr int DIP4 = 7;
+//for the single legacy board DIP switch arrangement
+//constexpr int DIP1 = 10;
+//constexpr int DIP2 = 9;
+//constexpr int DIP3 = 8;
+//constexpr int DIP4 = 7;
 
+//for upgraded boards only DIP switch arrangement
+constexpr int DIP1 = 7;
+constexpr int DIP2 = 8;
+constexpr int DIP3 = 9;
+constexpr int DIP4 = 10;
 
 void setup() {
        pinMode(SwitchPattern1, INPUT_PULLUP);
