@@ -9137,10 +9137,6 @@
 		(uuid "30789137-693f-4bfb-aa6b-3ef89ed6e537")
 	)
 	(no_connect
-		(at 43.18 215.9)
-		(uuid "33562f45-88ed-4770-9dd1-34ea9380ae0b")
-	)
-	(no_connect
 		(at 43.18 104.14)
 		(uuid "3363661b-c696-494b-b8f7-cf275258ba98")
 	)
@@ -9157,16 +9153,8 @@
 		(uuid "343f5d59-e5a1-4bcf-b078-95fb0631516b")
 	)
 	(no_connect
-		(at 43.18 213.36)
-		(uuid "34d745c5-bd7d-47ba-b4a4-a14a9b22879b")
-	)
-	(no_connect
 		(at 55.88 157.48)
 		(uuid "377eac66-ec7a-461e-8b66-deb33c694441")
-	)
-	(no_connect
-		(at 55.88 215.9)
-		(uuid "38c26a44-ef88-42c5-8120-e9dc1a1a1cd3")
 	)
 	(no_connect
 		(at 55.88 365.76)
@@ -9211,10 +9199,6 @@
 	(no_connect
 		(at 55.88 363.22)
 		(uuid "4bfc9b8f-3d27-43a8-bd25-119588e67b9b")
-	)
-	(no_connect
-		(at 55.88 213.36)
-		(uuid "4ce4b9ec-cd70-4715-9458-ff33fb7a8356")
 	)
 	(no_connect
 		(at 55.88 297.18)
@@ -10802,6 +10786,16 @@
 	)
 	(wire
 		(pts
+			(xy 41.91 223.52) (xy 58.42 223.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2d730e8c-3917-4061-9498-a0f07a46f105")
+	)
+	(wire
+		(pts
 			(xy 218.44 223.52) (xy 218.44 289.56)
 		)
 		(stroke
@@ -12302,6 +12296,16 @@
 	)
 	(wire
 		(pts
+			(xy 55.88 213.36) (xy 59.69 213.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78f4aa16-8922-4954-827e-3783635640e5")
+	)
+	(wire
+		(pts
 			(xy 354.33 356.87) (xy 396.24 356.87)
 		)
 		(stroke
@@ -13462,6 +13466,16 @@
 	)
 	(wire
 		(pts
+			(xy 58.42 223.52) (xy 58.42 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a42cb379-1158-42a0-8abc-9e8280f7c793")
+	)
+	(wire
+		(pts
 			(xy 55.88 368.3) (xy 66.04 368.3)
 		)
 		(stroke
@@ -14002,6 +14016,16 @@
 	)
 	(wire
 		(pts
+			(xy 59.69 226.06) (xy 40.64 226.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b398eee0-156c-475a-ad99-53d0bd148df0")
+	)
+	(wire
+		(pts
 			(xy 33.02 358.14) (xy 43.18 358.14)
 		)
 		(stroke
@@ -14309,6 +14333,16 @@
 			(type default)
 		)
 		(uuid "bebef1fa-e279-4d3f-a835-73596179c738")
+	)
+	(wire
+		(pts
+			(xy 41.91 215.9) (xy 43.18 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0e278c7-b196-4df8-9d31-5fa0a42be75b")
 	)
 	(wire
 		(pts
@@ -14982,6 +15016,16 @@
 	)
 	(wire
 		(pts
+			(xy 58.42 215.9) (xy 55.88 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9293871-5591-4bfe-b6b2-83221a315de8")
+	)
+	(wire
+		(pts
 			(xy 190.5 119.38) (xy 246.38 119.38)
 		)
 		(stroke
@@ -15029,6 +15073,16 @@
 			(type default)
 		)
 		(uuid "d9c892cb-07a1-4214-b514-d87475a316d1")
+	)
+	(wire
+		(pts
+			(xy 41.91 215.9) (xy 41.91 223.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "daed2114-7c06-4ed3-a41f-6445aa18f6e7")
 	)
 	(wire
 		(pts
@@ -15402,6 +15456,16 @@
 	)
 	(wire
 		(pts
+			(xy 40.64 226.06) (xy 40.64 213.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8e737c4-bfd0-4b14-bef5-5518ef7fb160")
+	)
+	(wire
+		(pts
 			(xy 374.65 267.97) (xy 374.65 256.54)
 		)
 		(stroke
@@ -15459,6 +15523,16 @@
 			(type default)
 		)
 		(uuid "ee377339-c783-45f0-8a2f-6d04ef7ce5b6")
+	)
+	(wire
+		(pts
+			(xy 40.64 213.36) (xy 43.18 213.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee7ec5a0-5ffc-41c2-9320-0849c18c17ee")
 	)
 	(wire
 		(pts
@@ -15819,6 +15893,16 @@
 			(type default)
 		)
 		(uuid "fb9b9ccf-7bbd-4e89-88f5-23d0ab129612")
+	)
+	(wire
+		(pts
+			(xy 59.69 213.36) (xy 59.69 226.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc60e4d1-cd8a-4356-8afc-90aa50e536e0")
 	)
 	(wire
 		(pts
@@ -16559,6 +16643,16 @@
 			(justify left bottom)
 		)
 		(uuid "6e5d7fff-86d7-4619-81d9-a4ca9c411166")
+	)
+	(label "dchp"
+		(at 59.69 213.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6eb38643-70df-4ccc-89d1-efcd16a15e20")
 	)
 	(label "SX5"
 		(at 96.52 147.32 0)
@@ -17339,6 +17433,16 @@
 			(justify right bottom)
 		)
 		(uuid "e8d0941f-06e1-4f17-9615-419f1697348a")
+	)
+	(label "intp"
+		(at 58.42 215.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ecf89a09-2a87-4846-b96e-24d54cdbaf2d")
 	)
 	(label "SX7"
 		(at 96.52 182.88 0)
