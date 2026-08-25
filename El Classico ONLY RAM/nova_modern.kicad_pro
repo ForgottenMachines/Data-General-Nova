@@ -1027,7 +1027,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "nova_modern.net",
-      "plot": "",
+      "plot": "Gerbers",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""
